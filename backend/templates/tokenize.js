@@ -33,9 +33,9 @@ function qgrams(s, q = 2) {
     return result;
 }
 
-function bloomFilter(chunks, length = 1024, eps = 2) {
+async function bloomFilter(chunks, length = 1024, eps = 2) {
     let bf = new Array(length).fill(false);
-    chunks.forEach(async (chunk) => {
+    for (const chunk of chunks) {
         for (
             var i = 0;
             i < Math.round((Math.log(2) * length) / chunks.length);
@@ -45,7 +45,7 @@ function bloomFilter(chunks, length = 1024, eps = 2) {
             let index = parseInt(hash.slice(0, 10), 16) % length;
             bf[index] = true;
         }
-    });
+    }
     for (var i = 0; i < length; i++) {
         if (Math.random() < 1 / (1 + Math.exp(eps))) {
             bf[i] = !bf[i];
