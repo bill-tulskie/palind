@@ -12,7 +12,7 @@ class Migration(migrations.Migration):
     operations = [
         migrations.AlterField(
             model_name="submission",
-            name="address_at_bith_token",
+            name="address_at_birth_token",
             field=models.CharField(
                 blank=True,
                 help_text="Street address",

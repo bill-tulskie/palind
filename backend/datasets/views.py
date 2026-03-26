@@ -1,7 +1,9 @@
 import csv
 import json
 from typing import Any, Dict
+from urllib import request
 import uuid
+from datetime import datetime
 
 from django.conf import settings
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
@@ -151,6 +153,9 @@ class SubmitView(View):
     """
 
     def post(self, request):
+
+        print("DEBUG: at top of post function")
+
         try:
             # Get Auth token bearer from header
             token = uuid.UUID(
@@ -161,20 +166,49 @@ class SubmitView(View):
         except:
             return HttpResponse(status=401, content="Invalid token")
 
+        # DEBUG: Print raw request body to stdout
+        print("DEBUG: Raw request body:", request.body.decode("utf-8"))
+
         # Create submission
-        data = json.loads(request.body.decode("utf-8"))
+        try:
+            data = json.loads(request.body.decode("utf-8"))
+        except json.JSONDecodeError as e:
+            print("DEBUG: JSON decode error:", str(e))
+            print("DEBUG: Raw request body:", request.body.decode("utf-8"))
+            return HttpResponse(status=400, content="Invalid JSON")
 
         # Get disease either from do_id or from dataset
-        if "disease_id" in data:
-            try:
-                disease = Disease.objects.filter(do_id=data["disease_id"]).first()
-            except:
-                return HttpResponse(status=400, content="Invalid disease_id")
+        disease = None
+        warnings = []
+        
+        if "disease_id" in data and data["disease_id"]:
+            disease_id = data["disease_id"].strip()
+
+            # First try do_id (common expected field)
+            disease = Disease.objects.filter(do_id=disease_id).first()
+
+            # If that doesn't exist, allow using the value as a name (or create it)
+            if disease is None:
+                disease = Disease.objects.filter(name__iexact=disease_id).first()
+
+            if disease is None:
+                description = f"Added from data uploaded in dataset '{dataset.name}' on {datetime.now().strftime('%Y-%m-%d')}"
+                disease = Disease.objects.create(name=disease_id, do_id=disease_id, description=description)
+                warnings.append(
+                    f"Disease ID '{disease_id}' was not found in the database and has been added as a new disease. "
+                    f"Please verify this is the correct disease."
+                )
+
         elif dataset.disease:
             disease = dataset.disease
         else:
             if dataset.created_by.is_prevalence_counting_user:
                 return HttpResponse(status=400, content="Missing disease_id")
+            else:
+                return HttpResponse(status=400, content="No disease specified")
+
+        if disease is None:
+            return HttpResponse(status=400, content="Disease not found")
 
         submission = Submission(
             protocol_version="1.0.0",
@@ -188,27 +222,31 @@ class SubmitView(View):
             last_name_soundex_token=data.get("last_name_soundex_token", ""),
             sex_at_birth_token=data.get("sex_at_birth_token", ""),
             date_of_birth_token=data.get("date_of_birth_token", ""),
-            address_at_bith_token=data.get("address_at_bith_token", ""),
+            address_at_birth_token=data.get("address_at_birth_token", ""),
             city_at_birth_token=data.get("city_at_birth_token", ""),
             state_at_birth_token=data.get("state_at_birth_token", ""),
             country_at_birth_token=data.get("country_at_birth_token", ""),
         )
 
         # Search if there is any similar patient and create one if not
-        patient = dataset.find_matching_patient(submission)
-        if patient is None:
-            patient = DatasetPatient.objects.create(dataset=dataset)
+        try:
+            patient = dataset.find_matching_patient(submission)
+            if patient is None:
+                patient = DatasetPatient.objects.create(dataset=dataset)
 
-        # Set the patient and save submission
-        submission.dataset_patient = patient
-        submission.full_clean()  # Validate submission
-        submission.save()
+            # Set the patient and save submission
+            submission.dataset_patient = patient
+            submission.full_clean()  # Validate submission
+            submission.save()
+        except Exception as e:
+            print("DEBUG: Error processing submission:", str(e))
+            return HttpResponse(status=400, content=f"Error processing submission: {str(e)}")
 
         # Do not return the patient id if the user is a prevalence counting user
         if dataset.created_by.is_prevalence_counting_user:
-            return JsonResponse({"public_id": "hidden"})
+            return JsonResponse({"public_id": "hidden", "warnings": warnings})
 
-        return JsonResponse({"public_id": patient.public_id.url()})
+        return JsonResponse({"public_id": patient.public_id.url(), "warnings": warnings})
 
 
 #########

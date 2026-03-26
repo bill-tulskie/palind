@@ -242,7 +242,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
                 (
-                    "address_at_bith_token",
+                    "address_at_birth_token",
                     models.CharField(
                         blank=True,
                         help_text="Street address",

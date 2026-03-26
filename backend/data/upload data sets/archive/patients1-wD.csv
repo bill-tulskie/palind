@@ -1,0 +1,21 @@
+id,disease_id,first_name,last_name,date_of_birth,middle_name,sex_at_birth,city_at_birth,zip_code_at_birth,address_at_birth,state_at_birth,country_at_birth
+64c2b398-342f-4fd9-b938-68edd33f84f4,AGRN,Stephanie,Jones,2000-01-29,Adrian,F,Andreashire,57917,0206 Ann Village Apt. 694,IN,TUN
+d4729f16-a0fe-4fb7-be7c-7a2be7a6a66d,POLK,David,Adkins,1914-06-30,Nicholas,F,Duncanmouth,88468,23345 Bradley Mall,VI,DNK
+7631bf99-9413-4fa2-a00e-618fd3cc9a23,POLK,Monica,Tucker,1910-06-01,Austin,F,Blairville,21731,4585 Douglas Greens Apt. 221,VI,LVA
+c8e66ba5-18e3-4096-8e9b-e33269a65f45,POLK,David,Barajas,2017-09-03,Devon,F,Caseychester,05271,897 Melissa Squares,AR,ZAF
+ce28f570-964a-4065-9e8c-5aaf4c194096,POLK,Donald,Jennings,2009-08-28,Mark,M,Port Bryan,85750,67639 Yoder Bypass,IL,TWN
+166d4b6d-3b8e-483d-8d80-465110af7453,POLK,Tracie,Thompson,1957-06-26,Robert,M,South Janiceberg,86344,8695 Benjamin Village Suite 685,ID,MDA
+f76d96b1-550b-4e4f-ab77-d873b305fada,POLK,John,Brown,1973-07-31,Christopher,F,East Diana,75265,0261 Dean Estates Apt. 941,WV,GTM
+f69011d8-0c0f-407f-b135-52ecef1a39d9,POLK,Brooke,Baker,1991-05-13,Russell,F,Yangview,13371,3814 Erika Cape Apt. 637,ND,BLR
+8d5ab215-6ad8-4163-a7ee-d7c4c432d500,POLK,Samantha,Mason,1958-07-13,Zachary,F,Larrybury,36997,26165 Katherine Plains Suite 752,CT,GRD
+b7b4fb31-4f6c-4927-9489-0f349aa5245b,POLK,Kenneth,Schmidt,1973-01-15,Stephanie,M,East Melaniefort,95515,0601 Roberts Estate Apt. 009,NM,MEX
+06d2d687-3a87-4fdc-8d17-753925c3dd36,POLK,David,Good,2014-06-12,Eric,M,South Anthony,27317,717 Campos Mountain,ND,UKR
+0702d5d3-88cb-4ae9-9a52-74416fc4946c,POLK,Mia,Keller,1932-06-22,Adrian,F,Rachelbury,22845,52708 Atkinson Grove,IL,KIR
+ae2e5b12-09c0-432a-b7d5-003f34f3a83d,GNE,Jason,Griffith,1956-02-19,Gary,F,North Nathan,84133,8653 Samuel Dam Apt. 137,UT,MOZ
+b1087645-3399-49a4-8db2-9ce3681829f2,GNE,Cameron,Coleman,1932-11-07,Jennifer,F,South Erinville,54990,9058 Chad Roads,IL,MCO
+b9e97ee6-c7e5-4393-910c-cab586894eec,GNE,Jose,Meyer,1954-06-04,Allen,F,West Jamiefurt,70192,900 Burns Mall Suite 867,PR,MYS
+04daf0d9-6268-411d-ab85-f8ce504c133d,GNE,Jeremy,Martinez,2004-10-29,Jennifer,M,Lake Carrie,40143,5531 Cox Views,GU,LAO
+49085649-a301-41ae-bf1d-b17e74ba9e2f,GNE,Mike,Stewart,1994-01-31,Jonathan,M,Kyleville,99007,324 James Tunnel Suite 124,NY,DZA
+f0d88a0e-0713-4467-b2b0-3e907073657b,GNE,Sarah,Smith,2016-09-10,Kathryn,M,Port Kevin,11507,517 Jackson Vista Suite 891,WI,GRD
+8853a4fc-46a3-41e0-947a-e422655a37a7,GNE,Jonathan,Cross,2009-07-11,Megan,M,Woodsview,65070,17465 Klein Curve Apt. 439,KY,LBY
+1ea8f93c-eea8-420a-9151-95773c5604a3,GNE,Lisa,Harmon,1917-08-10,Andrew,M,East Joanne,57471,679 Amanda Bypass,TN,NER

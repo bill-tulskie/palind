@@ -1,0 +1,67 @@
+None of these
+Unknown
+Congenital Muscle DiseaseCongenital Muscular Dystrophy 
+ACTA1 Congenital Muscular Dystrophy with rigid spine 
+Alpha 7 Integrin Related CMD (ITGA7) 
+alpha-Dystroglycanopathy Congenital Muscular Dystrophy and abnormal glycosylation of dystroglycan with severe epilepsy Congenital Muscular Dystrophy with hypoglycosylation of dystroglycan Congenital Muscular Dystrophy with hypoglycosylation of dystroglycan and epilepsy Congenital Muscular Dystrophy with fatty liver and infantile-onset cataract caused by TRAPPC11 mutations Dystroglycanopathy, congenital with or without mental retardation (formerly MDC1C) Fukuyama CMD Muscle-Eye-Brain Disease (MEB, MDDGA14) Walker Warburg Syndrome (WWS) LGMDR09 FKRP Related (formerly LGMD2I) LGMDR11 POMT1 related (formerly LGMD2K) LGMDR13 FKTN Related (formerly LGMD2M) LGMDR14 POMT2 related (formerly LGMD2N) LGMDR15 POMGnT1 related (formerly LGMD2O) LGMDR19 GMPPB Related (formerly LGMD2T) LGMDR20 ISPD related (formerly LGMD2U) LGMDR24 POMGnT2 related 
+Choline Kinase B Receptor - CHKB 
+Collagen VI Related Disorders Bethlem Myopathy (BM, BETHLM) Intermediate Collagen VI Ullrich CMD - UCMD LGMDD5 Collagen VI related Bethlem Myopathy (dominant) LGMDR22 Collagen VI related Bethlem Myopathy (recessive) Congenital Myosclerosis 
+Collagen XII Related Disorders COL12a1 Related CMD COL12 Related Bethlem Myopathy (BM2) COL12 Related Ullrich CMD (UCMD2) 
+Congenital Muscular Dystrophy with cataracts and intellectual disability (MDCCAID) 
+Congenital Muscular Dystrophy with joint hyperlaxity 
+Congenital Muscular Dystrophy Not Otherwise Specified (Including Merosin Positive) 
+Emery Dreifuss MD, EDMD Emery Dreifuss Muscular Dystrophy 6, X-Linked EDMD6 (FHL1) Emery Dreifuss Muscular Dystrophy 1, X-Linked EDMD1 (EMD) 
+GOLGA2-related congenital muscle dystrophy with brain involvement 
+LAMA2-CMD (Merosin Deficient, full or partial) LAMA2-CMD LGMDR23 MDC1A 
+LMNA Related Disorders Laminopathy (Lamin A/C) LMNA related Emery-Dreifuss MD (EDMD) (formerly LGMD1B) Emery-Dreifuss muscular dystrophy - EDMD2, EDMD3 (LMNA) LMNA/EDMD Related Heart Conditions (LMNA) Charcot-Marie-Tooth disease, axonal, type 2B1 - CMT2B1 (LMNA) Hutchinson-Gilford progeria syndrome-HGPS (LMNA) 
+Nesprin Related CMD (SYNE1) 
+SELENON Related Disorders (previously known as SEPN1) SELENON Related Myopathy (aka SEPN1) Congenital Fiber Type Disproportion - CFTD (SELENON) Desmin-Related Myopathy with Mallory Bodies (SELENON) Multiminicore Disease (SELENON) Rigid Spine Syndrome - RSS/RSMD1 (SELENON) 
+Telethonin CMD (TCAP) CMH25 (TCAP) LGMD2G (TCAP)Congenital Myopathy 
+Actin Aggregation Myopathy 
+Alpha 7 Integrin Related Myopathy (ITGA7) 
+Brody Myopathy (ATP2A1) 
+CACNA1S Related Myopathy Congenital Myopathy with ophthalmopelgia (CACN1S) 
+CNTN1-Related Congenital Myopathy Compton-North Congenital Myopathy (MYPCN) 
+Cap Myopathy/Cap Disease ACTA1 Related Cap TPM2 Related Cap TPM3 Related Cap 
+Central Core Disease - CCD RYR1 Related CCD 
+Centronuclear Myopathy - CNM BIN1 Related CNM CCDC78-Related Centronuclear Myopathy Dynamin 2 CMD/CM  
+CNM1 Myotubular Myopathy, X-linked - XLMTM/MTM1 RYR1 Related CNM TTN related CNM 
+Congenital Fiber Type Disproportion - CFTD 
+Congenital Myopathy Not Otherwise Specified 
+Core Rod Myopathy NEB Related Core Rod 
+Desmin-Related Myopathy with Mallory Bodies 
+Distal Myopathy Distal Myopathy 1, Laing Distal Myopathy - MPD1 (MYH7) Distal Myopathy 5 - MPD5 (ADSS1/ADSSL1) 
+FHL1 Related Myopathy 
+FKBP14-Related Disorders FKBP14-kEDS Ehlers-Danlos Syndrome, Type 2 (FKBP14) 
+Hyaline Body Myopathy 
+Inclusion Body Myopathy Inclusion body myopathy with early-onset-paget disease with or without frontoteporal demenia 1 (VCP) Congenital Fiber Type Disproportion - CFTD (MYH2) Isolated inclusion body myopathy - IBMPFD3 (HNRNPA1) Myopathy proximal to ophthalmoplegia (MYH2) Myopathy with joint contractures, ophtalmoplegia, and rimmed vacuoles - IBM3 (MYH2) 
+Multiminicore Myopathy/Multiminicore Disease ACTA1 Related MMD RYR1 Related MMD SELENON/SEPN1 Related MMD TTN Related MMD 
+Multiple Structured Core Disease (MsCD) ACTN2 Related Congenital Myopathy 
+Myofibrillar Myopathy - MFM DNAJB6 related Myofibrillar Myopathy (formerly LGMD1D) DES related Myofibrillar Myopathy (formerly LGMD1E or LGMD2R) MYOT related Myofibrillar Myopathy (formerly LGMD1A) 
+Myosin Storage Congenital Myopathy (MYH7) Myosin Storage Myopathy Cardiomyopathy, dilated, 1S - CMD1S Cardiomyopathy, familial hypertrophic, 1, included - CMH1 Left ventricular noncompaction 5 - LVNC5 (MYH7) 
+Nemaline Myopathy Arthrogryposis, distal, type 1A - DA1A (TPM2) Arthrogryposis, distal, type 2B - DA2B (TPM2) Cap myopathy - CAPM1 (TPM3) Cap myopathy - CAPM2 (TPM2) Congenital Fiber Type Disproportion - CFTD (ACTA1) Hypertrophic cardiomyopathy related to cardiac myopalladin - CMH22 (MYPN) Klippel-Feil syndrome with Nemaline myopathy and facial dysmorphism - KFS4 (MYO18B) Left ventricular noncompaction 4 - LVNC4 (ACTA1) LGMD related to KBTBD13 Myopathy with nemaline bodies (RYR3) Nemaline Myopathy with Cardiomyopathy (MYO18B) 
+Reducing Body Myopathy 
+RYR1 Related Disorders Central Core Disease - CCD (RYR1) Dusty Core Disease (RYR1) Centronuclear Myopathy (RYR1) Congenital Fiber Type Disproportion - CFTD (RYR1) Exertional Myalgia with or without Rhabdomyolysis (RYR1) Malignant Hyperthermia susceptibility - MHS1 (RYR1) RYR1 Related Myopathy 
+Spheroid Body Myopathy 
+Titinopathy Autosomal dominant myopathy with proximal muscle weakness and early respiratory (TTN) Cardiomyopathy, familial hypertrophic, 9 - CMH9 (TTN) Centronuclear myopathy related to TTN Hereditary myopathy with early respiratory failure - HMERF (TTN) LGMD2J LGMDR10 (Formerly LGMD2J) Multiminicore disease (TTN) Salih myopathy, (Congenital myopathy with fatal cardiomyopathy) Tibial muscular dystrophy, tardive - TMD (TTN) Titin Related Dilated Cardiomyopathy - CMD1G Titin Related Myopathy 
+Tubular Aggregate Myopathy 
+X-linked myopathy with excessive autophagy (XMEA/MEAX) 
+Zebra Body DiseaseCongenital Myasthenic Syndrome - CMS 
+Escobar Syndrome (multiple pterygium syndrome) - EVMPS 
+Lambert-Eaton Myasthenic Syndrome (LEMS) 
+LGMDR19 GMPPB related (formerly LGMD2T/MDDGC14) 
+LGMDR17 PLEC related (formerly LGMD2Q) 
+Collagen XIII Related Congenital Myasthenic Syndrome 
+Congenital myasthenic syndrome with choline acetyltransferase deficiency - CMS-EA 
+Congenital myasthenic syndrome with endplate acetylcholinesterase deficiency - EAD 
+Distal motor neuropathy related to SYT2 
+Epidermolysis bullosa simplex associated with late-onset muscular dystrophy - MDEBS 
+Familial limb girdle myasthenia - CMS1B 
+Familial limb girdle myasthenia with tubular aggregates - CMSTA 
+Myasthenia gravis, familial infantile - FIMG 
+Myasthenic syndrome, congenital - CMS1D 
+Myasthenic syndrome, congenital, Ie, included - CMS1E 
+Myasthenic syndrome, presynaptic, congenital, with or without motor neuropathy - MYSPC 
+Myasthenic syndrome, fast-channel congenital - FCCMS 
+Myasthenic syndrome, slow-channel congenital - SCCMS
+Limb-Girdle Muscular DystrophyLGMDD01 - DNAJB6 related (formerly LGMD1D)LGMDD05 - Collagen VI related Bethlem Myopathy (dominant)LGMDR07 - Telethonin (TCAP) related (formerly LGMD2G)LGMDR08 - TRIM related (formerly LGMD2H)LGMDR09 - FKRP related (formerly LGMD2I)LGMDR10 - Titin (TTN) related (formerly LGMD2J)LGMDR11 - POMT1 related (formerly LGMD2K)LGMDR13 - Fukutin (FKTN) related (formerly LGMD2M)LGMDR14 - POMT2 related (formerly LGMD2N)LGMDR15 - POMGnT1 related (formerly LGMD2O)LGMDR16 - DAG1 related Dystroglycanopathy (formerly LGMD2P)LGMDR17 - Plectin (PLEC) related (formerly LGMD2Q)LGMDR18 - TRAPPC11 related (formerly LGMD2S)LGMDR19 - GMPPB related (formerly LGMD2T)LGMDR20 - ISPD related (formerly LGMD2U)LGMDR22 - Collagen VI related Bethlem Myopathy (recessive)LGMDR23 - LAMA2 relatedLGMDR24 - POMGnT2 related

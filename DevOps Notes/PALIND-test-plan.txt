@@ -1,0 +1,22 @@
+Development notes/ questions:
+
+- Testing the code and test cases:
+		- Properly identify valid duplicates
+		- Properly identify distinct records
+		
+		- Examples for valid duplicates: 
+				-- Change first name from David to Dave. All else the same.
+				-- Identical records in two different uploads to the same dataset
+				-- Identical records except id in two different uploads to the same dataset
+				-- Identical records except id in two different datasets
+				
+		----> Code assigned unique palinds for all of the above cases		  
+		
+		----> What test datasets were used to validate these kinds of cases?
+		  
+- Planned changes to upload / datasets  
+		- Remove fields n/a in CMDIR
+		- Use data elements as-is where formal ontology exists
+			 	-- warn or reject on ontology errors 
+		- Add new as-is field: clinical diagnosis w/ formal ontology  
+		----> Will these chances break the code?

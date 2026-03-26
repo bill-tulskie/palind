@@ -1,0 +1,3027 @@
+{
+  "graphs": [
+    {
+      "id": "http://purl.obolibrary.org/obo/doid/doid-non-classified.owl",
+      "meta": {
+        "basicPropertyValues": [
+          {
+            "pred": "http://purl.obolibrary.org/obo/IAO_0000700",
+            "val": "http://purl.obolibrary.org/obo/DOID_4"
+          },
+          {
+            "pred": "http://purl.org/dc/elements/1.1/description",
+            "val": "The Disease Ontology has been developed as a standardized ontology for human disease with the purpose of providing the biomedical community with consistent, reusable and sustainable descriptions of human disease terms, phenotype characteristics and related medical vocabulary disease concepts."
+          },
+          {
+            "pred": "http://purl.org/dc/elements/1.1/language",
+            "val": "en"
+          },
+          {
+            "pred": "http://purl.org/dc/elements/1.1/title",
+            "val": "Human Disease Ontology"
+          },
+          {
+            "pred": "http://purl.org/dc/terms/license",
+            "val": "https://creativecommons.org/publicdomain/zero/1.0/"
+          },
+          {
+            "pred": "http://www.geneontology.org/formats/oboInOwl#default-namespace",
+            "val": "disease_ontology"
+          },
+          {
+            "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBOFormatVersion",
+            "val": "1.2"
+          },
+          {
+            "pred": "http://www.geneontology.org/formats/oboInOwl#saved-by",
+            "val": "lschriml"
+          },
+          {
+            "pred": "http://www.w3.org/2000/01/rdf-schema#comment",
+            "val": "The Disease Ontology content is available via the Creative Commons Public Domain Dedication CC0 1.0 Universal license (https://creativecommons.org/publicdomain/zero/1.0/)."
+          },
+          {
+            "pred": "http://www.w3.org/2002/07/owl#versionInfo",
+            "val": "2025-03-31"
+          }
+        ],
+        "version": "http://purl.obolibrary.org/obo/doid/releases/2025-03-31/doid-non-classified.owl"
+      },
+      "nodes": 
+      [
+        { 
+        "id": "ACTA1", 
+        "lbl": "ACTA1", 
+        "type": "CLASS", 
+        "meta" : { 
+          "definition" : { 
+            "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+            "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/59"]
+            },
+          "comments": ["OMIM mapping confirmed by DO. [SN]."],
+          "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+          "synonyms" : [{ 
+            "pred" : "hasExactSynonym", 
+            "val" : "ACTA1-related congenital myopathy" 
+            }],
+          "xrefs" : [{ "val" : "GARD:0030622" }, { "val" : "MIM:102610" }, { "val" : "ORDO:0050096" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854323" }], 
+          "basicPropertyValues" : [{ 
+            "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace", 
+            "val" : "disease_ontology" 
+            }]			 
+          } 
+        },
+      {
+        "id": "ACTN2",
+        "lbl": "ACTN2",
+        "type": "CLASS",
+        "meta" : {
+          "definition" : {
+            "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+            "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/88"]
+            },
+          "comments": ["OMIM mapping confirmed by DO. [SN]."],
+          "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+          "synonyms" : [{
+            "pred" : "hasExactSynonym",
+            "val" : "ACTN2-related congenital myopathy"
+            }],
+          "xrefs" : [{ "val" : "GARD:0030623" }, { "val" : "MIM:102573" }, { "val" : "ORDO:0050097" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854324" }],
+          "basicPropertyValues" : [{
+            "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+            "val" : "disease_ontology"
+            }]
+          }},
+      {
+        "id": "CAV3",
+        "lbl": "CAV3",
+        "type": "CLASS",
+        "meta" : {
+          "definition" : {
+            "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+            "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/856"]
+            },
+          "comments": ["OMIM mapping confirmed by DO. [SN]."],
+          "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+          "synonyms" : [{
+            "pred" : "hasExactSynonym",
+            "val" : "CAV3-related congenital myopathy"
+            }],
+          "xrefs" : [{ "val" : "GARD:0030624" }, { "val" : "MIM:601253" }, { "val" : "ORDO:0050098" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854325" }],
+          "basicPropertyValues" : [{
+            "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+            "val" : "disease_ontology"
+            }]
+          }},
+      {
+        "id": "AGRN",
+        "lbl": "AGRN",
+        "type": "CLASS",
+        "meta" : {
+          "definition" : {
+            "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+            "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/374"]
+            },
+          "comments": ["OMIM mapping confirmed by DO. [SN]."],
+          "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+          "synonyms" : [{
+            "pred" : "hasExactSynonym",
+            "val" : "AGRN-related congenital myopathy"
+            }],
+          "xrefs" : [{ "val" : "GARD:0030625" }, { "val" : "MIM:103320" }, { "val" : "ORDO:0050099" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854326" }],
+          "basicPropertyValues" : [{
+            "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+            "val" : "disease_ontology"
+            }]
+          }},
+      {
+        "id": "ALG2",
+        "lbl": "ALG2",
+        "type": "CLASS",
+        "meta" : {
+          "definition" : {
+            "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+            "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/28"]
+            },
+          "comments": ["OMIM mapping confirmed by DO. [SN]."],
+          "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+          "synonyms" : [{
+            "pred" : "hasExactSynonym",
+            "val" : "ALG2-related congenital myopathy"
+            }],
+          "xrefs" : [{ "val" : "GARD:0030626" }, { "val" : "MIM:601336" }, { "val" : "ORDO:0050100" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854327" }],
+          "basicPropertyValues" : [{
+            "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+            "val" : "disease_ontology"
+            }]
+          }},
+      {
+        "id": "ALG14",
+        "lbl": "ALG14",
+        "type": "CLASS",
+        "meta" : {
+          "definition" : {
+            "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+            "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/55339"]
+            },
+          "comments": ["OMIM mapping confirmed by DO. [SN]."],
+          "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+          "synonyms" : [{
+            "pred" : "hasExactSynonym",
+            "val" : "ALG14-related congenital myopathy"
+            }],
+          "xrefs" : [{ "val" : "GARD:0030627" }, { "val" : "MIM:615336" }, { "val" : "ORDO:0050101" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854328" }],
+          "basicPropertyValues" : [{
+            "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+            "val" : "disease_ontology"
+            }]
+          }},
+      {
+        "id": "ALG2",
+        "lbl": "ALG2",
+        "type": "CLASS",
+        "meta" : {
+          "definition" : {
+            "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+            "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/28"]
+            },
+          "comments": ["OMIM mapping confirmed by DO. [SN]."],
+          "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+          "synonyms" : [{
+            "pred" : "hasExactSynonym",
+            "val" : "ALG2-related congenital myopathy"
+            }],
+          "xrefs" : [{ "val" : "GARD:0030626" }, { "val" : "MIM:601336" }, { "val" : "ORDO:0050100" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854327" }],
+          "basicPropertyValues" : [{
+            "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+            "val" : "disease_ontology"
+            }]
+          }},
+      {
+        "id": "ALG3",
+        "lbl": "ALG3",
+        "type": "CLASS",
+        "meta" : {
+          "definition" : {
+            "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+            "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/27"]
+            },
+          "comments": ["OMIM mapping confirmed by DO. [SN]."],
+          "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+          "synonyms" : [{
+            "pred" : "hasExactSynonym",
+            "val" : "ALG3-related congenital myopathy"
+            }],
+          "xrefs" : [{ "val" : "GARD:0030628" }, { "val" : "MIM:601336" }, { "val" : "ORDO:0050102" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854329" }],
+          "basicPropertyValues" : [{
+            "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+            "val" : "disease_ontology"
+            }]
+          }},
+      {
+        "id": "ATP2A1",
+        "lbl": "ATP2A1",
+        "type": "CLASS",
+        "meta" : {
+          "definition" : {
+            "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+            "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/490"]
+            },
+          "comments": ["OMIM mapping confirmed by DO. [SN]."],
+          "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+          "synonyms" : [{
+            "pred" : "hasExactSynonym",
+            "val" : "ATP2A1-related congenital myopathy"
+            }],
+          "xrefs" : [{ "val" : "GARD:0030629" }, { "val" : "MIM:102610" }, { "val" : "ORDO:0050103" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854330" }],
+          "basicPropertyValues" : [{
+            "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+            "val" : "disease_ontology"
+            }]
+          }},
+      {
+        "id": "BAG3",
+        "lbl": "BAG3",
+        "type": "CLASS",
+        "meta" : {
+          "definition" : {
+            "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+            "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/9531"]
+            },
+          "comments": ["OMIM mapping confirmed by DO. [SN]."],
+          "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+          "synonyms" : [{
+            "pred" : "hasExactSynonym",
+            "val" : "BAG3-related congenital myopathy"
+            }],
+          "xrefs" : [{ "val" : "GARD:0030630" }, { "val" : "MIM:603883" }, { "val" : "ORDO:0050104" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854331" }],
+          "basicPropertyValues" : [{
+            "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+            "val" : "disease_ontology"
+            }]
+          }},
+      {
+        "id": "BIN1",
+        "lbl": "BIN1",
+        "type": "CLASS",
+        "meta" : {
+          "definition" : {
+            "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+            "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/274"]
+            },
+          "comments": ["OMIM mapping confirmed by DO. [SN]."],
+          "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+          "synonyms" : [{
+            "pred" : "hasExactSynonym",
+            "val" : "BIN1-related congenital myopathy"
+            }],
+          "xrefs" : [{ "val" : "GARD:0030631" }, { "val" : "MIM:601248" }, { "val" : "ORDO:0050105" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854332" }],
+          "basicPropertyValues" : [{
+            "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+            "val" : "disease_ontology"
+            }]
+          }},
+      {
+        "id": "CACNA1S",
+        "lbl": "CACNA1S",
+        "type": "CLASS",
+        "meta" : {
+          "definition" : {
+            "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+            "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/772"]
+            },
+          "comments": ["OMIM mapping confirmed by DO. [SN]."],
+          "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+          "synonyms" : [{
+            "pred" : "hasExactSynonym",
+            "val" : "CACNA1S-related congenital myopathy"
+            }],
+          "xrefs" : [{ "val" : "GARD:0030632" }, { "val" : "MIM:114208" }, { "val" : "ORDO:0050106" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854333" }],
+          "basicPropertyValues" : [{
+            "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+            "val" : "disease_ontology"
+            }]
+          }},
+      {
+        "id": "CHRNA1",
+        "lbl": "CHRNA1",
+        "type": "CLASS",
+        "meta" : {
+          "definition" : {
+            "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+            "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/1137"]
+            },
+          "comments": ["OMIM mapping confirmed by DO. [SN]."],
+          "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+          "synonyms" : [{
+            "pred" : "hasExactSynonym",
+            "val" : "CHRNA1-related congenital myopathy"
+            }],
+          "xrefs" : [{ "val" : "GARD:0030633" }, { "val" : "MIM:100690" }, { "val" : "ORDO:0050107" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854334" }],
+          "basicPropertyValues" : [{
+            "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+            "val" : "disease_ontology"
+            }]
+          }},
+      {
+        "id": "CHRNB1",
+        "lbl": "CHRNB1",
+        "type": "CLASS",
+        "meta" : {
+          "definition" : {
+            "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+            "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/1140"]
+            },
+          "comments": ["OMIM mapping confirmed by DO. [SN]."],
+          "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+          "synonyms" : [{
+            "pred" : "hasExactSynonym",
+            "val" : "CHRNB1-related congenital myopathy"
+            }],
+          "xrefs" : [{ "val" : "GARD:0030634" }, { "val" : "MIM:100710" }, { "val" : "ORDO:0050108" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854335" }],
+          "basicPropertyValues" : [{
+            "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+            "val" : "disease_ontology"
+            }]
+          }},
+      {
+        "id": "CHRND",
+        "lbl": "CHRND",
+        "type": "CLASS",
+        "meta" : {
+          "definition" : {
+            "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+            "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/1141"]
+            },
+          "comments": ["OMIM mapping confirmed by DO. [SN]."],
+          "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+          "synonyms" : [{
+            "pred" : "hasExactSynonym",
+            "val" : "CHRND-related congenital myopathy"
+            }],
+          "xrefs" : [{ "val" : "GARD:0030635" }, { "val" : "MIM:100720" }, { "val" : "ORDO:0050109" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854336" }],
+          "basicPropertyValues" : [{
+            "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+            "val" : "disease_ontology"
+            }]
+          }},
+      {
+        "id": "CHRNE",
+        "lbl": "CHRNE",
+        "type": "CLASS",
+        "meta" : {
+          "definition" : {
+            "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+            "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/1149"]
+            },
+          "comments": ["OMIM mapping confirmed by DO. [SN]."],
+          "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+          "synonyms" : [{
+            "pred" : "hasExactSynonym",
+            "val" : "CHRNE-related congenital myopathy"
+            }],
+          "xrefs" : [{ "val" : "GARD:0030636" }, { "val" : "MIM:100725" }, { "val" : "ORDO:0050110" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854337" }]	,
+          "basicPropertyValues" : [{
+            "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+            "val" : "disease_ontology"
+            }]
+          }},
+      {
+        "id": "CHRNG",
+        "lbl": "CHRNG",
+        "type": "CLASS",
+        "meta" : {
+          "definition" : {
+            "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+            "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/1146"]
+            },
+          "comments": ["OMIM mapping confirmed by DO. [SN]."],
+          "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+          "synonyms" : [{
+            "pred" : "hasExactSynonym",
+            "val" : "CHRNG-related congenital myopathy"
+            }],
+          "xrefs" : [{ "val" : "GARD:0030638" }, { "val" : "MIM:100730" }, { "val" : "ORDO:0050112" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854339" }],
+          "basicPropertyValues" : [{
+            "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+            "val" : "disease_ontology"
+            }]		
+        }
+      },
+      {
+        "id": "CNTN1",
+        "lbl": "CNTN1",
+        "type": "CLASS",
+        "meta" : {
+          "definition" : {
+            "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+            "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/1524"]
+            },
+          "comments": ["OMIM mapping confirmed by DO. [SN]."],
+          "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+          "synonyms" : [{
+            "pred" : "hasExactSynonym",
+            "val" : "CNTN1-related congenital myopathy"
+            }],
+          "xrefs" : [{ "val" : "GARD:0030637" }, { "val" : "MIM:604770" }, { "val" : "ORDO:0050111" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854338" }],
+          "basicPropertyValues" : [{
+            "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+            "val" : "disease_ontology"
+            }]
+          }},
+      {
+        "id": "COL12A1",
+        "lbl": "COL12A1",
+        "type": "CLASS",
+        "meta" : {
+          "definition" : {
+            "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+            "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/1303"]
+            },
+          "comments": ["OMIM mapping confirmed by DO. [SN]."],
+          "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+          "synonyms" : [{
+            "pred" : "hasExactSynonym",
+            "val" : "COL12A1-related congenital myopathy"
+            }],
+          "xrefs" : [{ "val" : "GARD:0030640" }, { "val" : "MIM:120320" }, { "val" : "ORDO:0050114" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854341" }],
+          "basicPropertyValues" : [{
+            "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+            "val" : "disease_ontology"
+            }]
+          }},
+        {
+            "id": "COL13A1",
+            "lbl": "COL13A1",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/1304"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "COL13A1-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030641" }, { "val" : "MIM:120070" }, { "val" : "ORDO:0050115" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854342" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]      
+            }
+        },
+        {
+            "id": "COL6A1",
+            "lbl": "COL6A1",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/1297"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "COL6A1-related congenital myopathy"
+                    }]}
+        },
+        {
+            "id": "COL6A2",
+            "lbl": "COL6A2",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/1298"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "COL6A2-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030642" }, { "val" : "MIM:120220" }, { "val" : "ORDO:0050116" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854343" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]
+                }},
+        {
+            "id": "COL6A3",
+            "lbl": "COL6A3",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/1299"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "COL6A3-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030643" }, { "val" : "MIM:120250" }, { "val" : "ORDO:0050117" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854344" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]
+                }},
+        {
+            "id": "COLQ",
+            "lbl": "COLQ",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/1281"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "COLQ-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030644" }, { "val" : "MIM:603034" }, { "val" : "ORDO:0050118" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854345" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]
+                }},
+        {
+            "id": "CRYAB",
+            "lbl": "CRYAB",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/1410"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "CRYAB-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030645" }, { "val" : "MIM:123590" }, { "val" : "ORDO:0050119" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854346" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]      
+            }
+        },
+        {
+            "id": "CTBP1",
+            "lbl": "CTBP1",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/1515"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "CTBP1-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030646" }, { "val" : "MIM:604618" }, { "val" : "ORDO:0050120" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854347" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]  
+            }
+        },
+        {
+            "id": "DAG1",
+            "lbl": "DAG1",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/1606"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "DAG1-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030647" }, { "val" : "MIM:128239" }, { "val" : "ORDO:0050121" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854348" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]  
+            }
+        },
+        {
+            "id": "DES",
+            "lbl": "DES",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/1674"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "DES-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030648" }, { "val" : "MIM:125660" }, { "val" : "ORDO:0050122" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854349" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]  
+            }
+        },
+        {
+            "id": "DNAJB6",
+            "lbl": "DNAJB6",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/10043"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "DNAJB6-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030649" }, { "val" : "MIM:611332" }, { "val" : "ORDO:0050123" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854350" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]  
+            }
+        },
+        {
+            "id": "DNM2",
+            "lbl": "DNM2",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/1756"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "DNM2-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030650" }, { "val" : "MIM:602378" }, { "val" : "ORDO:0050124" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854351" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]  
+            }
+        },
+        {
+            "id": "DOK7",
+            "lbl": "DOK7",
+            "type": "CLASS",
+            "meta" : {
+              "definition" : {
+                "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/55599"]
+                },
+              "comments": ["OMIM mapping confirmed by DO. [SN]."],
+              "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+              "synonyms" : [{
+                "pred" : "hasExactSynonym",
+                "val" : "DOK7-related congenital myopathy"
+                }],
+              "xrefs" : [{ "val" : "GARD:0030639" }, { "val" : "MIM:610285" }, { "val" : "ORDO:0050113" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854340" }],
+              "basicPropertyValues" : [{
+                "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val" : "disease_ontology"
+                }]
+              }
+        },
+        {
+            "id": "DOLK",
+            "lbl": "DOLK",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/8440"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "DOLK-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030651" }, { "val" : "MIM:610746" }, { "val" : "ORDO:0050125" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854352" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]
+                }},
+        {
+            "id": "DPAGT1",
+            "lbl": "DPAGT1",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/11039"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "DPAGT1-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030652" }, { "val" : "MIM:608093" }, { "val" : "ORDO:0050126" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854353" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]
+                }},
+        {
+            "id": "DPM1",
+            "lbl": "DPM1",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/8882"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "DPM1-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030653" }, { "val" : "MIM:608799" }, { "val" : "ORDO:0050127" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854354" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]  
+            }
+        },
+        {
+            "id": "DPM2",
+            "lbl": "DPM2",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/8883"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "DPM2-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030654" }, { "val" : "MIM:615042" }, { "val" : "ORDO:0050128" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854355" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]  
+            }
+        },
+        {
+            "id": "DPM3",
+            "lbl": "DPM3",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/8884"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "DPM3-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030655" }, { "val" : "MIM:612937" }, { "val" : "ORDO:0050129" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854356" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]  
+            }
+        },
+        {
+            "id": "EMD",
+            "lbl": "EMD",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/1890"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "EMD-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030656" }, { "val" : "MIM:310300" }, { "val" : "ORDO:0050130" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854357" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]      
+            }
+        },
+        {
+            "id": "FHL1",
+            "lbl": "FHL1",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/2275"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "FHL1-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030657" }, { "val" : "MIM:300163" }, { "val" : "ORDO:0050131" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854358" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]      
+
+            }
+        },
+        {
+            "id": "FKBP14",
+            "lbl": "FKBP14",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/54757"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "FKBP14-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030658" }, { "val" : "MIM:610968" }, { "val" : "ORDO:0050132" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854359" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]  
+            }
+        },
+        {
+            "id": "FKRP",
+            "lbl": "FKRP",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/23232"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "FKRP-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030659" }, { "val" : "MIM:606596" }, { "val" : "ORDO:0050133" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854360" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]
+            }
+        },
+        {
+            "id": "FKTN",
+            "lbl": "FKTN",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/2272"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "FKTN-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030660" }, { "val" : "MIM:607440" }, { "val" : "ORDO:0050134" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854361" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]  
+            }
+        },
+        {
+            "id": "FXR1",
+            "lbl": "FXR1",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/8085"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "FXR1-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030661" }, { "val" : "MIM:164310" }, { "val" : "ORDO:0050135" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854362" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]      
+            }
+        },
+        {
+            "id": "GFPT1",
+            "lbl": "GFPT1",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/2670"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "GFPT1-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030662" }, { "val" : "MIM:608780" }, { "val" : "ORDO:0050136" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854363" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]
+            }
+        },
+        {
+            "id": "GGPS1",
+            "lbl": "GGPS1",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/2735"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "GGPS1-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030663" }, { "val" : "MIM:614162" }, { "val" : "ORDO:0050137" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854364" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]  
+            }
+        },
+        {
+            "id": "GMPPB",
+            "lbl": "GMPPB",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/8450"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "GMPPB-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030664" }, { "val" : "MIM:615320" }, { "val" : "ORDO:0050138" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854365" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]  
+            }
+        },
+        {
+            "id": "GNE",
+            "lbl": "GNE",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/2792"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "GNE-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030665" }, { "val" : "MIM:603824" }, { "val" : "ORDO:0050139" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854366" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]  
+            }
+        },
+        {
+            "id": "GOSR2",
+            "lbl": "GOSR2",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/84447"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "GOSR2-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030666" }, { "val" : "MIM:614653" }, { "val" : "ORDO:0050140" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854367" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]  
+            }
+        },
+        {
+            "id": "HNRNPA1",
+            "lbl": "HNRNPA1",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/3178"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "HNRNPA1-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030667" }, { "val" : "MIM:164017" }, { "val" : "ORDO:0050141" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854368" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]
+            }
+        },
+        {
+            "id": "HNRNPA1",
+            "lbl": "HNRNPA1",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/3178"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "HNRNPA1-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030667" }, { "val" : "MIM:164017" }, { "val" : "ORDO:0050141" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854368" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]
+            }
+        },
+        {
+            "id": "HSPB8",
+            "lbl": "HSPB8",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/3315"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "HSPB8-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030668" }, { "val" : "MIM:614895" }, { "val" : "ORDO:0050142" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854369" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]  
+            }
+        },
+        {
+            "id": "INPP5K",
+            "lbl": "INPP5K",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/25925"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "INPP5K-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030669" }, { "val" : "MIM:615285" }, { "val" : "ORDO:0050143" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854370" }],
+                "basicPropertyValues" : [{      
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]  
+            }
+        },
+        {
+            "id": "ISPD/CRPPA",
+            "lbl": "ISPD/CRPPA",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/55606"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "ISPD/CRPPA-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030670" }, { "val" : "MIM:614631" }, { "val" : "ORDO:0050144" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854371" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]  
+            }
+        },
+        {
+            "id": "ITGA7",
+            "lbl": "ITGA7",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/3676"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "ITGA7-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030671" }, { "val" : "MIM:147840" }, { "val" : "ORDO:0050145" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854372" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]  
+            }
+        },
+        {
+            "id": "KBTBD13",
+            "lbl": "KBTBD13",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/57675"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "KBTBD13-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030672" }, { "val" : "MIM:615348" }, { "val" : "ORDO:0050146" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854373" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]  
+            }
+        },
+        {
+            "id": "KLHL40",
+            "lbl": "KLHL40",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/84133"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "KLHL40-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030673" }, { "val" : "MIM:615348" }, { "val" : "ORDO:0050147" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854374" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]  
+            }
+        },
+        {
+            "id": "KLHL41",
+            "lbl": "KLHL41",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/84134"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "KLHL41-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030674" }, { "val" : "MIM:617954" }, { "val" : "ORDO:0050148" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854375" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]  
+            }
+        },
+        {
+            "id": "KY",
+            "lbl": "KY",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/3732"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "KY-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030675" }, { "val" : "MIM:608807" }, { "val" : "ORDO:0050149" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854376" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]  
+            }
+        },
+        {
+            "id": "LAMA2",
+            "lbl": "LAMA2",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/3901"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "LAMA2-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030676" }, { "val" : "MIM:607855" }, { "val" : "ORDO:0050150" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854377" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]  
+            }
+        },
+        {
+            "id": "LAMA5",
+            "lbl": "LAMA5",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/3912"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "LAMA5-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030677" }, { "val" : "MIM:615187" }, { "val" : "ORDO:0050151" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854378" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]  
+            }
+        },
+        {
+            "id": "LAMB2",
+            "lbl": "LAMB2",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/3917"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "LAMB2-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030678" }, { "val" : "MIM:150325" }, { "val" : "ORDO:0050152" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854379" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]  
+            }
+        },
+        {
+            "id": "LARGE",
+            "lbl": "LARGE",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/79925"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "LARGE-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030679" }, { "val" : "MIM:603590" }, { "val" : "ORDO:0050153" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854380" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]  
+            }
+        },
+        {
+            "id": "LDB3/ZASP",
+            "lbl": "LDB3/ZASP",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/3998"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "LDB3/ZASP-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030680" }, { "val" : "MIM:605906" }, { "val" : "ORDO:0050154" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854381" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]  
+            }
+        },
+        {
+            "id": "LMNA",
+            "lbl": "LMNA",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/4000"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "LMNA-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030681" }, { "val" : "MIM:150330" }, { "val" : "ORDO:0050155" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854382" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]  
+            }
+        },
+        {
+            "id": "LMOD3",
+            "lbl": "LMOD3",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/54803"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "LMOD3-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030682" }, { "val" : "MIM:615348" }, { "val" : "ORDO:0050156" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854383" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]  
+            }
+        },
+        {
+            "id": "LRP4",
+            "lbl": "LRP4",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/4041"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "LRP4-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030683" }, { "val" : "MIM:603575" }, { "val" : "ORDO:0050157" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854384" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]  
+            }
+        },
+        {
+            "id": "MEGF10",
+            "lbl": "MEGF10",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/55013"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "MEGF10-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030684" }, { "val" : "MIM:614399" }, { "val" : "ORDO:0050158" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854385" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]  
+            }
+        },
+        {
+            "id": "MICU1",
+            "lbl": "MICU1",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/57411"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "MICU1-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030685" }, { "val" : "MIM:615673" }, { "val" : "ORDO:0050159" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854386" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]  
+            }
+        },
+        {
+            "id": "MSTO1",
+            "lbl": "MSTO1",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/57534"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "MSTO1-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030686" }, { "val" : "MIM:615084" }, { "val" : "ORDO:0050160" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854387" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]  
+            }
+        },
+        {
+            "id": "MTM1",
+            "lbl": "MTM1",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/4502"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "MTM1-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030687" }, { "val" : "MIM:310400" }, { "val" : "ORDO:0050161" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854388" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]  
+            }
+        },
+        {
+            "id": "MUSK",
+            "lbl": "MUSK",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/4605"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "MUSK-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030688" }, { "val" : "MIM:601296" }, { "val" : "ORDO:0050162" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854389" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]  
+            }
+        },
+        {
+            "id": "MY09A",
+            "lbl": "MY09A",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/4655"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "MY09A-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030689" }, { "val" : "MIM:614326" }, { "val" : "ORDO:0050163" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854390" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]  
+            }
+        },
+        {
+            "id": "MYBPC3",
+            "lbl": "MYBPC3",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/4609"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "MYBPC3-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030690" }, { "val" : "MIM:608761" }, { "val" : "ORDO:0050164" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854391" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]  
+            }
+        },
+        {
+            "id": "MYH2",
+            "lbl": "MYH2",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/4626"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "MYH2-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030691" }, { "val" : "MIM:160710" }, { "val" : "ORDO:0050165" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854392" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]  
+            }
+        },
+        {
+            "id": "MYH6",
+            "lbl": "MYH6",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/4624"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "MYH6-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030692" }, { "val" : "MIM:160710" }, { "val" : "ORDO:0050166" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854393" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]  
+            }
+        },
+        {
+            "id": "MYH7",
+            "lbl": "MYH7",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/4625"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "MYH7-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030693" }, { "val" : "MIM:160710" }, { "val" : "ORDO:0050167" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854394" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]  
+            }
+        },
+        {
+            "id": "MYH8",
+            "lbl": "MYH8",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/4627"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "MYH8-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030694" }, { "val" : "MIM:160710" }, { "val" : "ORDO:0050168" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854395" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]  
+            }
+        },
+        {
+            "id": "MYL1",
+            "lbl": "MYL1",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/4641"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "MYL1-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030695" }, { "val" : "MIM:160710" }, { "val" : "ORDO:0050169" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854396" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]  
+            }
+        },
+        {
+            "id": "MYL2",
+            "lbl": "MYL2",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/4642"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "MYL2-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030696" }, { "val" : "MIM:160710" }, { "val" : "ORDO:0050170" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854397" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]  
+            }
+        },
+        {
+            "id": "MYO18B",
+            "lbl": "MYO18B",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/51234"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "MYO18B-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030697" }, { "val" : "MIM:615348" }, { "val" : "ORDO:0050171" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854398" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]  
+            }
+        },
+        {
+            "id": "MYO18B", 
+            "lbl": "MYO18B",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/51234"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "MYO18B-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030697" }, { "val" : "MIM:615348" }, { "val" : "ORDO:0050171" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854398" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]  
+            }
+        },
+        {
+            "id": "MYOT/TTID",
+            "lbl": "MYOT/TTID",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/4651"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "MYOT/TTID-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030698" }, { "val" : "MIM:613765" }, { "val" : "ORDO:0050172" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854399" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]  
+            }
+        },
+        {
+            "id": "MYPN",
+            "lbl": "MYPN",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/84675"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "MYPN-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030699" }, { "val" : "MIM:615348" }, { "val" : "ORDO:0050173" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854400" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]  
+            }
+        },
+        {
+            "id": "NEB",
+            "lbl": "NEB",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/4703"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "NEB-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030700" }, { "val" : "MIM:161650" }, { "val" : "ORDO:0050174" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854401" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]  
+            }
+        },
+        {
+            "id": "None",
+            "lbl": "None",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "No genetic diagnosis identified.",
+                    "xrefs" : []
+                    },
+                "comments": ["Used when no genetic diagnosis is identified in a CMD patient."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "No genetic diagnosis"
+                    }],
+                "xrefs" : [],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]  
+            }
+        },
+        {
+            "id": "ORAI1",
+            "lbl": "ORAI1",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/25928"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "ORAI1-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030701" }, { "val" : "MIM:613386" }, { "val" : "ORDO:0050175" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854402" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]
+            }
+        },
+        {
+            "id": "PAX7",
+            "lbl": "PAX7",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/5074"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "PAX7-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030702" }, { "val" : "MIM:607150" }, { "val" : "ORDO:0050176" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854403" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]
+            }
+        },
+        {
+            "id": "PGM1",
+            "lbl": "PGM1",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/5230"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "PGM1-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030703" }, { "val" : "MIM:614921" }, { "val" : "ORDO:0050177" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854404" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]
+            }
+        },
+        {
+            "id": "PIGY",
+            "lbl": "PIGY",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/64017"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "PIGY-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030705" }, { "val" : "MIM:615716" }, { "val" : "ORDO:0050179" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854406" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]  
+            }
+        },
+        {
+            "id": "PLEC",
+            "lbl": "PLEC",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/5361"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "PLEC-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030704" }, { "val" : "MIM:601282" }, { "val" : "ORDO:0050178" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854405" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]  
+            }
+        },
+        {
+            "id": "POLK",
+            "lbl": "POLK",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/5426"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "POLK-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030707" }, { "val" : "MIM:612591" }, { "val" : "ORDO:0050181" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854408" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]
+            }
+        },
+        {
+            "id": "POMGNT1",
+            "lbl": "POMGNT1",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/80315"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "POMGNT1-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030708" }, { "val" : "MIM:609308" }, { "val" : "ORDO:0050182" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854409" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]
+            }
+        },
+        {
+            "id": "POMGNT2/GTDC2",
+            "lbl": "POMGNT2/GTDC2",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/55350"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "POMGNT2/GTDC2-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030709" }, { "val" : "MIM:615247" }, { "val" : "ORDO:0050183" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854410" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]
+            }
+        },
+        {
+            "id": "POMK/SGK196",
+            "lbl": "POMK/SGK196",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/55349"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "POMK/SGK196-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030710" }, { "val" : "MIM:615247" }, { "val" : "ORDO:0050184" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854411" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]
+            }
+        },
+        {
+            "id": "POMT1",
+            "lbl": "POMT1",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/5356"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "POMT1-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030711" }, { "val" : "MIM:607423" }, { "val" : "ORDO:0050185" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854412" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]
+            }
+        },
+        {
+            "id": "POMT2",
+            "lbl": "POMT2",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/25930"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "POMT2-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030712" }, { "val" : "MIM:607624" }, { "val" : "ORDO:0050186" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854413" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]
+            }
+        },
+        {
+            "id": "PREPL",
+            "lbl": "PREPL",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/55555"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "PREPL-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030713" }, { "val" : "MIM:616224" }, { "val" : "ORDO:0050187" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854414" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]
+            }
+        },
+        {
+            "id": "PYROXD1/RYROXD1",
+            "lbl": "PYROXD1/RYROXD1",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/84148"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "PYROXD1/RYROXD1-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030714" }, { "val" : "MIM:617580" }, { "val" : "ORDO:0050188" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854415" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]
+            }
+        },
+        {
+            "id": "RASPN",
+            "lbl": "RASPN",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/27347"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "RASPN-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030715" }, { "val" : "MIM:614653" }, { "val" : "ORDO:0050189" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854416" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]
+            }
+        },
+        {
+            "id": "RPH3A",
+            "lbl": "RPH3A",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/6012"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "RPH3A-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030716" }, { "val" : "MIM:612921" }, { "val" : "ORDO:0050190" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854417" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]
+            }
+        },
+        {
+            "id": "RXYLT1/TMEM5",
+            "lbl": "RXYLT1/TMEM5",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/80125"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "RXYLT1/TMEM5-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030717" }, { "val" : "MIM:614620" }, { "val" : "ORDO:0050191" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854418" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]
+            }
+        },
+        {
+            "id": "RYR1",
+            "lbl": "RYR1",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/6261"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "RYR1-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030718" }, { "val" : "MIM:180901" }, { "val" : "ORDO:0050192" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854419" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]
+            }
+        },
+        {
+            "id": "RYR3",
+            "lbl": "RYR3",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/6263"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "RYR3-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030719" }, { "val" : "MIM:180902" }, { "val" : "ORDO:0050193" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854420" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]
+            }
+        },
+        {
+            "id": "SCN4A",
+            "lbl": "SCN4A",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/6321"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "SCN4A-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030720" }, { "val" : "MIM:603967" }, { "val" : "ORDO:0050194" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854421" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]
+            }
+        },
+        {
+            "id": "SEPN1/SELENON",
+            "lbl": "SEPN1/SELENON",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/80715"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "SEPN1/SELENON-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030721" }, { "val" : "MIM:606210" }, { "val" : "ORDO:0050195" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854422" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]
+            }
+        },
+        {
+            "id": "SLC18A3",
+            "lbl": "SLC18A3",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/51602"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "SLC18A3-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030722" }, { "val" : "MIM:618218" }, { "val" : "ORDO:0050196" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854423" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]
+            }
+        },
+        {
+            "id": "SLC25A1",
+            "lbl": "SLC25A1",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/6572"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "SLC25A1-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030723" }, { "val" : "MIM:612686" }, { "val" : "ORDO:0050197" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854424" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]
+            }
+        },
+        {
+            "id": "SLC5A7",
+            "lbl": "SLC5A7",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/6531"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "SLC5A7-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030724" }, { "val" : "MIM:612707" }, { "val" : "ORDO:0050198" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854425" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]
+            }
+        },
+        {
+            "id": "SNAP25",
+            "lbl": "SNAP25",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/6615"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "SNAP25-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030725" }, { "val" : "MIM:613517" }, { "val" : "ORDO:0050199" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854426" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]
+            }
+        },
+        {
+            "id": "SNUPN",
+            "lbl": "SNUPN",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/6617"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "SNUPN-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030726" }, { "val" : "MIM:613518" }, { "val" : "ORDO:0050200" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854427" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]
+            }
+        },
+        {
+            "id": "SPEG",
+            "lbl": "SPEG",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/23043"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "SPEG-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030727" }, { "val" : "MIM:615950" }, { "val" : "ORDO:0050201" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854428" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]  
+            }
+        },
+        {
+            "id": "STAC3",
+            "lbl": "STAC3",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/54738"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "STAC3-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030728" }, { "val" : "MIM:615767" }, { "val" : "ORDO:0050202" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854429" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]
+            }
+        },
+        {
+            "id": "STIM1",
+            "lbl": "STIM1",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/11016"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "STIM1-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030729" }, { "val" : "MIM:612783" }, { "val" : "ORDO:0050203" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854430" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]
+            }
+        },
+        {
+            "id": "SUN1",
+            "lbl": "SUN1",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/54803"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "SUN1-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030730" }, { "val" : "MIM:608530" }, { "val" : "ORDO:0050204" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854431" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]
+            }
+        },
+        {
+            "id": "SUN2",
+            "lbl": "SUN2",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/54804"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "SUN2-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030731" }, { "val" : "MIM:608531" }, { "val" : "ORDO:0050205" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854432" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]  
+            }
+        },
+        {
+            "id": "SYNE1",
+            "lbl": "SYNE1",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/23425"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "SYNE1-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030732" }, { "val" : "MIM:608441" }, { "val" : "ORDO:0050206" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854433" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]
+            }
+        },
+        {
+            "id": "SYNE2",
+            "lbl": "SYNE2",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/23426"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "SYNE2-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030733" }, { "val" : "MIM:608442" }, { "val" : "ORDO:0050207" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854434" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]
+            }
+        },
+        {
+            "id": "SYT2",
+            "lbl": "SYT2",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/6853"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "SYT2-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030734" }, { "val" : "MIM:618218" }, { "val" : "ORDO:0050208" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854435" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]
+            }
+        },
+        {
+            "id": "TCAP",
+            "lbl": "TCAP",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/6943"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "TCAP-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030735" }, { "val" : "MIM:604488" }, { "val" : "ORDO:0050209" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854436" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]
+            }
+        },
+        {
+            "id": "TNNI3",
+            "lbl": "TNNI3",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/7136"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "TNNI3-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030736" }, { "val" : "MIM:613688" }, { "val" : "ORDO:0050210" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854437" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]
+            }
+        },
+        {
+            "id": "TNNT1",
+            "lbl": "TNNT1",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/7138"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "TNNT1-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030737" }, { "val" : "MIM:605355" }, { "val" : "ORDO:0050211" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854438" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]
+            }
+        },
+        {
+            "id": "TNNT3",
+            "lbl": "TNNT3",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/7140"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "TNNT3-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030738" }, { "val" : "MIM:600692" }, { "val" : "ORDO:0050212" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854439" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]
+            }
+        },
+        {
+            "id": "TNP03",
+            "lbl": "TNP03",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/7142"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "TNP03-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030739" }, { "val" : "MIM:609285" }, { "val" : "ORDO:0050213" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854440" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]
+            }
+        },
+        {
+            "id": "TPM1",
+            "lbl": "TPM1",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/7167"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "TPM1-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030740" }, { "val" : "MIM:191010" }, { "val" : "ORDO:0050214" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854441" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]
+            }
+        },
+        {
+            "id": "TPM2",
+            "lbl": "TPM2",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/7170"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "TPM2-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030741" }, { "val" : "MIM:190990" }, { "val" : "ORDO:0050215" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854442" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]
+            }
+        },
+        {
+            "id": "TPM3",
+            "lbl": "TPM3",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/7173"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "TPM3-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030742" }, { "val" : "MIM:191030" }, { "val" : "ORDO:0050216" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854443" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]
+            }
+        },
+        {
+            "id": "TRAPPC11",
+            "lbl": "TRAPPC11",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/25925"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "TRAPPC11-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030705" }, { "val" : "MIM:614138" }, { "val" : "ORDO:0050179" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854406" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]
+            }
+        },
+        {
+            "id": "TRDN",
+            "lbl": "TRDN",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/51849"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "TRDN-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030743" }, { "val" : "MIM:613283" }, { "val" : "ORDO:0050217" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854444" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]
+            }
+        },
+        {
+            "id": "TTN",
+            "lbl": "TTN",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/7273"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "TTN-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030744" }, { "val" : "MIM:188840" }, { "val" : "ORDO:0050218" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854445" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]
+            }
+        },
+        {
+            "id": "TUBB3",
+            "lbl": "TUBB3",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/10383"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "TUBB3-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030745" }, { "val" : "MIM:602661" }, { "val" : "ORDO:0050219" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854446" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]
+            }
+        },
+        {
+            "id": "UNC13A",
+            "lbl": "UNC13A",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/9121"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "UNC13A-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030746" }, { "val" : "MIM:608433" }, { "val" : "ORDO:0050220" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854447" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]
+            }
+        },
+        {
+            "id": "UNC45B",
+            "lbl": "UNC45B",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/55857"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "UNC45B-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030747" }, { "val" : "MIM:615368" }, { "val" : "ORDO:0050221" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854448" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]
+            }
+        },
+        {
+            "id": "unknown",
+            "lbl": "unknown",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : []
+                },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "unknown congenital myopathy"
+                }],
+                "xrefs" : [],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                }]
+            }
+        },
+        {
+            "id": "VAMP1",
+            "lbl": "VAMP1",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/6843"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "VAMP1-related congenital myopathy"
+                    },{
+                    "pred" : "hasExactSynonym",
+                    "val" : "SYB1-related congenital myopathy"
+                    },{
+                    "pred" : "hasExactSynonym",
+                    "val" : "SYB1"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030748" }, { "val" : "MIM:618217" }, { "val" : "ORDO:0050222" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854449" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]
+            }
+        },
+        {
+            "id": "VCP",
+            "lbl": "VCP",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/7415"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "VCP-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030749" }, { "val" : "MIM:601023" }, { "val" : "ORDO:0050223" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854450" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]
+            }
+        },
+        {
+            "id": "VMA21",
+            "lbl": "VMA21",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/9172"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "VMA21-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030750" }, { "val" : "MIM:300896" }, { "val" : "ORDO:0050224" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854451" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]
+            }
+        },
+        {
+            "id": "ZAK",
+            "lbl": "ZAK",
+            "type": "CLASS",
+            "meta" : {
+                "definition" : {
+                    "val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+                    "xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/25925"]
+                    },
+                "comments": ["OMIM mapping confirmed by DO. [SN]."],
+                "subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+                "synonyms" : [{
+                    "pred" : "hasExactSynonym",
+                    "val" : "ZAK-related congenital myopathy"
+                    }],
+                "xrefs" : [{ "val" : "GARD:0030706" }, { "val" : "MIM:605910" }, { "val" : "ORDO:0050180" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854407" }],
+                "basicPropertyValues" : [{
+                    "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                    "val" : "disease_ontology"
+                    }]
+            }
+        }
+      ]    
+    }
+  ]
+}
+

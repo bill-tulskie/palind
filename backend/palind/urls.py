@@ -48,29 +48,21 @@ urlpatterns = (
         path("datasets/", DatasetListView.as_view(), name="dataset_list"),
         path("dataset/<int:pk>/", DatasetDetailView.as_view(), name="dataset_detail"),
         path(
-            "dataset/<int:pk>/export",
-            DatasetExportCSVView.as_view(),
-            name="dataset_export",
+            "dataset/<int:pk>/export", DatasetExportCSVView.as_view(), name="dataset_export",
         ),
         path(
             "dataset/<int:pk>/edit", DatasetUpdateView.as_view(), name="dataset_update"
         ),
         path(
-            "dataset/<int:pk>/delete",
-            DatasetDeleteView.as_view(),
-            name="dataset_delete",
+            "dataset/<int:pk>/delete", DatasetDeleteView.as_view(), name="dataset_delete",
         ),
         path(
-            "dataset/<int:pk>/upload",
-            DatasetUploadCSV.as_view(),
-            name="dataset_upload_csv",
+            "dataset/<int:pk>/upload", DatasetUploadCSV.as_view(), name="dataset_upload_csv",
         ),
         path("datasets/new/", DatasetCreateView.as_view(), name="dataset_create"),
         # Demos
         path(
-            "bloom-filter-demo",
-            TemplateView.as_view(template_name="demos/bloom_filter_demo.html"),
-            name="bloom-filter-demo",
+            "bloom-filter-demo", TemplateView.as_view(template_name="demos/bloom_filter_demo.html"), name="bloom-filter-demo",
         ),
         path("linker-demo", LinkerDemo.as_view(), name="linker-demo"),
         path("merge-datasets", merge_view, name="merge-datasets"),

@@ -1,0 +1,45 @@
+{ 
+	"id": "http://purl.obolibrary.org/obo/DOID_9883", 
+	"lbl": "Becker muscular dystrophy", 
+	"type": "CLASS", 
+	"meta": { 
+		"definition": { 
+			"val": "A muscular dystrophy that involves slowly worsening muscle weakness of the legs and pelvis, and has_material_basis_in X-linked recessive inheritance of mutation in the dystrophin gene on chromosome Xp21.", 
+			"xrefs": ["url:https://www.ncbi.nlm.nih.gov/pubmed/19461958", "url:https://www.omim.org/entry/300376"] }, 
+		"comments": ["OMIM mapping confirmed by DO. [SN]."], 
+		"subsets": ["http://purl.obolibrary.org/obo/doid#DO_rare_slim"], 
+		"synonyms": [{
+				 "pred": "hasExactSynonym", 
+				 "val": "Benign pseudohypertrophic muscular dystrophy" }, { 
+					 "pred": "hasExactSynonym", 
+					 "val": "benign congenital myopathy" }],
+		"xrefs": [{ "val": "GARD:5900" }, { "val": "MIM:300376" }, { "val": "ORDO:98895" }, { "val":"SNOMEDCT_US_2023_03_01:111501005" }, { "val": "UMLS_CUI:C0699741" }], 
+		"basicPropertyValues": [{ "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace", "val": "disease_ontology" }] 
+	} 
+}
+
+	{ 
+		"id": "ACTA1", 
+		"lbl": "ACTA1", 
+		"type": "CLASS", 
+		"meta" : { 
+			"definition" : { 
+				"val" : "A CMD congenital muscular dystrophy genetic diagnosis.",
+				"xrefs" : ["url:https://www.ncbi.nlm.nih.gov/gene/59"]
+				},
+			"comments": ["OMIM mapping confirmed by DO. [SN]."],
+			"subsets" : ["http://purl.obolibrary.org/obo/doid#DO_cmd_slim"],
+			"synonyms" : [{ 
+				"pred" : "hasExactSynonym", 
+				"val" : "ACTA1-related congenital myopathy" 
+				}],
+			"xrefs" : [{ "val" : "GARD:0030622" }, { "val" : "MIM:102610" }, { "val" : "ORDO:0050096" }, { "val":"SNOMEDCT_US_2023_03_01:703960004" }, { "val" : "UMLS_CUI:C1854323" }], 
+			"basicPropertyValues" : [{ 
+				"pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace", 
+				"val" : "disease_ontology" 
+				}]			 
+			}, 
+	},
+
+
+

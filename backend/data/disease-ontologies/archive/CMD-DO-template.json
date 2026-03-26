@@ -1,0 +1,44 @@
+{
+  "graphs" : [ {
+	"id" : "http://purl.obolibrary.org/obo/doid/doid-non-classified.owl",
+	"meta" : {
+	  "basicPropertyValues" : [ {
+		"pred" : "http://purl.obolibrary.org/obo/IAO_0000700",
+		"val" : "http://purl.obolibrary.org/obo/DOID_4"
+	  }, {
+		"pred" : "http://purl.org/dc/elements/1.1/description",
+		"val" : "The Disease Ontology has been developed as a standardized ontology for human disease with the purpose of providing the biomedical community with consistent, reusable and sustainable descriptions of human disease terms, phenotype characteristics and related medical vocabulary disease concepts."
+	  }, {
+		"pred" : "http://purl.org/dc/elements/1.1/language",
+		"val" : "en"
+	  }, {
+		"pred" : "http://purl.org/dc/elements/1.1/title",
+		"val" : "Human Disease Ontology"
+	  }, {
+		"pred" : "http://purl.org/dc/terms/license",
+		"val" : "https://creativecommons.org/publicdomain/zero/1.0/"
+	  }, {
+		"pred" : "http://www.geneontology.org/formats/oboInOwl#default-namespace",
+		"val" : "disease_ontology"
+	  }, {
+		"pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBOFormatVersion",
+		"val" : "1.2"
+	  }, {
+		"pred" : "http://www.geneontology.org/formats/oboInOwl#saved-by",
+		"val" : "lschriml"
+	  }, {
+		"pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
+		"val" : "The Disease Ontology content is available via the Creative Commons Public Domain Dedication CC0 1.0 Universal license (https://creativecommons.org/publicdomain/zero/1.0/)."
+	  }, {
+		"pred" : "http://www.w3.org/2002/07/owl#versionInfo",
+		"val" : "2025-03-31"
+	  } ],
+	  "version" : "http://purl.obolibrary.org/obo/doid/releases/2025-03-31/doid-non-classified.owl"
+	},
+	"nodes" : [ { 
+		
+	} ]
+	} ]
+}
+	
+	

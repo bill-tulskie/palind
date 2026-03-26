@@ -11,7 +11,7 @@
 
   /*Background color*/
   #grad1 {
-      background-color: : #9C27B0;
+      background-color: #9C27B0;
       background-image: linear-gradient(120deg, #FF4081, #81D4FA);
   }
 
@@ -274,19 +274,28 @@
 <script>
   // Fetch request to backend with authorization header
   async function palindSubmit(data) {
-    //await new Promise(r => setTimeout(r, 0));
-    const response = await fetch("/v2/submit/",
-      {
-        method: "POST",
-        headers: {
-          "Authorization": "Bearer {{ dataset.api_token }}",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data)
-      }
-    );
-    return await response.json();
+  // BT: for debugging
+  console.log("Submitting data to PALIND:", data);
+  console.log("===========================");
+  console.log("Stringified data:", JSON.stringify(data));  // Fixed typo: "Stringfied" -> "Stringified"
+  console.log("===========================");
+  
+  const response = await fetch("/v2/submit/", {
+    method: "POST",
+    headers: {
+      "Authorization": "Bearer {{ dataset.api_token }}",
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data)
+  });
+  
+  const responseText = await response.text();
+  console.log("Response status:", response.status, "Response text:", responseText);
+  if (!response.ok) {
+    throw new Error(`Server error ${response.status}: ${responseText}`);
   }
+  return JSON.parse(responseText);
+}
 
   const DO_IDS = [{% for id in do_ids %}"{{ id }}", {% endfor %}];
 
@@ -451,38 +460,63 @@
       this.uploading = true;
 
       this.ids = [];
+      let allWarnings = [];
+      
       for (let row of this.rows) {
-        // Tokenize
-        let tokens = await Promise.all(row.map(async (cell, col) => {
-          return await palindTokenize(cell);
-        }));
+        try {
+          // Tokenize
+          let tokens = await Promise.all(row.map(async (cell, col) => {
+            console.log("Tokenizing cell:", cell, "Column:", this.columns[col]);
+            return await palindTokenize(cell);
+          }));
 
-        // Create request
-        let requestData = {};
-        tokens.forEach((token, index) => {
-          if (this.columns[index] === "id") {
-            // Do not upload the ID
-            return;
-          }
-          else if (this.columns[index] === "disease_id") {
-            // Upload the disease ID as is
-            requestData[this.columns[index]] = row[index];
-            return;
-          }
-          else {
-            requestData[this.columns[index] + "_token"] = token.map(bit => bit ? "1" : "0").join("");
-          }
-        });
-        // Submit
-        const response = await palindSubmit(requestData);
+          // Create request
+          let requestData = {};
+          tokens.forEach((token, index) => {
+            if (this.columns[index] === "id") {
+              // Do not upload the ID
+              return;
+            }
+            else if (this.columns[index] === "disease_id") {
+              // Upload the disease ID as is
+              requestData[this.columns[index]] = row[index];
+              return;
+            }
+            else {
+              requestData[this.columns[index] + "_token"] = token.map(bit => bit ? "1" : "0").join("");
+            }
+          });
+          // Submit
 
-        this.ids.push(response.public_id);
+          console.log("**** Calling palindSubmit with:", requestData);
+
+          const response = await palindSubmit(requestData);
+
+          this.ids.push(response.public_id);
+          
+          // Collect warnings from response
+          if (response.warnings && Array.isArray(response.warnings)) {
+            allWarnings = allWarnings.concat(response.warnings);
+          }
+        } catch (error) {
+          console.error("Error uploading row:", error);
+          alert("Error uploading data: " + error.message);
+          this.uploading = false;
+          return; // Stop processing further rows
+        }
         this.tableHeader = this.tableHeader.slice(0, 1);
         this.rowsHtml = this.formatRows();
       }
 
       this.uploading = false;
       this.uploaded = true;
+      
+      // Display warnings if any
+      if (allWarnings.length > 0) {
+        const warningMessage = "The following warnings were encountered during upload:\n\n" + 
+                              allWarnings.map((w, i) => (i + 1) + ". " + w).join("\n\n");
+        alert(warningMessage);
+      }
     },
     downloadIDs() {
       let csvContent = "data:text/csv;charset=utf-8," + "id,palind_id\n" +

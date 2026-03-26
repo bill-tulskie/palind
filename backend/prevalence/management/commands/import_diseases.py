@@ -19,7 +19,7 @@ class Command(BaseCommand):
         # Extract data
         version = graph["meta"]["version"]
         nodes = graph["nodes"]
-        edges = graph["edges"]
+        # edges = graph["edges"]
 
         print(f"Loading version {version}")
 
@@ -27,12 +27,12 @@ class Command(BaseCommand):
         Disease.objects.filter(dataset__isnull=True).delete()
 
         # Get the parent of all edges
-        parents = [edge["obj"] for edge in edges if edge["pred"] == "is_a"]
+        # parents = [edge["obj"] for edge in edges if edge["pred"] == "is_a"]
 
         # Create a disease for each node that is not a parent of any other node
         with transaction.atomic():
             for node in nodes:
-                if node["id"] not in parents:
+                # if node["id"] not in parents:
                     # Do not import deprecated
                     if node.get("meta", {}).get("deprecated", False):
                         continue
@@ -58,3 +58,8 @@ class Command(BaseCommand):
                         do_json=node,
                         **xrefs
                     )
+        print("Diseases imported successfully.")
+        print(f"Total diseases imported: {Disease.objects.count()}")
+        print(f"Version: {version}")
+        print("Disease object attributes:")
+        print(dir(Disease.objects.first()))  # Debugging line to check attributes")

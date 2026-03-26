@@ -1,0 +1,12 @@
+Development Plan:
+
+- Fork code
+- Remove columns from the upload csv file: zip_code_at_birth 	address_at_birth 	state_at_birth 	country_at_birth
+- <test>
+- Add a new clinical diagnosis table to the DB with columns: id, label, clinical_dx_code
+- Create a loader to populate this table from a csv file (clinical_dx.csv)
+- Load the table
+- Create a view of the Clinical Diagnosis Table with sorting and searching and add to the admin dashboard 
+- Add a field called clinical_dx to the upload csv file.  This field will used as is, not be tokenized, similarly to the disease_id field.   
+- When generating palinds, the code should warn via an alert that an unknown clincal_dx value was identified in the upload dataset.  
+- <test>

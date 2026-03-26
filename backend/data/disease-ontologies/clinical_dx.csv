@@ -1,0 +1,195 @@
+label,clinical_dx_code
+ACTA1 Congenital Muscular Dystrophy with rigid spine,acta1_cmd
+ACTA1 Related Cap,cap_acta1
+ACTA1 Related MMD,acta1_mmd
+Actin Aggregation Myopathy ,acta1_cm
+ACTN2 Related Congenital Myopathy,actn2_mscd
+Alpha 7 Integrin Related CMD (ITGA7),itga7_cmd
+Alpha 7 Integrin Related Myopathy (ITGA7),itga7_cm
+alpha-Dystroglycanopathy ,adg_rd
+"Arthrogryposis, distal, type 1A - DA1A (TPM2)",tpm2_da1a_nm
+"Arthrogryposis, distal, type 2B - DA2B (TPM2)",tpm2_da2b_nm
+Autosomal dominant myopathy with proximal muscle weakness and early respiratory (TTN) ,ttn_ad_cm
+"Bethlem Myopathy (BM, BETHLM) ",col6_bethlem
+BIN1 Related CNM,cnm_bin1
+Brody Myopathy (ATP2A1),atp2a1_brody
+CACNA1S Related Myopathy,cacna1s_rm
+Cap myopathy - CAPM1 (TPM3),tpm3_capm1_nm
+Cap myopathy - CAPM2 (TPM2),tpm2_capm2_nm
+Cap Myopathy/Cap Disease ,cap_rd
+"Cardiomyopathy, dilated, 1S - CMD1S",cardiomyopathy_1s
+"Cardiomyopathy, familial hypertrophic, 1, included - CMH1",cardiomyopathy_h1
+"Cardiomyopathy, familial hypertrophic, 9 - CMH9 (TTN)",ttn_cmh9
+CCDC78-Related Centronuclear Myopathy,ccdc78_cnm
+Central Core Disease - CCD ,ccd_rd
+Central Core Disease - CCD (RYR1),ryr1_ccd
+Centronuclear Myopathy - CNM ,cnm_rd
+Centronuclear Myopathy (RYR1),ryr1_cnm
+Centronuclear myopathy related to TTN ,ttn_cnm
+"Charcot-Marie-Tooth disease, axonal, type 2B1 - CMT2B1 (LMNA)",lmna_cmt2b1
+Choline Kinase B Receptor - CHKB ,chkb
+CMH25 (TCAP),tcap_cmh25
+CNM1,cnm_1
+CNTN1-Related Congenital Myopathy,cntn1_rm
+COL12 Related Bethlem Myopathy (BM2),col12_bethlem2
+COL12 Related Ullrich CMD (UCMD2),col12_ullrich2
+COL12a1 Related CMD,col12a1_rd
+Collagen VI Related Disorders ,col6_rd
+Collagen XII Related Disorders ,col12_rd
+Collagen XIII Related Congenital Myasthenic Syndrome ,cms_col13
+Compton-North Congenital Myopathy (MYPCN) ,mypcn
+Congenital Fiber Type Disproportion - CFTD ,cftd_cm
+Congenital Fiber Type Disproportion - CFTD (ACTA1),acta1_nm
+Congenital Fiber Type Disproportion - CFTD (MYH2),myh2_cftd
+Congenital Fiber Type Disproportion - CFTD (RYR1),ryr1_cftd
+Congenital Fiber Type Disproportion - CFTD (SELENON) ,seleonon_cftd
+Congenital Muscle Disease ,congenital_muscle_disease
+Congenital Muscular Dystrophy ,cmd_rd
+Congenital Muscular Dystrophy and abnormal glycosylation of dystroglycan with severe epilepsy ,adg_epilepsy
+Congenital Muscular Dystrophy Not Otherwise Specified (Including Merosin Positive) ,cmd_nos
+Congenital Muscular Dystrophy with cataracts and intellectual disability (MDCCAID) ,cmd_mdccaid
+Congenital Muscular Dystrophy with fatty liver and infantile-onset cataract caused by TRAPPC11 mutations,adg_trappc11
+Congenital Muscular Dystrophy with hypoglycosylation of dystroglycan ,adg_hypoglycosylation
+Congenital Muscular Dystrophy with hypoglycosylation of dystroglycan and epilepsy ,adg_hypoglycosylation_epilepsy
+Congenital Muscular Dystrophy with joint hyperlaxity ,cmd_hyperlaxity
+Congenital Myasthenic Syndrome - CMS ,cms_rd
+Congenital myasthenic syndrome with choline acetyltransferase deficiency - CMS-EA ,cms_ea
+Congenital myasthenic syndrome with endplate acetylcholinesterase deficiency - EAD ,cms_ead
+Congenital Myopathy ,cm_rd
+Congenital Myopathy Not Otherwise Specified ,cm_nos
+Congenital Myopathy with ophthalmopelgia (CACN1S),cacna1s_ophthal_rm
+Congenital Myosclerosis ,col6_myosclerosis
+Core Rod Myopathy ,cr_rd
+DES related Myofibrillar Myopathy (formerly LGMD1E or LGMD2R),des_mfm_lgmd1e_lgmd2r
+Desmin-Related Myopathy with Mallory Bodies ,desmin_cm
+Desmin-Related Myopathy with Mallory Bodies (SELENON) ,selenon_desmin
+Distal motor neuropathy related to SYT2,cms_syt2
+Distal Myopathy ,
+"Distal Myopathy 1, Laing Distal Myopathy - MPD1 (MYH7)",mpd1_cm
+Distal Myopathy 5 - MPD5 (ADSS1/ADSSL1),adss1_mpd5
+DNAJB6 related Myofibrillar Myopathy (formerly LGMD1D),dnajb6_mfm_lgmd1d
+Dusty Core Disease (RYR1),ryr1_dusty_core
+Dynamin 2 CMD/CM,cnm_dnm2
+"Dystroglycanopathy, congenital with or without mental retardation (formerly MDC1C)",adg_mdc1c
+"Ehlers-Danlos Syndrome, Type 2 (FKBP14)",fkbp14_eds_2
+"Emery Dreifuss MD, EDMD ",edmd_rd
+"Emery Dreifuss Muscular Dystrophy 1, X-Linked EDMD1 (EMD)",edmd1_rd
+"Emery Dreifuss Muscular Dystrophy 6, X-Linked EDMD6 (FHL1)",edmd1_fhl1
+"Emery-Dreifuss muscular dystrophy - EDMD2, EDMD3 (LMNA)",lmna_edmd2_3
+Epidermolysis bullosa simplex associated with late-onset muscular dystrophy - MDEBS ,cms_mdebs
+Escobar Syndrome (multiple pterygium syndrome) - EVMPS ,cms_escobar
+Exertional Myalgia with or without Rhabdomyolysis (RYR1),ryr1_myalgia
+Familial limb girdle myasthenia - CMS1B,cms_1b
+Familial limb girdle myasthenia with tubular aggregates - CMSTA ,cms_ta
+FHL1 Related Myopathy,fhl1_cm
+FKBP14-kEDS,fkbp14_keds
+FKBP14-Related Disorders,fkbp14_rd
+Fukuyama CMD ,adg_fukuyama
+GOLGA2-related congenital muscle dystrophy with brain involvement,cmd_golga2
+Hereditary myopathy with early respiratory failure - HMERF (TTN) ,ttn_hmerf
+Hutchinson-Gilford progeria syndrome-HGPS (LMNA) ,lmna_hgps
+Hyaline Body Myopathy ,hyaline_body_cm
+Hypertrophic cardiomyopathy related to cardiac myopalladin - CMH22 (MYPN),cmh22_mypn_nm
+Inclusion Body Myopathy ,inclusion_body_cm
+Inclusion body myopathy with early-onset-paget disease with or without frontoteporal demenia 1 (VCP),inclusion_body_paget_cm
+Intermediate Collagen VI ,col6_intermediate
+Isolated inclusion body myopathy - IBMPFD3 (HNRNPA1),ibmpfd3_hnrnpa1
+Klippel-Feil syndrome with Nemaline myopathy and facial dysmorphism - KFS4 (MYO18B),kfs4_myo18b_nm
+LAMA2-CMD,lama2_cmd
+"LAMA2-CMD (Merosin Deficient, full or partial)",lama2_rd
+Lambert-Eaton Myasthenic Syndrome (LEMS) ,cms_lems
+Laminopathy (Lamin A/C) ,lmna_laminopathy
+Left ventricular noncompaction 4 - LVNC4 (ACTA1),lvnc4_acta1_nm
+Left ventricular noncompaction 5 - LVNC5 (MYH7),myh7_lvnc5_cm
+LGMD related to KBTBD13,lgmd_kbtbd13_nm
+LGMD2G (TCAP),tcap_lgmd2g
+LGMD2J,ttn_lgmd2j
+LGMDD01 - DNAJB6 related (formerly LGMD1D),lgmdd01_dnajb6
+LGMDD05 - Collagen VI related Bethlem Myopathy (dominant),lgmdd05_col6
+LGMDD5 Collagen VI related Bethlem Myopathy (dominant),col6_lgmdd5
+LGMDR07 - Telethonin (TCAP) related (formerly LGMD2G),lgmdr07_tcap
+LGMDR08 - TRIM related (formerly LGMD2H),lgmdr08_trim
+LGMDR09 - FKRP related (formerly LGMD2I),lgmdr09_fkrp
+LGMDR09 FKRP Related (formerly LGMD2I),adg_fkrp_lgmdr09
+LGMDR10 - Titin (TTN) related (formerly LGMD2J),lgmdr10_ttn
+LGMDR10 (Formerly LGMD2J),ttn_lgmdr10
+LGMDR11 - POMT1 related (formerly LGMD2K),lgmdr11_pomt1
+LGMDR11 POMT1 related (formerly LGMD2K),adg_lgmdr11_pomt1
+LGMDR13 - Fukutin (FKTN) related (formerly LGMD2M),lgmdr13_fktn
+LGMDR13 FKTN Related (formerly LGMD2M),adg_lgmdr13_fktn
+LGMDR14 - POMT2 related (formerly LGMD2N),lgmdr14_pomt2
+LGMDR14 POMT2 related (formerly LGMD2N),adg_lgmd14_pomt2
+LGMDR15 - POMGnT1 related (formerly LGMD2O),lgmdr15_pomgnt1
+LGMDR15 POMGnT1 related (formerly LGMD2O),adg_lgmdr15_pomgnt1
+LGMDR16 - DAG1 related Dystroglycanopathy (formerly LGMD2P),lgmdr16_dag1
+LGMDR17 - Plectin (PLEC) related (formerly LGMD2Q),lgmdr17_plec
+LGMDR17 PLEC related (formerly LGMD2Q),plec_lgmdr17
+LGMDR18 - TRAPPC11 related (formerly LGMD2S),lgmdr18_trappc11
+LGMDR19 - GMPPB related (formerly LGMD2T),lgmdr19_gmppb
+LGMDR19 GMPPB Related (formerly LGMD2T),adg_lgmd19_gmppb
+LGMDR19 GMPPB related (formerly LGMD2T/MDDGC14),gmppb_lgmdr19
+LGMDR20 - ISPD related (formerly LGMD2U),lgmdr20_ispd
+LGMDR20 ISPD related (formerly LGMD2U),adg_lgmdr20_ispd
+LGMDR22 - Collagen VI related Bethlem Myopathy (recessive),lgmdr22_col6
+LGMDR22 Collagen VI related Bethlem Myopathy (recessive),col6_lgmdr22
+LGMDR23,lama2_lgmdr23
+LGMDR23 - LAMA2 related,lgmdr23_lama2
+LGMDR24 - POMGnT2 related,lgmdr24_pomgnt2
+LGMDR24 POMGnT2 related,adg_lgmdr24_pomgnt2
+Limb-Girdle Muscular Dystrophy ,lgmd_rd 
+LMNA Related Disorders ,lmna_rd
+LMNA related Emery-Dreifuss MD (EDMD) (formerly LGMD1B),lmna_lgmd1b_edmd
+LMNA/EDMD Related Heart Conditions (LMNA) ,lmna_edmd_heart
+Malignant Hyperthermia susceptibility - MHS1 (RYR1),ryr1_mhs1
+MDC1A,lama2_mdc1a
+Multiminicore Disease (SELENON) ,selenon_mmd
+Multiminicore disease (TTN) ,ttn_mmd
+Multiminicore Myopathy/Multiminicore Disease ,mmd_rd
+Multiple Structured Core Disease (MsCD) ,mscd_rd
+"Muscle-Eye-Brain Disease (MEB, MDDGA14)",adg_meb
+"Myasthenia gravis, familial infantile - FIMG ",cms_fimg
+"Myasthenic syndrome, congenital - CMS1D",cms_1d
+"Myasthenic syndrome, congenital, Ie, included - CMS1E",cms_1e
+"Myasthenic syndrome, fast-channel congenital - FCCMS ",cms_fc
+"Myasthenic syndrome, presynaptic, congenital, with or without motor neuropathy - MYSPC ",cms_myspc
+"Myasthenic syndrome, slow-channel congenital - SCCMS ",cms_sc
+Myofibrillar Myopathy - MFM ,mfm_rd
+Myopathy proximal to ophthalmoplegia (MYH2),myh2_ophthal
+"Myopathy with joint contractures, ophtalmoplegia, and rimmed vacuoles - IBM3 (MYH2)",myh2_ibm3
+Myopathy with nemaline bodies (RYR3),ryr3_nm
+Myosin Storage Congenital Myopathy (MYH7),myh7_cm
+Myosin Storage Myopathy ,myh7_cm
+MYOT related Myofibrillar Myopathy (formerly LGMD1A),myot_mfm_lgmd1a
+"Myotubular Myopathy, X-linked - XLMTM/MTM1",cnm_mtm1
+NEB Related Core Rod ,neb_cr
+Nemaline Myopathy ,nm_rd
+Nemaline Myopathy with Cardiomyopathy (MYO18B),myo18b_cardio_nm
+Nesprin Related CMD (SYNE1),syne1_nesprin
+None of these ,none
+Reducing Body Myopathy ,reducing_body_cm
+Rigid Spine Syndrome - RSS/RSMD1 (SELENON),selenon_rsmd1
+RYR1 Related CCD,ccd_ryr1
+RYR1 Related CNM,cnm_ryr1
+RYR1 Related Disorders,ryr1_rd
+RYR1 Related MMD,ryr1_mmd
+RYR1 Related Myopathy,ryr1_rm
+"Salih myopathy, (Congenital myopathy with fatal cardiomyopathy) ",ttn_salih
+SELENON Related Disorders (previously known as SEPN1),selenon_rd
+SELENON Related Myopathy (aka SEPN1),selenon_rm
+SELENON/SEPN1 Related MMD,selenon_mmd
+Spheroid Body Myopathy ,spheroid_body_rm
+Telethonin CMD (TCAP) ,tcap_telethonin
+"Tibial muscular dystrophy, tardive - TMD (TTN) ",ttn_tmd
+Titin Related Dilated Cardiomyopathy - CMD1G,ttn_dcm_1g
+Titin Related Myopathy ,ttn_rm
+Titinopathy ,titinopathy_rd
+TPM2 Related Cap,cap_tpm2
+TPM3 Related Cap,cap_tpm3
+TTN related CNM ,cnm_ttn
+TTN Related MMD ,ttn_mmd
+Tubular Aggregate Myopathy ,tubular_aggregate_cm
+Ullrich CMD - UCMD ,col6_ullrich
+Unknown ,unknown
+Walker Warburg Syndrome (WWS) ,adg_wws
+X-linked myopathy with excessive autophagy (XMEA/MEAX) ,xmea
+Zebra Body Disease ,zebra_body_cm

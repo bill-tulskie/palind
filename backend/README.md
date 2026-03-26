@@ -8,11 +8,15 @@ You can run the app using Docker or as a development environment.
 
     docker compose up
 
+    
+
 Then, open a browser and visit [http://localhost:8000/dataset/1/upload-csv](http://localhost:8000/dataset/1/upload-csv)
 
 ## Run DB Migrations
 
 Run this command if this is the first time starting a container (OR) you have changed any data models:
+
+python manage.py migrate
 
 Then, visit:
 - Application: http://localhost:8000

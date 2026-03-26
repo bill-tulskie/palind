@@ -1,0 +1,23 @@
+
+Install the SQLite CLI:
+
+apt install sqlite3
+TODO: add to docker compose
+
+SQLite DB data is in 
+
+/palind/backend/data/db.sqlite
+
+> cd /palind/backend/data
+
+> sqlite3  db.sqlite3 or > python manage.py dbshell
+
+then, .tables or .schema
+
+or 
+
+> python manage.py inspectdb
+
+
+
+ 

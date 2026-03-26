@@ -1,0 +1,4 @@
+﻿id,disease_id,first_name,last_name,date_of_birth,middle_name,sex_at_birth,city_at_birth,zip_code_at_birth,address_at_birth,state_at_birth,country_at_birth
+f29cf795-03c9-4eb8-9efe-69b20e536a8d,AAAA,Crystal,Hamilton,1/7/22,Sarah,F,Port Christopherstad,62383,0307 Gina Meadow Apt. 280,TX,UZB
+5b,POLK,Dave,Barajas,9/3/17,,F,Caseychester,5271,897 Melissa Squares,AR,ZAF
+1a,AAAA,Cristy,Hamilton,1/7/22,Sarah,F,Port Christopherstad,62383,0307 Gina Meadow Apt. 280,TX,UZB

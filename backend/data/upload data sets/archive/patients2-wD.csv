@@ -1,0 +1,21 @@
+id,disease_id,first_name,last_name,date_of_birth,middle_name,sex_at_birth,city_at_birth,zip_code_at_birth,address_at_birth,state_at_birth,country_at_birth
+72befd06-d8c5-4d7d-8927-130eb64f7ecb,GNE,Tyrone,Lara,1966-12-23,Tiffany,M,Millsmouth,13627,81709 Robbins Mill Suite 337,UT,JOR
+501ae481-3a1f-48d0-a914-d0415ad581ce,GNE,Kathryn,Santana,2015-09-18,Ashley,M,Hullmouth,26847,95621 Seth Glen,NY,PRK
+73885f70-2af6-4d7c-99b3-718e21af6812,GNE,David,Smith,1919-01-20,Jessica,F,Steeleton,99029,8257 Valerie Groves,WV,SOM
+979f27d2-512a-4586-874a-f88b0f02134d,TTN,Kimberly,Martin,1930-09-21,Breanna,M,Garychester,57375,01623 John Extensions Suite 352,ID,FSM
+f1cf7d4b-7eb2-47e4-b37e-a689ae39ade0,FKTN,Kenneth,Hall,1983-09-10,Mary,F,South Danielfurt,53605,796 Daniel Roads Suite 801,TX,ESP
+c7bcc64b-f02b-4ba7-8256-6edadb2faa58,COLQ,Anna,Wang,1917-05-20,Robert,M,Port Amy,58160,243 Richard Wells,IL,GTM
+4bc4c548-60e3-403d-a90a-99d5bf46f597,COLQ,Cindy,Miller,1964-03-29,Robin,M,East Johnbury,18255,2750 Alejandro Manors,ND,FSM
+20ad9fed-c7bc-4e38-af9f-5e7ea8c4a743,COLQ,Timothy,Torres,2011-03-27,Billy,M,Port Jeffreyborough,04767,29947 Brianna Mountain,AK,KAZ
+a2a9b419-64f9-4e97-92ef-90d26aa984da,COLQ,Carmen,Gill,1918-03-01,James,F,Lake Joshua,04192,7829 Stephanie Keys,FL,MLT
+ae486958-e608-4d9a-8e62-de964bbb6e3e,COLQ,Dana,Miller,1998-05-03,Shari,M,Lake Frederick,41620,747 Luis Mount,MS,ERI
+becd002b-61e8-435a-b3ce-35661caee803,COLQ,Michelle,King,2000-08-08,Jennifer,F,Christianburgh,00829,18461 John Trail,AS,ZWE
+54a25946-2ecc-4e09-a90a-12064c3048c0,COLQ,Christina,Watkins,2023-01-01,Laura,F,Port Eric,94999,87840 Garcia Roads Suite 874,AS,FSM
+63fc1298-5557-4d5e-a42f-bf1af031b806,COLQ,David,Byrd,1989-02-01,Susan,F,Teresastad,72521,25037 Little Springs Suite 569,MD,DEU
+95c791cd-f668-4e79-a74d-f342f7b6a5a7,COLQ,Jason,Cruz,1987-07-30,Cindy,F,South Ann,77422,1755 Petersen Drive,DC,TWN
+acd37d86-7dd2-4e1f-98d8-03281f012759,COLQ,Lisa,Holland,1945-05-18,Elizabeth,M,West Nathanchester,39815,547 Parker Prairie,MO,DMA
+d2d8c0ff-4a29-4296-b229-520004980478,COLQ,Steven,Gregory,2015-10-22,Kathleen,M,Port Marcusberg,86568,0464 Mitchell Inlet Apt. 163,VI,ERI
+ac0e8b6f-857d-4a5e-891b-edddcc2f36a6,COLQ,Cheryl,Santiago,1916-11-10,Joshua,M,South Jamesport,73874,7743 Joe Brooks,DC,BRA
+5d76a067-5d4e-43de-8028-28aff96eea4c,COLQ,Pamela,Diaz,1931-06-25,Bryan,M,New Timothy,24086,182 Kristi Courts Suite 318,AR,ARM
+53d78de6-fe75-411d-96fd-c8fc66d60eb2,COLQ,Christopher,Barron,1968-03-24,Dana,F,Port Rhondaberg,03026,5137 Collins Place Suite 458,IA,CRI
+f29cf795-03c9-4eb8-9efe-69b20e536a8d,AAAA,Crystal,Hamilton,2022-01-07,Sarah,F,Port Christopherstad,62383,0307 Gina Meadow Apt. 280,TX,UZB

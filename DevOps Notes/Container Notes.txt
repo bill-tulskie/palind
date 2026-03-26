@@ -1,0 +1,16 @@
+Install ps using apt-get:
+
+# apt-get update && apt-get install procps 
+TODO: This needs to be redone if the container is rebuilt. Research adding to docker compose.   
+
+Stop and restart the container to stop/restart the Django server
+
+To attach a terminal (iterm or vscode terminal) to the running container: 
+
+> docker exec -it <container ID> sh
+
+e.g. > docker exec -it 6fd2aa1a5fa00adeaba1e0de77adbad98a49a7101988eede210317163c342d3f sh
+
+. . . or start a terminal in the container from docker desktop.
+
+   

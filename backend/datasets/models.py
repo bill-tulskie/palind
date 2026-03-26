@@ -246,7 +246,7 @@ class Submission(models.Model):
         verbose_name="Zip code at birth",
         help_text="Zip code",
     )
-    address_at_bith_token = models.CharField(
+    address_at_birth_token = models.CharField(
         max_length=TOKEN_LENGTH,
         blank=True,
         validators=[validate_token],

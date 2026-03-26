@@ -1,0 +1,13 @@
+id,disease_id,first_name,last_name,date_of_birth,middle_name,sex_at_birth,city_at_birth,zip_code_at_birth,address_at_birth,state_at_birth,country_at_birth
+556ff6b5-04cf-46c5-a591-3c557023fb49,COL12A1,Christopher,Curtsinger,4/17/72 0:00,T,male,Louisville ,,,,
+556ff6b5-04cf-46c5-a591-3c557023fb50,COL12A1,Chris,Curtsinger,4/17/72 0:00,,male,Louisville ,,,,
+556ff6b5-04cf-46c5-a591-3c557023fb51,COL12A1,Christo,Curtsinger,4/17/72 0:00,,male,Louisville ,,,,
+559d3b9c-4f06-4663-b95e-460ef1415b02,STIM1,Mark,Fox,12/13/77 0:00,Joseph,male,Lansing ,,,,
+559d3b9c-4f06-4663-b95e-460ef1415b03,STIM1,Mark,Foxx,12/13/77 0:00,Joe,male,Lansing ,,,,
+559d3b9c-4f06-4663-b95e-460ef1415b04,FLNC,Mark,Fox,12/13/77 0:00,Joseph,male,Lansing ,,,,
+559d3b9c-4f06-4663-b95e-460ef1415b05,STIM1,Bill,Tulskie,2/18/59 0:00,Anthony,male,Philadelphia,,,,
+559d3b9c-4f06-4663-b95e-460ef1415b06,STIM1,Bill,Tulskie,2/18/59 0:00,A,male,Phila,,,,
+559d3b9c-4f06-4663-b95e-460ef1415b07,STIM1,William,Tulskie,2/18/59 0:00,,male,Philly,,,,
+559d3b9c-4f06-4663-b95e-460ef1415b08,STIM1,William,Tulskie,2/18/59 0:00,Anthony,male,Philadelphia,19083,6 colonial road,PA,USA
+559d3b9c-4f06-4663-b95e-460ef1415b09,STIM1,William,Tulskie,2/18/59 0:00,Anthony,male,Philadelphia,19083,6 colonial road,PA,USA
+559d3b9c-4f06-4663-b95e-460ef1415b10,STIM1,William,Tulskie,2/18/59 0:00,Anthony,male,Philadelphia,19083,6 colonial road,PA,USA

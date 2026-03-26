@@ -99,7 +99,7 @@ class PIITokenizer:
         gender="",
         email="",
         city_at_birth="",
-        address_at_bith="",
+        address_at_birth="",
         zip_code_at_birth="",
         abbr_zip_code_at_birth="",
         state_at_birth="",
@@ -128,7 +128,7 @@ class PIITokenizer:
         city_at_birth = self.normalize_name(city_at_birth)
 
         # Fields with allowed numbers
-        address_at_bith = self.normalize(address_at_bith, allow_numbers=True)
+        address_at_birth = self.normalize(address_at_birth, allow_numbers=True)
         zip_code_at_birth = self.normalize(zip_code_at_birth, allow_numbers=True)
         abbr_zip_code_at_birth = self.normalize(
             abbr_zip_code_at_birth, allow_numbers=True

@@ -1,0 +1,11 @@
+id,disease_id,first_name,last_name,date_of_birth,middle_name,sex_at_birth,city_at_birth,zip_code_at_birth,address_at_birth,state_at_birth,country_at_birth
+3-1,AAAA,Crystal,Hamilton,1/7/22,Sarah,F,Port Christopherstad,00000,na,na,na
+3-2,POLK,David,Barajas,9/3/17,,F,Caseychester,00000,na,na,na
+3-3,GNE,Tyrone,Lara,12/23/66,Tiffany,M,Millsmouth,00000,na,na,na
+3-4,GNE,Kathryn,Santana,9/18/15,Ashley,M,Hullmouth,00000,na,na,na
+3-5,GNE,David,Smith,1/20/19,Jessica,F,Steeleton,00000,na,na,na
+3-1a-fn,AAAA,Cristy,Hamilton,1/7/22,Sarah,F,Port Christopherstad,00000,na,na,na
+3-2a-fn-ln,POLK,Dave,Barahas,9/3/17,,F,Caseychester,00000,na,na,na
+3-1b-CMD,AAAA,Crystal,Hamilton,1/7/22,Sarah,F,Port Christopherstad,00000,na,na,na
+3-1c-CMD-fn-mn,AAAA,Cristy,Hamilton,1/7/22,Sara,F,Port Christopherstad,00000,na,na,na
+3-2b-CMD-fn-ln-MN,POLK,Dave,Barahas,9/3/17,,F,Caseychester,00000,na,na,na
