@@ -1,6 +1,6 @@
 Development Plan:
 
-- Fork code
+X Fork code
 - Remove columns from the upload csv file: zip_code_at_birth 	address_at_birth 	state_at_birth 	country_at_birth
 - <test>
 - Add a new clinical diagnosis table to the DB with columns: id, label, clinical_dx_code

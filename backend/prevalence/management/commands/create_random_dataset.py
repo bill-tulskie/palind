@@ -39,10 +39,6 @@ class Command(BaseCommand):
             "middle_name",
             "sex_at_birth",
             "city_at_birth",
-            "zip_code_at_birth",
-            "address_at_birth",
-            "state_at_birth",
-            "country_at_birth",
         ]
 
         rows = []
@@ -66,11 +62,6 @@ class Command(BaseCommand):
                         faker.first_name(),
                         np.random.choice(["M", "F"]),
                         faker.city(),
-                     #   faker.zipcode(),
-                        faker.zipcode()[:5],
-                        faker.street_address(),
-                        faker.state_abbr(),
-                        faker.country_code(representation="alpha-3"),
                     )
                 )
 

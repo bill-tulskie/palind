@@ -222,10 +222,7 @@ class SubmitView(View):
             last_name_soundex_token=data.get("last_name_soundex_token", ""),
             sex_at_birth_token=data.get("sex_at_birth_token", ""),
             date_of_birth_token=data.get("date_of_birth_token", ""),
-            address_at_birth_token=data.get("address_at_birth_token", ""),
             city_at_birth_token=data.get("city_at_birth_token", ""),
-            state_at_birth_token=data.get("state_at_birth_token", ""),
-            country_at_birth_token=data.get("country_at_birth_token", ""),
         )
 
         # Search if there is any similar patient and create one if not

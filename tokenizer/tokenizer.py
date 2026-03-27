@@ -18,10 +18,6 @@ EPSILONS = {
     "former_name": 3.0,
     "sex_at_birth": 0.2,
     "city_at_birth": 3.0,
-    "address_at_birth": 3.0,
-    "zip_code_at_birth": 0.4,
-    "state_at_birth": 0.2,
-    "country_at_birth": 0.2,
     "parent1_first_name": 3.0,
     "parent1_last_name": 3.0,
     "parent1_full_name": 3.0,
@@ -99,11 +95,6 @@ class PIITokenizer:
         gender="",
         email="",
         city_at_birth="",
-        address_at_birth="",
-        zip_code_at_birth="",
-        abbr_zip_code_at_birth="",
-        state_at_birth="",
-        country_at_birth="",
         # Parental information
         parent1_first_name="",
         parent1_last_name="",
@@ -127,13 +118,6 @@ class PIITokenizer:
         gender = self.normalize_name(gender)
         city_at_birth = self.normalize_name(city_at_birth)
 
-        # Fields with allowed numbers
-        address_at_birth = self.normalize(address_at_birth, allow_numbers=True)
-        zip_code_at_birth = self.normalize(zip_code_at_birth, allow_numbers=True)
-        abbr_zip_code_at_birth = self.normalize(
-            abbr_zip_code_at_birth, allow_numbers=True
-        )
-
         # Emails are just striped from whitespace
         email = email.strip()
         parent1_email = parent1_email.strip()
@@ -152,12 +136,6 @@ class PIITokenizer:
 
         if date_of_birth:
             date_of_birth = self.normalize_date_of_birth(date_of_birth)
-
-        if country_at_birth:
-            self._validate_country(country_at_birth)
-
-        if state_at_birth:
-            self._validate_state(state_at_birth)
 
         #
         # Create derived fields
@@ -274,15 +252,7 @@ class PIITokenizer:
         gender_token = self._tokenize("gender", [gender])
 
         # Location at birth
-        country_at_birth_token = self._tokenize("country_at_birth", [country_at_birth])
-        state_at_birth_token = self._tokenize("state_at_birth", [state_at_birth])
         city_at_birth_token = self._tokenize("city_at_birth", expand(city_at_birth))
-        zip_code_at_birth_token = self._tokenize(
-            "zip_code_at_birth", [zip_code_at_birth]
-        )
-        abbr_zip_code_at_birth_token = self._tokenize(
-            "abbr_zip_code_at_birth", [abbr_zip_code_at_birth]
-        )
 
         # Date of birth
         date_of_birth_token = self._tokenize("date_of_birth", [date_of_birth])
@@ -296,11 +266,7 @@ class PIITokenizer:
             "last_name_soundex_token": last_name_soundex_token,
             "email_token": email_token,
             "gender_token": gender_token,
-            "country_at_birth_token": country_at_birth_token,
-            "state_at_birth_token": state_at_birth_token,
             "city_at_birth_token": city_at_birth_token,
-            "zip_code_at_birth_token": zip_code_at_birth_token,
-            "abbr_zip_code_at_birth_token": abbr_zip_code_at_birth_token,
             "date_of_birth_token": date_of_birth_token,
             # Parental information
             "parent1_first_name_token": parent1_first_name_token,

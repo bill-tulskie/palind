@@ -55,8 +55,7 @@ class Command(BaseCommand):
     def transform_data(self, data, input_headers):
         output_columns = [
             "id", "disease_id", "first_name", "last_name", "date_of_birth",
-            "middle_name", "sex_at_birth", "city_at_birth", "zip_code_at_birth",
-            "address_at_birth", "state_at_birth", "country_at_birth"
+            "middle_name", "sex_at_birth", "city_at_birth"
         ]
 
         # Required input fields (middle name is optional)

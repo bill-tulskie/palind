@@ -239,34 +239,6 @@ class Submission(models.Model):
         verbose_name="City at birth",
         help_text="City name",
     )
-    zip_code_at_birth_token = models.CharField(
-        max_length=TOKEN_LENGTH,
-        blank=True,
-        validators=[validate_token],
-        verbose_name="Zip code at birth",
-        help_text="Zip code",
-    )
-    address_at_birth_token = models.CharField(
-        max_length=TOKEN_LENGTH,
-        blank=True,
-        validators=[validate_token],
-        verbose_name="Address at birth",
-        help_text="Street address",
-    )
-    state_at_birth_token = models.CharField(
-        max_length=TOKEN_LENGTH,
-        blank=True,
-        validators=[validate_token],
-        verbose_name="State at birth",
-        help_text="ISO 3166-2",
-    )
-    country_at_birth_token = models.CharField(
-        max_length=TOKEN_LENGTH,
-        blank=True,
-        validators=[validate_token],
-        verbose_name="Country at birth",
-        help_text="ISO 3166-1 alpha-3",
-    )
 
     def __str__(self):
         try:

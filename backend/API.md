@@ -17,4 +17,4 @@
     curl "$SUBMIT_URL" \
     -X POST \
     -H "Authorization: Bearer $DATASET_TOKEN" \
-    --data-raw '{"first_name_token":"$SAMPLE","last_name_token":"$SAMPLE","date_of_birth_token":"$SAMPLE","sex_at_birth_token":"$SAMPLE","disease_id":"$DISEASE_ID","middle_name_token":"$SAMPLE","city_at_birth_token":"$SAMPLE","state_at_birth_token":"$SAMPLE","country_at_birth_token":"$SAMPLE"}'
+    --data-raw '{"first_name_token":"$SAMPLE","last_name_token":"$SAMPLE","date_of_birth_token":"$SAMPLE","sex_at_birth_token":"$SAMPLE","disease_id":"$DISEASE_ID","middle_name_token":"$SAMPLE","city_at_birth_token":"$SAMPLE"}'
