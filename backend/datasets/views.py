@@ -59,7 +59,7 @@ class DatasetDetailView(AccessibleDatasetsMixin, DetailView):
 class DatasetCreateView(LoginRequiredMixin, CreateView):
     model = Dataset
     template_name = "dashboard/dataset_create.html"
-    fields = ["name", "description", "tags", "source"]
+    fields = ["name", "description", "palind_prefix", "tags", "source"]
 
     def dispatch(self, request, *args, **kwargs):
         if request.user.is_prevalence_counting_user:
@@ -70,13 +70,16 @@ class DatasetCreateView(LoginRequiredMixin, CreateView):
         form.instance.public = True  # TODO: remove this
         form.instance.created_by = self.request.user
         form.instance.organization = self.request.user.organization
+        # Set default palind_prefix to dataset name if not provided
+        if not form.instance.palind_prefix:
+            form.instance.palind_prefix = form.instance.name
         return super().form_valid(form)
 
 
 class DatasetUpdateView(AccessibleDatasetsMixin, UpdateView):
     model = Dataset
     template_name = "dashboard/dataset_update.html"
-    fields = ["name", "description", "tags", "source"]
+    fields = ["name", "description", "palind_prefix", "tags", "source"]
 
     def form_valid(self, form):
         form.instance.public = True  # TODO: remove this

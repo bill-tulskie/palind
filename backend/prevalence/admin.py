@@ -2,7 +2,14 @@ from django.contrib import admin
 from django.urls import reverse
 from django.utils.html import format_html
 
-from .models import Disease, URLSource, GlobalStats, DiseaseStats, PatientsBySource
+from .models import (
+    ClinicalDiagnosis,
+    Disease,
+    URLSource,
+    GlobalStats,
+    DiseaseStats,
+    PatientsBySource,
+)
 
 
 class URLSourceAdmin(admin.ModelAdmin):
@@ -38,7 +45,13 @@ class DiseaseAdmin(admin.ModelAdmin):
     search_fields = ["do_json"]
 
 
+class ClinicalDiagnosisAdmin(admin.ModelAdmin):
+    list_display = ("id", "label", "clinical_dx_code")
+    search_fields = ("label", "clinical_dx_code")
+
+
 admin.site.register(Disease, DiseaseAdmin)
+admin.site.register(ClinicalDiagnosis, ClinicalDiagnosisAdmin)
 admin.site.register(URLSource, URLSourceAdmin)
 admin.site.register(GlobalStats, GlobalStatsAdmin)
 admin.site.register(DiseaseStats, DiseaseStatsAdmin)

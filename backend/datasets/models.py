@@ -78,6 +78,8 @@ class Dataset(models.Model):
 
     public = models.BooleanField(default=True)
 
+    palind_prefix = models.CharField(max_length=200, blank=True, help_text="Prefix used for PALIND identifiers")
+
     organization = models.ForeignKey(
         "accounts.Organization", on_delete=models.CASCADE, null=True, blank=True
     )
@@ -86,6 +88,12 @@ class Dataset(models.Model):
     api_token = models.CharField(max_length=36, default=uuid.uuid4, editable=False)
 
     to_delete = models.BooleanField(default=False)
+
+    def save(self, *args, **kwargs):
+        # Set default palind_prefix to dataset name if not provided
+        if not self.palind_prefix:
+            self.palind_prefix = self.name
+        super().save(*args, **kwargs)
 
     def __str__(self):
         return self.name
@@ -115,7 +123,14 @@ class PublicID(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
 
     def url(self):
-        return f"patientids.com/{self.id}"
+        # Get the dataset prefix through the reverse relationship
+        try:
+            dataset_patient = self.datasetpatient
+            prefix = dataset_patient.dataset.palind_prefix or dataset_patient.dataset.name
+            return f"{prefix}/{self.id}"
+        except:
+            # Fallback for cases where the relationship doesn't exist yet
+            return f"patientids.com/{self.id}"
 
     def __str__(self):
         return self.url()

@@ -26,6 +26,13 @@
                 </div>
             </div>
             <div class="mb-4 row">
+                <label class="col-form-label col-sm-2 text-sm-end">PALIND Prefix</label>
+                <div class="col-sm-10">
+                    <input class="form-control" type="text" name="palind_prefix" maxlength="200" id="id_palind_prefix" value="{{ dataset.palind_prefix }}" placeholder="Leave blank to use dataset name">
+                    <small class="form-text text-muted">Prefix used for PALIND identifiers. Defaults to dataset name if left blank.</small>
+                </div>
+            </div>
+            <div class="mb-4 row">
                 <label class="col-form-label col-sm-2 text-sm-end">Tags</label>
                 <div class="col-sm-10">
                     <select name="tags" multiple="" class="form-control">

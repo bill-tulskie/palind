@@ -1,3 +1,7 @@
+
+To restart django
+# python manage.py runserver
+
 The backend folder contains a prevalence folder and a datasets folder.  Each has a migrations folder.
 
 from (venv) # prompt while in (cd'd to) backend directory 
@@ -7,8 +11,6 @@ To run migrations on a specific app e.g. prevalence or datasets:
 
 To run all migrations:
 (venv) # python manage.py migrate
-
-
 
 Example of truncating corrupted tables:
 

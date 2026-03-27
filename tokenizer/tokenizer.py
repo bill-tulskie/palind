@@ -18,14 +18,6 @@ EPSILONS = {
     "former_name": 3.0,
     "sex_at_birth": 0.2,
     "city_at_birth": 3.0,
-    "parent1_first_name": 3.0,
-    "parent1_last_name": 3.0,
-    "parent1_full_name": 3.0,
-    "parent1_email": 3.0,
-    "parent2_first_name": 3.0,
-    "parent2_last_name": 3.0,
-    "parent2_full_name": 3.0,
-    "parent2_email": 3.0,
 }
 
 
@@ -95,13 +87,6 @@ class PIITokenizer:
         gender="",
         email="",
         city_at_birth="",
-        # Parental information
-        parent1_first_name="",
-        parent1_last_name="",
-        parent1_email="",
-        parent2_first_name="",
-        parent2_last_name="",
-        parent2_email="",
     ):
         #
         # Normalize names
@@ -111,17 +96,11 @@ class PIITokenizer:
         middle_name = self.normalize_name(middle_name)
         last_name = self.normalize_name(last_name)
         former_name = self.normalize_name(former_name)
-        parent1_first_name = self.normalize_name(parent1_first_name)
-        parent1_last_name = self.normalize_name(parent1_last_name)
-        parent2_first_name = self.normalize_name(parent2_first_name)
-        parent2_last_name = self.normalize_name(parent2_last_name)
         gender = self.normalize_name(gender)
         city_at_birth = self.normalize_name(city_at_birth)
 
         # Emails are just striped from whitespace
         email = email.strip()
-        parent1_email = parent1_email.strip()
-        parent2_email = parent2_email.strip()
 
         #
         # Validate input fields
@@ -145,9 +124,6 @@ class PIITokenizer:
         first_name_soundex = soundex(first_name)
         last_name_soundex = soundex(last_name)
 
-        parent1_full_name = self.normalize(f"{parent1_first_name}{parent1_last_name}")
-        parent2_full_name = self.normalize(f"{parent2_first_name}{parent2_last_name}")
-
         #
         # Tokenize
         #
@@ -157,29 +133,9 @@ class PIITokenizer:
         middle_name_token = self._tokenize("middle_name", expand(middle_name))
         last_name_token = self._tokenize("last_name", expand(last_name))
         full_name_token = self._tokenize("full_name", expand(full_name))
-        parent1_first_name_token = self._tokenize(
-            "parent1_first_name", expand(parent1_first_name)
-        )
-        parent1_last_name_token = self._tokenize(
-            "parent1_last_name", expand(parent1_last_name)
-        )
-        parent2_first_name_token = self._tokenize(
-            "parent2_first_name", expand(parent2_first_name)
-        )
-        parent2_last_name_token = self._tokenize(
-            "parent2_last_name", expand(parent2_last_name)
-        )
-        parent1_full_name_token = self._tokenize(
-            "parent1_full_name", expand(parent1_full_name)
-        )
-        parent2_full_name_token = self._tokenize(
-            "parent2_full_name", expand(parent2_full_name)
-        )
 
         # Emails are not expanded
         email_token = self._tokenize("email", [email])
-        parent1_email_token = self._tokenize("parent1_email", [parent1_email])
-        parent2_email_token = self._tokenize("parent2_email", [parent2_email])
 
         # Soundex
         first_name_soundex_token = self._tokenize(
@@ -187,65 +143,6 @@ class PIITokenizer:
         )
         last_name_soundex_token = self._tokenize(
             "last_name_soundex", [last_name_soundex]
-        )
-        parent1_first_name_soundex_token = self._tokenize(
-            "parent1_first_name_soundex", [soundex(parent1_first_name)]
-        )
-        parent1_last_name_soundex_token = self._tokenize(
-            "parent1_last_name_soundex", [soundex(parent1_last_name)]
-        )
-        parent2_first_name_soundex_token = self._tokenize(
-            "parent2_first_name_soundex", [soundex(parent2_first_name)]
-        )
-        parent2_last_name_soundex_token = self._tokenize(
-            "parent2_last_name_soundex", [soundex(parent2_last_name)]
-        )
-
-        middle_name_token = self._tokenize("middle_name", expand(middle_name))
-        last_name_token = self._tokenize("last_name", expand(last_name))
-        full_name_token = self._tokenize("full_name", expand(full_name))
-        parent1_first_name_token = self._tokenize(
-            "parent1_first_name", expand(parent1_first_name)
-        )
-        parent1_last_name_token = self._tokenize(
-            "parent1_last_name", expand(parent1_last_name)
-        )
-        parent2_first_name_token = self._tokenize(
-            "parent2_first_name", expand(parent2_first_name)
-        )
-        parent2_last_name_token = self._tokenize(
-            "parent2_last_name", expand(parent2_last_name)
-        )
-        parent1_full_name_token = self._tokenize(
-            "parent1_full_name", expand(parent1_full_name)
-        )
-        parent2_full_name_token = self._tokenize(
-            "parent2_full_name", expand(parent2_full_name)
-        )
-
-        # Emails are not expanded
-        email_token = self._tokenize("email", [email])
-        parent1_email_token = self._tokenize("parent1_email", [parent1_email])
-        parent2_email_token = self._tokenize("parent2_email", [parent2_email])
-
-        # Soundex
-        first_name_soundex_token = self._tokenize(
-            "first_name_soundex", [first_name_soundex]
-        )
-        last_name_soundex_token = self._tokenize(
-            "last_name_soundex", [last_name_soundex]
-        )
-        parent1_first_name_soundex_token = self._tokenize(
-            "parent1_first_name_soundex", [soundex(parent1_first_name)]
-        )
-        parent1_last_name_soundex_token = self._tokenize(
-            "parent1_last_name_soundex", [soundex(parent1_last_name)]
-        )
-        parent2_first_name_soundex_token = self._tokenize(
-            "parent2_first_name_soundex", [soundex(parent2_first_name)]
-        )
-        parent2_last_name_soundex_token = self._tokenize(
-            "parent2_last_name_soundex", [soundex(parent2_last_name)]
         )
 
         # Gender
@@ -268,19 +165,6 @@ class PIITokenizer:
             "gender_token": gender_token,
             "city_at_birth_token": city_at_birth_token,
             "date_of_birth_token": date_of_birth_token,
-            # Parental information
-            "parent1_first_name_token": parent1_first_name_token,
-            "parent1_last_name_token": parent1_last_name_token,
-            "parent1_full_name_token": parent1_full_name_token,
-            "parent1_first_name_soundex_token": parent1_first_name_soundex_token,
-            "parent1_last_name_soundex_token": parent1_last_name_soundex_token,
-            "parent1_email_token": parent1_email_token,
-            "parent2_first_name_token": parent2_first_name_token,
-            "parent2_last_name_token": parent2_last_name_token,
-            "parent2_full_name_token": parent2_full_name_token,
-            "parent2_first_name_soundex_token": parent2_first_name_soundex_token,
-            "parent2_last_name_soundex_token": parent2_last_name_soundex_token,
-            "parent2_email_token": parent2_email_token,
         }
 
     def submit(self, url, dataset_api_token, token):

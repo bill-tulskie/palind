@@ -1,21 +1,26 @@
+After attaching terminal to docker container ...
+
+To restart django
+# python manage.py runserver 
+
 To set up a Python virtual environment in palind/backend or /app (docker container):
 
-> python -m venv venv
+# python -m venv venv
  or
-> python3 -m venv venv
+# python3 -m venv venv
 
   then
 
-> source venv/bin/activate (for BASH)
+# source venv/bin/activate (for BASH)
   or
-> . venv/bin/activate (for docker container / POSIX)
+# . venv/bin/activate (for docker container / POSIX)
 
 Check activation with 
-> which python
+(venv) # which python
 
 Then install dependencies with:
 
-> pip install -r requirements.txt
+(venv) # pip install -r requirements.txt
 
 To return from virtual environment (venv)
 (venv) # deactivate

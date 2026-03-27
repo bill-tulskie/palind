@@ -64,6 +64,14 @@ class Disease(models.Model):
         return self.name
 
 
+class ClinicalDiagnosis(models.Model):
+    label = models.CharField(max_length=255)
+    clinical_dx_code = models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.label
+
+
 class URLSource(models.Model):
     disease = models.ForeignKey(Disease, on_delete=models.CASCADE)
 
