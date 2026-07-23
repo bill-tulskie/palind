@@ -1,7 +1,8 @@
 After attaching terminal to docker container ...
 
 To restart django
-# python manage.py runserver 
+# cd /Users/bill/Projects/GitHub/palind
+# python manage.py runserver
 
 To set up a Python virtual environment in palind/backend or /app (docker container):
 
@@ -11,11 +12,13 @@ To set up a Python virtual environment in palind/backend or /app (docker contain
 
   then
 
+# cd /Users/bill/Projects/GitHub/palind
 # source venv/bin/activate (for BASH)
   or
-# . venv/bin/activate (for docker container / POSIX)
+% cd /Users/bill/Projects/GitHub/palind
+% . venv/bin/activate (for docker container / POSIX)
 
-Check activation with 
+Check activation with
 (venv) # which python
 
 Then install dependencies with:
@@ -30,8 +33,3 @@ To launch the python shell:
 
 To exit the python shell:
 >>> exit()
-
-
-
-
-

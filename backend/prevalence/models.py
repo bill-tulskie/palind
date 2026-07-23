@@ -64,12 +64,22 @@ class Disease(models.Model):
         return self.name
 
 
-class ClinicalDiagnosis(models.Model):
-    label = models.CharField(max_length=255)
-    clinical_dx_code = models.CharField(max_length=200)
+class ClinicalDX(models.Model):
+    umbrella = models.CharField(max_length=255, blank=True)
+    gene = models.CharField(max_length=255, blank=True)
+    subtype = models.CharField(max_length=255, blank=True)
+    label = models.CharField(max_length=255, blank=True)
+    clinical_classification = models.CharField(max_length=255, blank=True)
+    clinical_dx_code = models.CharField(max_length=255, blank=True)
+
+    class Meta:
+        verbose_name = "Clinical DX"
+        verbose_name_plural = "Clinical DX"
+        ordering = ["umbrella", "gene", "subtype", "label"]
+        unique_together = (("umbrella", "gene", "subtype", "clinical_dx_code"),)
 
     def __str__(self):
-        return self.label
+        return self.label or self.clinical_dx_code
 
 
 class URLSource(models.Model):
@@ -104,16 +114,42 @@ class DiseaseStats(models.Model):
         verbose_name_plural = "  Disease Stats"
 
 
+class ClinicalClassificationStats(models.Model):
+    global_stats = models.ForeignKey(GlobalStats, on_delete=models.CASCADE)
+    disease = models.ForeignKey(Disease, on_delete=models.CASCADE)
+
+    clinical_classification = models.CharField(max_length=255, blank=True)
+
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    n_contributors = models.PositiveIntegerField(default=0)
+    n_patients = models.PositiveIntegerField(default=0)
+
+    confidence = models.CharField(
+        max_length=20, choices=[("low", "low"), ("medium", "medium"), ("high", "high")]
+    )
+
+    class Meta:
+        verbose_name = " Clinical Classification Stats"
+        verbose_name_plural = " Clinical Classification Stats"
+
+
 def count_diseases_prevalence():
     patients = collections.defaultdict(list)
     unique_patients = collections.defaultdict(list)
     contributors = collections.defaultdict(set)
     sources = collections.defaultdict(int)
+    classifications = collections.defaultdict(lambda: collections.defaultdict(list))
 
     for p in DatasetPatient.objects.all():
         submission = p.submission_set.last()
         if submission and submission.disease:
             patients[submission.disease].append(submission)
+            # Track clinical_classification instances per disease
+            cc = (submission.clinical_classification or "").strip()
+            if cc:
+                classifications[submission.disease][cc].append(submission)
 
     disease_stats = []
     for disease_name, disease_patients in patients.items():
@@ -134,6 +170,25 @@ def count_diseases_prevalence():
                 confidence="low",  # TODO
             )
         )
+
+        # For each clinical classification within this disease, compute stats
+        for cc_label, cc_submissions in classifications.get(disease_name, {}).items():
+            cc_contributors = set()
+            cc_unique_patients = []
+            for s in cc_submissions:
+                cc_contributors.add(s.dataset.created_by.organization.pk)
+                if not any(are_similar(s, up) for up in cc_unique_patients):
+                    cc_unique_patients.append(s)
+
+            # Create ClinicalClassificationStats instance (to be saved later)
+            classification_stat = ClinicalClassificationStats(
+                disease=disease,
+                clinical_classification=cc_label,
+                n_contributors=len(cc_contributors),
+                n_patients=len(cc_unique_patients),
+                confidence="low",
+            )
+            disease_stats.append(classification_stat)
 
     global_stats = GlobalStats.objects.create(
         n_diseases=len(unique_patients),

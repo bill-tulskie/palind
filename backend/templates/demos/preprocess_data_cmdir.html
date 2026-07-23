@@ -1,0 +1,701 @@
+{% extends "dashboard/base.html" %}
+
+{% block extra_head %}
+  <title>PALIND Preprocess CMDIR Data</title>
+  <style>
+    .demo-wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .table-wrap {
+      max-height: 420px;
+      overflow: auto;
+    }
+
+    .mono {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 0.9rem;
+    }
+
+    .expected-columns-table,
+    .expected-columns-table th,
+    .expected-columns-table td {
+      border: 1px solid #000;
+      background-color: #fff;
+    }
+
+    .expected-columns-table > thead > tr > th {
+      border-color: #000 !important;
+    }
+  </style>
+{% endblock extra_head %}
+
+{% block content %}
+  {{ clinical_dx_values|json_script:"clinical-dx-values" }}
+  {{ submit_api_token|json_script:"submit-api-token" }}
+  {{ submit_dataset_name|json_script:"submit-dataset-name" }}
+
+  <div class="demo-wrap">
+    <h1 class="h3 mb-3">Preprocess CMDIR Data</h1>
+    <p class="text-muted mb-4">
+      Upload a CSV exported from the CMD International Registry (CMDIR) to generate
+      in-memory output rows and review skipped/no-profile records.
+    </p>
+
+    <button
+      type="button"
+      id="expected-columns-toggle"
+      class="btn btn-outline-secondary btn-sm mb-3"
+      onclick="toggleExpectedColumns()"
+      aria-expanded="false"
+      aria-controls="expected-cmdir-columns"
+    >
+      Show Details
+    </button>
+
+    <div id="expected-cmdir-columns" class="alert alert-info mb-4 p-4" role="alert" style="display: none;">
+      <p class="mb-2"><strong>Expected CMDIR Input Columns</strong></p>
+      <table class="table table-sm mb-0 expected-columns-table">
+        <thead>
+          <tr>
+            <th>Required</th>
+            <th>Optional</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <ul class="mb-0 mono">
+                <li>uid</li>
+                <li>field_city_of_birth</li>
+                <li>field_date_of_birth</li>
+                <li>field_account_first_name</li>
+                <li>field_gender_at_birth</li>
+                <li>field_diagnosis_gene</li>
+                <li>field_account_last_name</li>
+              </ul>
+            </td>
+            <td>
+              <ul class="mb-0 mono">
+                <li>field_account_middle_name</li>
+                <li>field_clinical</li>
+                <li>ownerId</li>
+                <li>mail</li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card mb-4">
+      <div class="card-body">
+        <label for="csv-input" class="form-label"><strong>Input CSV</strong></label>
+        <input id="csv-input" type="file" accept=".csv" class="form-control" />
+      </div>
+    </div>
+
+    <div id="status"></div>
+
+    <div id="results" style="display: none;">
+      <div class="row g-3 mb-4">
+        <div class="col-md-3">
+          <div class="card"><div class="card-body"><div class="text-muted">Processed</div><div id="n-processed" class="h4 mb-0"></div></div></div>
+        </div>
+        <div class="col-md-3">
+          <div class="card"><div class="card-body"><div class="text-muted">Output Rows</div><div id="n-valid" class="h4 mb-0"></div></div></div>
+        </div>
+        <div class="col-md-3">
+          <div class="card"><div class="card-body"><div class="text-muted">Skipped</div><div id="n-skipped" class="h4 mb-0"></div></div></div>
+        </div>
+        <div class="col-md-3">
+          <div class="card"><div class="card-body"><div class="text-muted">Curated City Records</div><div id="n-curated-city" class="h4 mb-0"></div></div></div>
+        </div>
+      </div>
+
+      <div id="missing-fields" class="alert alert-warning" style="display: none;"></div>
+      <div id="skip-reasons" class="alert alert-info" style="display: none;"></div>
+
+      <h2 class="h5 mt-4">Output Array (Equivalent to --out/--json)</h2>
+      <div class="table-wrap mb-4 preprocess-table-container">
+        <table class="table table-sm table-striped table-bordered mono preprocess-table" id="valid-table"></table>
+      </div>
+      <div class="mb-3">
+        <div class="text-muted small mb-2" id="generate-target-dataset" style="display: none;"></div>
+        <button
+          type="button"
+          id="generate-output-array"
+          class="btn btn-primary"
+          onclick="generateFromOutputArray()"
+        >
+          <i class="fa fa-cogs" aria-hidden="true"></i>
+          &nbsp;
+          Generate PALINDs from Output Array
+        </button>
+      </div>
+
+      <div id="generated-palinds-section" class="mt-4" style="display: none;">
+        <h2 class="h5">Generated PALIND Results</h2>
+        <div class="table-wrap preprocess-table-container">
+          <table class="table table-sm table-striped table-bordered mono preprocess-table" id="generated-palinds-table"></table>
+        </div>
+        <div id="generate-upload-status" class="mt-3" style="display: none;">
+          <div id="generate-upload-alert" class="alert" role="alert"></div>
+          <button
+            type="button"
+            id="download-generated-mapping"
+            class="btn btn-primary"
+            onclick="downloadGeneratedMapping()"
+            style="display: none;"
+          >
+            <i class="fa fa-download" aria-hidden="true"></i>
+            &nbsp;
+            Download the mapping ID <-> PALIND ID
+          </button>
+        </div>
+      </div>
+
+      <button
+        type="button"
+        id="curated-city-toggle"
+        class="btn btn-outline-secondary btn-sm mt-4 mb-2 btn-preprocess"
+        onclick="toggleTableSection('curated-city-toggle', 'curated-city-section', 'Curated City at Birth Records')"
+        aria-expanded="false"
+        aria-controls="curated-city-section"
+      >
+        Show Curated City at Birth Records
+      </button>
+      <div id="curated-city-section" class="table-wrap mb-4 preprocess-table-container" style="display: none;">
+        <table class="table table-sm table-striped table-bordered mono preprocess-table" id="curated-city-table"></table>
+      </div>
+
+      <button
+        type="button"
+        id="missing-required-toggle"
+        class="btn btn-outline-secondary btn-sm mt-4 mb-2 btn-preprocess"
+        onclick="toggleTableSection('missing-required-toggle', 'missing-required-section', 'Missing Required Fields')"
+        aria-expanded="false"
+        aria-controls="missing-required-section"
+      >
+        Show Missing Required Fields
+      </button>
+      <div id="missing-required-section" class="table-wrap preprocess-table-container" style="display: none;">
+        <table class="table table-sm table-striped table-bordered mono preprocess-table" id="missing-required-table"></table>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    {% include "tokenize.js" %}
+
+    function toggleExpectedColumns() {
+      const details = document.getElementById("expected-cmdir-columns");
+      const button = document.getElementById("expected-columns-toggle");
+      const isOpen = details.style.display !== "none";
+
+      details.style.display = isOpen ? "none" : "block";
+      button.setAttribute("aria-expanded", isOpen ? "false" : "true");
+      button.textContent = isOpen ? "Show Details" : "Hide Details";
+    }
+
+    function toggleTableSection(buttonId, sectionId, title) {
+      const section = document.getElementById(sectionId);
+      const button = document.getElementById(buttonId);
+      const isOpen = section.style.display !== "none";
+
+      section.style.display = isOpen ? "none" : "block";
+      button.setAttribute("aria-expanded", isOpen ? "false" : "true");
+      button.textContent = (isOpen ? "Show " : "Hide ") + title;
+    }
+
+    const OUTPUT_COLUMNS = [
+      "id",
+      "disease_id",
+      "first_name",
+      "last_name",
+      "date_of_birth",
+      "middle_name",
+      "sex_at_birth",
+      "city_at_birth",
+      "clinical_classification",
+    ];
+
+    const REQUIRED_INPUT_FIELDS = [
+      "field_city_of_birth",
+      "field_date_of_birth",
+      "field_account_first_name",
+      "field_gender_at_birth",
+      "field_diagnosis_gene",
+      "field_account_last_name",
+    ];
+
+    const MAPPING = {
+      uid: "id",
+      field_diagnosis_gene: "disease_id",
+      field_account_first_name: "first_name",
+      field_account_last_name: "last_name",
+      field_date_of_birth: "date_of_birth",
+      field_account_middle_name: "middle_name",
+      field_gender_at_birth: "sex_at_birth",
+    };
+
+    const submitApiToken = JSON.parse(
+      document.getElementById("submit-api-token").textContent || '""'
+    );
+    const submitDatasetName = JSON.parse(
+      document.getElementById("submit-dataset-name").textContent || '""'
+    );
+    let latestValidRows = [];
+    let generatedIdMapping = [];
+
+    function renderGenerateTargetLabel() {
+      const label = document.getElementById("generate-target-dataset");
+      if (!submitApiToken) {
+        label.style.display = "none";
+        return;
+      }
+
+      const datasetText = submitDatasetName
+        ? "Generate target dataset: " + submitDatasetName
+        : "Generate target dataset is configured";
+
+      label.textContent = datasetText;
+      label.style.display = "block";
+    }
+
+    async function palindSubmit(data) {
+      const response = await fetch("/v2/submit/", {
+        method: "POST",
+        headers: {
+          "Authorization": "Bearer " + submitApiToken,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      const responseText = await response.text();
+      if (!response.ok) {
+        throw new Error("Server error " + response.status + ": " + responseText);
+      }
+
+      return JSON.parse(responseText);
+    }
+
+    function escapeHtml(value) {
+      return String(value || "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/\"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    }
+
+    async function buildSubmissionFromRow(row) {
+      const tokenFields = [
+        "first_name",
+        "middle_name",
+        "last_name",
+        "sex_at_birth",
+        "date_of_birth",
+        "city_at_birth",
+        "clinical_classification",
+      ];
+
+      const requestData = {
+        disease_id: row.disease_id || "",
+        clinical_classification: row.clinical_classification || "",
+      };
+
+      for (const field of tokenFields) {
+        const value = row[field] || "";
+        const token = await palindTokenize(value);
+        requestData[field + "_token"] = token.map((bit) => bit ? "1" : "0").join("");
+      }
+
+      return requestData;
+    }
+
+    async function generateFromOutputArray() {
+      if (!submitApiToken) {
+        setStatus("No target dataset token is available for Generate.", "warning");
+        return;
+      }
+
+      if (!latestValidRows || latestValidRows.length === 0) {
+        setStatus("No output rows available. Upload and preprocess a CSV first.", "warning");
+        return;
+      }
+
+      const button = document.getElementById("generate-output-array");
+      const previousHtml = button.innerHTML;
+      button.disabled = true;
+      button.innerHTML = "<span class='spinner-border spinner-border-sm' role='status' aria-hidden='true'></span>&nbsp;Generating...";
+
+      const generateResults = [];
+      generatedIdMapping = [];
+
+      const uploadStatusWrap = document.getElementById("generate-upload-status");
+      const uploadAlert = document.getElementById("generate-upload-alert");
+      const downloadButton = document.getElementById("download-generated-mapping");
+      uploadStatusWrap.style.display = "none";
+      downloadButton.style.display = "none";
+
+      try {
+        setStatus("Generating PALIND IDs from Output Array rows...", "info");
+
+        for (const row of latestValidRows) {
+          const requestData = await buildSubmissionFromRow(row);
+          const response = await palindSubmit(requestData);
+          generateResults.push({
+            input_id: row.id || "",
+            palind_id: response.public_id || "",
+            warnings: Array.isArray(response.warnings) ? response.warnings.join("; ") : "",
+          });
+          generatedIdMapping.push({
+            input_id: row.id || "",
+            palind_id: response.public_id || "",
+          });
+        }
+
+        document.getElementById("generated-palinds-section").style.display = "block";
+        renderTable(
+          "generated-palinds-table",
+          generateResults,
+          ["input_id", "palind_id", "warnings"]
+        );
+        uploadStatusWrap.style.display = "block";
+        uploadAlert.className = "alert alert-success";
+        uploadAlert.textContent = "All tokens uploaded successfully!";
+        downloadButton.style.display = "inline-block";
+        setStatus("Generate completed. Results are shown at the bottom of this page.", "success");
+      } catch (err) {
+        document.getElementById("generated-palinds-section").style.display = "block";
+        if (generateResults.length > 0) {
+          renderTable(
+            "generated-palinds-table",
+            generateResults,
+            ["input_id", "palind_id", "warnings"]
+          );
+        }
+        uploadStatusWrap.style.display = "block";
+        uploadAlert.className = "alert alert-danger";
+        uploadAlert.textContent = "Token upload was not completed successfully.";
+        if (generatedIdMapping.length > 0) {
+          downloadButton.style.display = "inline-block";
+        }
+        setStatus("Error during Generate: " + err.message, "danger");
+      } finally {
+        button.disabled = false;
+        button.innerHTML = previousHtml;
+      }
+    }
+
+    function downloadGeneratedMapping() {
+      if (!generatedIdMapping || generatedIdMapping.length === 0) {
+        return;
+      }
+
+      let csv = "input_id,palind_id\n";
+      generatedIdMapping.forEach((row) => {
+        const inputId = String(row.input_id || "").replace(/\"/g, '""');
+        const palindId = String(row.palind_id || "").replace(/\"/g, '""');
+        csv += '"' + inputId + '","' + palindId + '"\n';
+      });
+
+      const encodedUri = encodeURI("data:text/csv;charset=utf-8," + csv);
+      const link = document.createElement("a");
+      link.setAttribute("href", encodedUri);
+      link.setAttribute("download", "palind_ids.csv");
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
+    function normalizeCityOfBirth(cityValue) {
+      const city = (cityValue || "").trim();
+      if (!city) {
+        return ["", ""];
+      }
+
+      if (city.length === 1) {
+        return ["", "single-character placeholder city value treated as blank"];
+      }
+
+      let normalized = city;
+      const notes = [];
+
+      const withoutParenthetical = normalized.replace(/\s*\([^)]*\)\s*$/, "").trim();
+      if (withoutParenthetical !== normalized) {
+        normalized = withoutParenthetical;
+        notes.push("removed trailing parenthesized qualifier");
+      }
+
+      if (normalized.includes(",")) {
+        const parts = normalized.split(",", 2).map((part) => part.trim());
+        const left = parts[0] || "";
+        const right = parts[1] || "";
+
+        if (left.toLowerCase() === "washington" && right.toUpperCase() === "DC") {
+          normalized = "Washington DC";
+          notes.push("removed comma for Washington, DC while keeping DC");
+        } else {
+          normalized = left;
+          notes.push("removed comma-delimited state/country");
+        }
+      }
+
+      return [normalized, notes.join("; ")];
+    }
+
+    function parseCsv(text) {
+      const rows = [];
+      let row = [];
+      let cell = "";
+      let inQuotes = false;
+
+      for (let i = 0; i < text.length; i += 1) {
+        const ch = text[i];
+
+        if (ch === '"') {
+          if (inQuotes && text[i + 1] === '"') {
+            cell += '"';
+            i += 1;
+          } else {
+            inQuotes = !inQuotes;
+          }
+          continue;
+        }
+
+        if (!inQuotes && ch === ",") {
+          row.push(cell);
+          cell = "";
+          continue;
+        }
+
+        if (!inQuotes && (ch === "\n" || ch === "\r")) {
+          if (ch === "\r" && text[i + 1] === "\n") {
+            i += 1;
+          }
+          row.push(cell);
+          rows.push(row);
+          row = [];
+          cell = "";
+          continue;
+        }
+
+        cell += ch;
+      }
+
+      if (cell.length > 0 || row.length > 0) {
+        row.push(cell);
+        rows.push(row);
+      }
+
+      return rows;
+    }
+
+    function csvToJsonArray(csvText) {
+      const allRows = parseCsv(csvText.replace(/^\uFEFF/, ""));
+      if (allRows.length === 0) {
+        return [];
+      }
+
+      const headers = allRows[0].map((h) => (h || "").trim());
+      const data = [];
+
+      for (let i = 1; i < allRows.length; i += 1) {
+        const values = allRows[i];
+        const obj = {};
+
+        for (let j = 0; j < headers.length; j += 1) {
+          obj[headers[j]] = values[j] !== undefined ? values[j] : "";
+        }
+
+        const hasAnyValue = Object.values(obj).some((v) => (v || "").trim() !== "");
+        if (hasAnyValue) {
+          data.push(obj);
+        }
+      }
+
+      return data;
+    }
+
+    function transformData(data, inputHeaders, clinicalDxValues) {
+      const clinicalLookup = {};
+      clinicalDxValues.forEach((pair) => {
+        const label = ((pair && pair[0]) || "").trim().toLowerCase();
+        const classification = ((pair && pair[1]) || "").trim();
+        if (label && !(label in clinicalLookup)) {
+          clinicalLookup[label] = classification;
+        }
+      });
+
+      const missingFields = REQUIRED_INPUT_FIELDS.concat(Object.keys(MAPPING)).filter((field) => {
+        return !inputHeaders.includes(field) && field !== "field_account_middle_name";
+      });
+
+      const validRows = [];
+      const skippedRows = [];
+      const missingRequiredRows = [];
+      const curatedCityRows = [];
+      const skipStats = {};
+
+      data.forEach((row) => {
+        const missingReason = [];
+
+        REQUIRED_INPUT_FIELDS.forEach((field) => {
+          if (!((row[field] || "").trim())) {
+            missingReason.push(field);
+          }
+        });
+
+        const clinicalLabel = (row.field_clinical || "").trim();
+        const clinicalClassification = clinicalLabel
+          ? (clinicalLookup[clinicalLabel.toLowerCase()] || "not_found")
+          : "";
+
+        if (missingReason.length > 0) {
+          const reasonKey = missingReason.join(", ");
+          skipStats[reasonKey] = (skipStats[reasonKey] || 0) + 1;
+
+          const skippedRecord = {
+            uid: row.uid || "",
+            mail: row.mail || "",
+            reason: missingReason.join("; "),
+          };
+
+          skippedRows.push(skippedRecord);
+          missingRequiredRows.push(skippedRecord);
+          return;
+        }
+
+        const originalCity = (row.field_city_of_birth || "").trim();
+        const cityResult = normalizeCityOfBirth(originalCity);
+        const normalizedCity = cityResult[0];
+        const cityNote = cityResult[1];
+
+        const newRow = {};
+        OUTPUT_COLUMNS.forEach((col) => {
+          newRow[col] = "";
+        });
+
+        Object.entries(MAPPING).forEach((entry) => {
+          const oldKey = entry[0];
+          const newKey = entry[1];
+          newRow[newKey] = row[oldKey] || "";
+        });
+
+        newRow.city_at_birth = normalizedCity;
+        newRow.clinical_classification = clinicalClassification;
+        validRows.push(newRow);
+
+        if (cityNote) {
+          curatedCityRows.push({
+            uid: row.uid || "",
+            mail: row.mail || "",
+            reason: "Normalized field_city_of_birth from '" + originalCity + "' to '" + normalizedCity + "': " + cityNote,
+          });
+        }
+      });
+
+      return {
+        validRows,
+        skippedRows,
+        missingRequiredRows,
+        curatedCityRows,
+        missingFields,
+        skipStats,
+      };
+    }
+
+    function renderTable(tableId, rows, preferredColumns) {
+      const table = document.getElementById(tableId);
+      if (!rows || rows.length === 0) {
+        table.innerHTML = "<thead><tr><th>No rows</th></tr></thead><tbody></tbody>";
+        return;
+      }
+
+      const columns = preferredColumns || Object.keys(rows[0]);
+      const thead = "<thead><tr>" + columns.map((c) => "<th>" + c + "</th>").join("") + "</tr></thead>";
+      const tbody = "<tbody>" + rows.map((r) => {
+        return "<tr>" + columns.map((c) => "<td>" + (r[c] || "") + "</td>").join("") + "</tr>";
+      }).join("") + "</tbody>";
+
+      table.innerHTML = thead + tbody;
+    }
+
+    function setStatus(message, type) {
+      const status = document.getElementById("status");
+      status.innerHTML = "<div class='alert alert-" + type + "'>" + message + "</div>";
+    }
+
+    function renderResults(inputRows, result) {
+      latestValidRows = result.validRows.slice();
+      document.getElementById("results").style.display = "block";
+      document.getElementById("n-processed").textContent = String(inputRows.length);
+      document.getElementById("n-valid").textContent = String(result.validRows.length);
+      document.getElementById("n-skipped").textContent = String(result.skippedRows.length);
+      document.getElementById("n-curated-city").textContent = String(result.curatedCityRows.length);
+
+      const missingFieldsBox = document.getElementById("missing-fields");
+      if (result.missingFields.length > 0) {
+        missingFieldsBox.style.display = "block";
+        missingFieldsBox.textContent = "Missing expected input columns: " + result.missingFields.join(", ");
+      } else {
+        missingFieldsBox.style.display = "none";
+      }
+
+      const skipReasonsBox = document.getElementById("skip-reasons");
+      const skipStatsEntries = Object.entries(result.skipStats);
+      if (skipStatsEntries.length > 0) {
+        skipReasonsBox.style.display = "block";
+        skipReasonsBox.innerHTML = "<strong>Reasons for skipping</strong><ul class='mb-0'>" +
+          skipStatsEntries.map((entry) => "<li>" + entry[1] + " record(s) missing: " + entry[0] + "</li>").join("") +
+          "</ul>";
+      } else {
+        skipReasonsBox.style.display = "none";
+      }
+
+      renderTable("valid-table", result.validRows, OUTPUT_COLUMNS);
+      renderTable("curated-city-table", result.curatedCityRows, ["uid", "mail", "reason"]);
+      renderTable("missing-required-table", result.missingRequiredRows, ["uid", "mail", "reason"]);
+    }
+
+    async function readFileText(file) {
+      return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = () => resolve(String(reader.result || ""));
+        reader.onerror = () => reject(new Error("Failed to read file"));
+        reader.readAsText(file);
+      });
+    }
+
+    document.getElementById("csv-input").addEventListener("change", async (event) => {
+      const file = event.target.files && event.target.files[0];
+      if (!file) {
+        return;
+      }
+
+      try {
+        setStatus("Processing CSV in browser memory...", "info");
+
+        const csvText = await readFileText(file);
+        const inputRows = csvToJsonArray(csvText);
+        const inputHeaders = inputRows.length > 0 ? Object.keys(inputRows[0]) : [];
+
+        const clinicalDxValues = JSON.parse(
+          document.getElementById("clinical-dx-values").textContent
+        );
+
+        const result = transformData(inputRows, inputHeaders, clinicalDxValues);
+        renderResults(inputRows, result);
+        setStatus("Completed. Output rows are shown below from in-memory arrays.", "success");
+      } catch (err) {
+        setStatus("Error processing CSV: " + err.message, "danger");
+      }
+    });
+
+    renderGenerateTargetLabel();
+  </script>
+{% endblock content %}

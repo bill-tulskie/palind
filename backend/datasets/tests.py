@@ -74,8 +74,28 @@ class TestSubmissionModel(TestCase):
             last_name_token=valid_token,
             date_of_birth_token=valid_token,
             sex_at_birth_token=valid_token,
+            clinical_classification="",
         )
         try:
             submission.full_clean()
         except ValidationError:
             self.fail("Submission with valid token should not raise ValidationError")
+
+    def test_submission_with_optional_clinical_classification(self):
+        valid_token = "0" * 512 + "1" * 512
+
+        submission = Submission(
+            protocol_version="1.0.0",
+            disease=self.disease,
+            dataset=self.dataset,
+            dataset_patient=self.dataset_patient,
+            first_name_token=valid_token,
+            last_name_token=valid_token,
+            date_of_birth_token=valid_token,
+            sex_at_birth_token=valid_token,
+            clinical_classification= "some classification",
+        )
+        try:
+            submission.full_clean()
+        except ValidationError:
+            self.fail("Submission with optional clinical_classification token should not raise ValidationError")

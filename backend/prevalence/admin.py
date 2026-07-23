@@ -3,8 +3,8 @@ from django.urls import reverse
 from django.utils.html import format_html
 
 from .models import (
-    ClinicalDiagnosis,
     Disease,
+    ClinicalDX,
     URLSource,
     GlobalStats,
     DiseaseStats,
@@ -45,14 +45,23 @@ class DiseaseAdmin(admin.ModelAdmin):
     search_fields = ["do_json"]
 
 
-class ClinicalDiagnosisAdmin(admin.ModelAdmin):
-    list_display = ("id", "label", "clinical_dx_code")
-    search_fields = ("label", "clinical_dx_code")
+class ClinicalDXAdmin(admin.ModelAdmin):
+    list_display = ("umbrella", "gene", "subtype", "label", "clinical_classification", "clinical_dx_code")
+    search_fields = ("label", "clinical_dx_code", "umbrella", "gene", "subtype")
+    list_filter = ("umbrella", "gene", "subtype")
 
 
 admin.site.register(Disease, DiseaseAdmin)
-admin.site.register(ClinicalDiagnosis, ClinicalDiagnosisAdmin)
+admin.site.register(ClinicalDX, ClinicalDXAdmin)
 admin.site.register(URLSource, URLSourceAdmin)
 admin.site.register(GlobalStats, GlobalStatsAdmin)
 admin.site.register(DiseaseStats, DiseaseStatsAdmin)
 admin.site.register(PatientsBySource, PatientsBySourceAdmin)
+from .models import ClinicalClassificationStats
+
+
+class ClinicalClassificationStatsAdmin(admin.ModelAdmin):
+    list_display = ("disease", "clinical_classification", "n_contributors", "n_patients", "confidence", "created_at")
+
+
+admin.site.register(ClinicalClassificationStats, ClinicalClassificationStatsAdmin)

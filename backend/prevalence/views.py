@@ -8,7 +8,7 @@ from django.views.generic import TemplateView
 
 from datasets.views import SuperUserRequiredMixin
 
-from .models import DiseaseStats, GlobalStats, count_diseases_prevalence
+from .models import DiseaseStats, GlobalStats, count_diseases_prevalence, ClinicalClassificationStats
 
 
 class PrevalenceView(TemplateView):
@@ -31,6 +31,9 @@ class PrevalenceView(TemplateView):
         context[
             "patients_by_source"
         ] = global_stats.patientsbysource_set.all().order_by("-n_patients")
+
+        # Top clinical classifications across diseases
+        context["clinical_classifications"] = global_stats.clinicalclassificationstats_set.all().order_by("-n_patients")[:10]
 
         return context
 
@@ -78,6 +81,15 @@ class PrevalenceDataView(View):
             "diseases": diseases,
             "summary": global_stats_data,
             "patients_by_source": patients_by_source,
+            "clinical_classifications": [
+                {
+                    "disease": c.disease.name,
+                    "clinical_classification": c.clinical_classification,
+                    "n_patients": c.n_patients,
+                    "n_contributors": c.n_contributors,
+                }
+                for c in ClinicalClassificationStats.objects.filter(global_stats=global_stats).order_by("-n_patients")
+            ],
         }
 
         return JsonResponse(data)

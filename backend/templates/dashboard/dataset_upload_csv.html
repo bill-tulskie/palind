@@ -300,9 +300,9 @@
   const DO_IDS = [{% for id in do_ids %}"{{ id }}", {% endfor %}];
 
   const REQUIRED_FIELDS = [
-    {% if request.user.is_prevalence_counting_user %}
-      "disease_id",
-    {% else %}
+    // disease_id is required for all uploads
+    "disease_id",
+    {% if not request.user.is_prevalence_counting_user %}
       "id",
     {% endif %}
 
@@ -356,7 +356,13 @@
         // The first columns are fixed: the required fields
         self.columns = REQUIRED_FIELDS;
 
-        const headerRow = rows[0].split(",");
+        let headerRow = rows[0].split(",");
+
+        // Backwards-compat: treat legacy `gene` column as `disease_id`.
+        // If the CSV contains both, prefer the explicit `disease_id` column.
+        if (headerRow.includes("gene") && !headerRow.includes("disease_id")) {
+          headerRow = headerRow.map(h => h === "gene" ? "disease_id" : h);
+        }
 
         if (!headerRow.includes("disease_id")) {
           headerRow.push("disease_id");
@@ -375,6 +381,7 @@
         // Then, we add those fields that are also present in the CSV
         self.columns = self.columns.concat(Object.keys(self.fields).filter(field => headerRow.includes(field) && !(self.columns.includes(field))));
         const columnIndices = self.columns.map(col_name => headerRow.indexOf(col_name));
+        const clientIdIndex = headerRow.indexOf("id");
 
         // Check if there is any unkown extra column
         self.errors = self.errors.concat(headerRow.filter(col_name => !(col_name in self.fields)).map(col_name => `Unknown column <code>${col_name}</code>`));
@@ -385,8 +392,8 @@
           // Split the row into cells
           var cells = rows[i].split(",");
 
-          // Save the client ID, which is the column with first index
-          self.clientIDs.push(cells[columnIndices[0]]);
+          // Save client ID from the explicit `id` column (not disease_id).
+          self.clientIDs.push(clientIdIndex >= 0 ? (cells[clientIdIndex] ?? "") : "");
 
           // Get the cells in the correct order, skipping the `id` column FIXME
           cells = columnIndices.slice(0).map(index => cells[index] ?? "");
@@ -462,7 +469,7 @@
       this.ids = [];
       let allWarnings = [];
       
-      for (let row of this.rows) {
+          for (let row of this.rows) {
         try {
           // Tokenize
           let tokens = await Promise.all(row.map(async (cell, col) => {
@@ -480,6 +487,12 @@
             else if (this.columns[index] === "disease_id") {
               // Upload the disease ID as is
               requestData[this.columns[index]] = row[index];
+              return;
+            }
+            else if (this.columns[index] === "clinical_classification") {
+              // Send both tokenized and raw clinical_classification
+              requestData[this.columns[index]] = row[index];
+              requestData[this.columns[index] + "_token"] = token.map(bit => bit ? "1" : "0").join("");
               return;
             }
             else {
@@ -504,7 +517,7 @@
           this.uploading = false;
           return; // Stop processing further rows
         }
-        this.tableHeader = this.tableHeader.slice(0, 1);
+        this.tableHeader = ["ID"];
         this.rowsHtml = this.formatRows();
       }
 
@@ -648,13 +661,7 @@
             </tr>
           </thead>
           <tbody>
-            {% if request.user.is_prevalence_counting_user %}
-              <tr>
-                <td><code>disease_id</code></td>
-                <td></td>
-                <td>Unique identifier of the disease. If left empty, "{{ dataset.disease }}" will be used.</td>
-              </tr>
-            {% else %}
+            {% if not request.user.is_prevalence_counting_user %}
               <tr>
                 <td><code>id</code></td>
                 <td>required</td>

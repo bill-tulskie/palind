@@ -1,0 +1,16 @@
+uid,mail,reason
+20712,nihatcesur@arcor.de,Normalized field_city_of_birth from '?' to '': single-character placeholder city value treated as blank
+19866,phaggard@neo.rr.com,field_city_of_birth
+20718,monika.siegwart@agentur-suess.de,Normalized field_city_of_birth from '?' to '': single-character placeholder city value treated as blank
+26285,anny_gs@hotmail.com,field_city_of_birth; field_date_of_birth; field_account_first_name; field_gender_at_birth; field_account_last_name
+26372,cassiemccachren@gmail.com,field_city_of_birth; field_date_of_birth; field_account_first_name; field_gender_at_birth; field_account_last_name
+26520,canderson@wtc-mail.net,field_city_of_birth; field_date_of_birth; field_account_first_name; field_gender_at_birth; field_account_last_name
+26628,agnieszkazubiel@gmail.com,field_city_of_birth; field_date_of_birth; field_account_first_name; field_gender_at_birth; field_account_last_name
+26522,lobonge@hotmail.com,"Normalized field_city_of_birth from 'Horseheads, ny' to 'Horseheads': removed comma-delimited state/country"
+26260,pelospintados@comcast.net,"Normalized field_city_of_birth from 'san pedro sula , honduras' to 'san pedro sula': removed comma-delimited state/country"
+28950,binamaya@protonmail.com,field_city_of_birth; field_date_of_birth; field_account_first_name; field_gender_at_birth; field_diagnosis_gene; field_account_last_name
+20574,rjhigley@blueyonder.co.uk,field_city_of_birth
+20606,thewisslers@charter.net,field_city_of_birth
+26630,sharonstanley1@aol.com,field_city_of_birth; field_date_of_birth; field_account_first_name; field_gender_at_birth; field_account_last_name
+26774,jossabtv@gmail.com,field_city_of_birth; field_date_of_birth; field_account_first_name; field_gender_at_birth; field_account_last_name
+20652,robin.widstrom@bredband.net,field_city_of_birth

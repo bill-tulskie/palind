@@ -255,6 +255,29 @@ class Submission(models.Model):
         help_text="City name",
     )
 
+    gene_token = models.CharField(
+        max_length=TOKEN_LENGTH,
+        blank=True,
+        validators=[validate_token],
+        verbose_name="Gene",
+        help_text="Gene name or identifier",
+    )
+
+    clinical_classification_token = models.CharField(
+        max_length=TOKEN_LENGTH,
+        blank=True,
+        validators=[validate_token],
+        verbose_name="Clinical classification",
+        help_text="Clinical classification (tokenized)",
+    )
+    # Raw clinical classification (not tokenized) — used for prevalence statistics
+    clinical_classification = models.CharField(
+        max_length=255,
+        blank=True,
+        verbose_name="Clinical classification (raw)",
+        help_text="Clinical classification (raw string, not tokenized)",
+    )
+
     def __str__(self):
         try:
             return f"Submission {self.id} for {self.dataset_patient.public_id.url()}"

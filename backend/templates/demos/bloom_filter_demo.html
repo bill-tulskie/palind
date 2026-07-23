@@ -63,6 +63,7 @@
     l: 500,
     eps: 2,
     q: 2,
+    renderVersion: 0,
 
     sanitizeRemoveAccents: true,
     sanitizeRemoveNonLetters: true,
@@ -94,16 +95,22 @@
       return result;
     },
     qgrams_html(qgrams) {
-      this.bf1();
+      void this.bf1();
       return qgrams.map(qgram => `<span class="badge bg-primary" style="margin-right: 10px">${qgram}</span>`).join(' ');
     },
-    bloomFilter(chunks) {
+    async bloomFilter(chunks, version) {
       let bf = new Array(this.l).fill(false);
-      chunks.forEach(async chunk => {
+      for (const chunk of chunks) {
         for (var i = 0; i < Math.round(Math.log(2)*this.l/chunks.length); i++) {
-          bf[parseInt(SHA256(chunk + "#" + i), 16) % this.l] = true;
+          const hash = await SHA256(chunk + "#" + i);
+          bf[parseInt(hash.slice(0, 10), 16) % this.l] = true;
         }
-      });
+      }
+
+      if (version !== this.renderVersion) {
+        return;
+      }
+
       let flipped = [];
       for (var i = 0; i < this.l; i++) {
         let flip = Math.random() < (1 / (1 + Math.exp(this.eps)));
@@ -123,8 +130,10 @@
     qgrams1() {
       return this.qgrams_html(this.qgrams(this.sanitized1()));
     },
-    bf1() {
-      let bf = this.bloomFilter(this.qgrams(this.sanitized1()));
+    async bf1() {
+      this.renderVersion += 1;
+      const version = this.renderVersion;
+      await this.bloomFilter(this.qgrams(this.sanitized1()), version);
     },
 
     diffused1: '',

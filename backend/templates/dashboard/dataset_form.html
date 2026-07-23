@@ -81,6 +81,11 @@
                     <button type="submit" class="btn btn-primary">
                         Save dataset
                     </button>
+                    {% if request.resolver_match.url_name == "dataset_create" %}
+                        <button type="submit" name="save_and_load_cmd" value="1" class="btn btn-outline-primary ms-2">
+                            Save dataset &amp; load CMD data
+                        </button>
+                    {% endif %}
                 </div>
             </div>
         </form>

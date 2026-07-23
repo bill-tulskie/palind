@@ -8,6 +8,7 @@ from django.conf.urls.static import static
 from accounts.views import OrganizationDetailView
 from datasets.views import (
     LinkerDemo,
+    PreprocessDataDemo,
     SubmitView,
     DatasetCreateView,
     DatasetListView,
@@ -63,6 +64,11 @@ urlpatterns = (
         # Demos
         path(
             "bloom-filter-demo", TemplateView.as_view(template_name="demos/bloom_filter_demo.html"), name="bloom-filter-demo",
+        ),
+        path(
+            "preprocess_data_cmdir",
+            PreprocessDataDemo.as_view(),
+            name="preprocess_data_cmdir",
         ),
         path("linker-demo", LinkerDemo.as_view(), name="linker-demo"),
         path("merge-datasets", merge_view, name="merge-datasets"),

@@ -1,0 +1,40 @@
+id,disease_id,first_name,last_name,date_of_birth,middle_name,sex_at_birth,city_at_birth,clinical_classification
+20712,unknown,Firdevs,Cesur,3/19/07 0:00,Elif,female,,UK_UNS_
+25902,COL12A1,Christopher,Curtsinger,4/17/72 0:00,T,male,Louisville,MD_COL12A1_COL12
+25415,ACTA1,Avir,Ravi,3/30/21 0:00,,male,Plano,MY_UNS_NM
+26243,FLNC,Jerry,Bonnett,12/8/52 0:00,Wayne,male,Ponoka,MY_UNS_MFM
+21982,NEB,Leo,Hidan Da Silva,2/24/17 0:00,Nicolas,male,Munich,MY_UNS_NM
+19170,LAMA2,Danah,Lawler,10/22/13 0:00,,female,Ithaca,MD_LAMA2_LAMA2
+26144,LMNA,Arthur,Korzeniewski,7/30/03 0:00,,male,Curitiba,MD_UNS_EDMD
+25469,COL6A2,Daniel,Bassan,11/30/20 0:00,,male,Palo Alto,MD_UNS_COL6
+27190,SCN4A,Rachael,Carder,9/24/91 0:00,,female,Rochester,MS_UNS_
+26111,COL6A1,Kurt,Kleinholdermann,12/25/20 0:00,Matteo,male,Frankfurt,MD_UNS_COL6
+26103,STIM1,Mark,Fox,12/13/77 0:00,Joseph,male,Lansing,MY_UNS_TAM
+23562,LAMA2,Nathanael,Parmentier,9/30/18 0:00,,male,Paris,MD_LAMA2_LAMA2
+20718,unknown,Mara,Siegwart,4/8/98 0:00,Jo,female,,UK_UNS_
+20608,unknown,John-Dylan,Cully,2/14/02 0:00,,male,Las Cruces,MD_UNS_COL6
+26529,ACTA1,Victoria,Gylche,3/15/15 0:00,,female,Stockholm,MY_UNS_NM
+21910,NEB,Cristina,Ochoa,10/27/89 0:00,,female,Mcallen,MY_UNS_NM
+27109,COL12A1,Helene,Smith,12/9/80 0:00,Margaret ,female,Sasolburg,UK_UNS_
+26200,TPM2,Shai,Ivgi,11/3/21 0:00,,female,Tel Aviv,MY_TPM2_
+24582,NEB,Mason,Cahoon,1/24/14 0:00,Gary,male,Cleveland,MY_UNS_NM
+26522,unknown,Nathan,Rodriguez,3/3/11 0:00,,male,Horseheads,MD_UNS_UKN
+26105,NEB,Mason,Reed,6/4/20 0:00,,male,Dayton,MY_UNS_NM
+26444,LAMA2,Isaac,Wickizer,1/3/17 0:00,Lee,male,Indianapolis,MD_LAMA2_LAMA2
+26241,KBTBD13,Wayne,anderson,8/5/67 0:00,eric,male,Jacksonville,MY_UNS_NM
+25768,RYR1,Brandon,Glover,9/9/83 0:00,K,male,Tucson,MY_RYR1_CNM
+26260,TTN,Rodsly,de la Torre,1/13/72 0:00,amaral,female,san pedro sula,MY_TTN_
+26531,TTN,Daniel ,Gaspari ,7/14/80 0:00,,male,Melbourne,not_found
+21854,LMNA,Christian,Dunn,12/14/15 0:00,,male,White Plains,MD_LMNA_LMNA
+23802,FKTN,Karl,Evans,4/11/40 0:00,Cecil,male,Nyssa,MD_LAMA2_LAMA2
+25018,unknown,Malena,Blanco,11/19/06 0:00,Belén,female,José C Paz,MD_UNS_COL6
+26323,COL6A1,Simon,Gareis,3/11/13 0:00,Agustin,male,Buenos Aires,MD_UNS_COL6
+24034,NEB,Abigial,Schollett,11/21/18 0:00,Lee,female,Fayetteville,MY_UNS_NM
+21740,ACTA1,Charlotte,Hoare,4/16/14 0:00,Grace,female,Coeur D Alene,MY_UNS_NM
+19168,LAMA2,Felix,Lay,10/3/17 0:00,Walter,male,West Branch,MD_LAMA2_LAMA2
+19194,LAMA2,Maria,Marques,8/1/18 0:00,De Sousa,female,Leiria,MD_LAMA2_LAMA2
+26599,LAMA2,Manuel ,Oliveira ,1/6/19 0:00,Almeida ,male,Porto,MD_LAMA2_LAMA2
+24354,NEB,Gavin,Croce,12/27/07 0:00,,male,East Aurora,MY_UNS_NM
+26351,MICU1,Nicolas,Flint,8/23/86 0:00,Laszlo,male,Plano,MD_UNS_UKN
+26287,TTN,Brian,Fox,5/4/66 21:00,Aaron,male,Washington,MY_TTN_HMERF
+24906,LAMA2,Alba,Izquierdo Alonso,3/9/94 0:00,,female,Salamanca,MD_LAMA2_LAMA2

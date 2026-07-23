@@ -1,12 +1,29 @@
 Development Plan:
 
 X Fork code
-- Remove columns from the upload csv file: zip_code_at_birth 	address_at_birth 	state_at_birth 	country_at_birth
-- <test>
-- Add a new clinical diagnosis table to the DB with columns: id, label, clinical_dx_code
-- Create a loader to populate this table from a csv file (clinical_dx.csv)
-- Load the table
-- Create a view of the Clinical Diagnosis Table with sorting and searching and add to the admin dashboard 
+X Remove columns from the upload csv file: zip_code_at_birth 	address_at_birth 	state_at_birth 	country_at_birth
+X <test>
+
+X Remove parent1_* and parent2_* from code base.  
+
+X <test>
+
+X Add a property to datasets called Palind Prefix with a default value of the dataset name and with the ability to override the value in the dataset create and edit pages
+X Replace static 'patientids.com' prefix assigned to palinds with a prefix of the Palind Prefix property of the dataset.
+X Add a new clinical diagnosis table to the DB with columns: id, label, clinical_dx_code
+X Create a loader to populate this table from a csv file (clinical_dx.csv)
+X Load the Clinical Diagnosis table
+X Create a view of the Clinical Diagnosis Table with sorting and searching and add to the admin dashboard 
+
+
 - Add a field called clinical_dx to the upload csv file.  This field will used as is, not be tokenized, similarly to the disease_id field.   
 - When generating palinds, the code should warn via an alert that an unknown clincal_dx value was identified in the upload dataset.  
 - <test>
+
+We need to add a new Clinical Diagnosis table to the database with columns: id, label, clinical_dx_code and then create a loader called import_clinical_dx.py to populate this table from a comma separated variable file. An example comma separated variable file can be found in data/disease-ontologies/clinical_dx.csv. We also need to create a view of the Clinical Diagnosis table with sorting, searching, and the ability to edit an entry and add a link to this view to the admin dashboard. 
+
+ 
+- Add a field called clinical_dx to the upload csv file.  This field will used as is, not be tokenized, similarly to the disease_id field.   
+- When generating palinds, the code should warn via an alert that an unknown clincal_dx value was identified in the upload dataset.
+
+Cheryl Harskowitch has asked 

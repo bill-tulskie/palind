@@ -163,6 +163,15 @@
     .modal {
         --bs-modal-width: 1000px;
     }
+    .clinical-classifications-chart-wrap {
+        height: 300px;
+        position: relative;
+    }
+    @media (min-width: 768px) {
+        .clinical-classifications-chart-wrap {
+            height: 360px;
+        }
+    }
 </style>
 
 {% endblock extra_head %}
@@ -175,8 +184,10 @@
         <span class="sidebar-brand-text align-middle">
             <!-- <img class="p-2" width="50" height="50" src="{% static 'img/palind_logo.png' %}" alt="PALIND Logo">
         -->
-            <img class="p-2" width="50" height="50" src="{% static 'img/cmdir-palind-logo.png' %}" alt="PALIND Logo">
-            <img class="p-2" height="30" src="{% static 'palind_name.svg' %}" alt="PALIND">
+            <img class="p-2" width="60" height="100" src="{% static 'CMD-Palind-logo.png' %}" alt="PALIND Logo">
+            <img class="p-2" height="100" src="{% static 'CMD-Palind-title.png' %}" alt="CMD PALIND 1">
+            <!-- <img class="p-2" height="30" src="{% static 'palind_name.svg' %}" alt="PALIND">
+        -->    
         </span>
 
         <div class="navbar-collapse collapse">
@@ -205,7 +216,7 @@
 
             <div class="row mb-2 mb-xl-3">
                 <div class="col-auto d-none d-sm-block">
-                    <h1 class="title">Prevalence Dashboard</h1>
+                    <h1 class="title">Incidence Dashboard</h1>
                 </div>
 
                 <div class="col-auto ms-auto text-end mt-n1">
@@ -396,6 +407,68 @@
                         </div>
                     </div>
                 </div>
+                    <div class="card" style="flex-grow: 1; margin-top: 1rem">
+                        <div class="card-body">
+                            <h3 class="subtitle">Top Clinical Classifications</h3>
+                            {% if clinical_classifications %}
+                                <div class="clinical-classifications-chart-wrap">
+                                    <canvas id="clinicalClassificationsChart" style="padding-right: 1rem;"></canvas>
+                                </div>
+                                <script>
+                                    var clinicalCtx = document.getElementById('clinicalClassificationsChart').getContext('2d');
+                                    var clinicalGradient = clinicalCtx.createLinearGradient(500, 0, 1500, 0);
+                                    clinicalGradient.addColorStop(0, '#EBA082');
+                                    clinicalGradient.addColorStop(1, '#CD4610');
+
+                                    new Chart(clinicalCtx, {
+                                        type: 'bar',
+                                        data: {
+                                            labels: [{% for cc in clinical_classifications %}'{{ cc.clinical_classification|escapejs }}'{% if not forloop.last %}, {% endif %}{% endfor %}],
+                                            datasets: [{
+                                                label: '# of Patients',
+                                                data: [{% for cc in clinical_classifications %}{{ cc.n_patients }}{% if not forloop.last %}, {% endif %}{% endfor %}],
+                                                backgroundColor: clinicalGradient,
+                                            }]
+                                        },
+                                        options: {
+                                            responsive: true,
+                                            maintainAspectRatio: false,
+                                            indexAxis: 'y',
+                                            barThickness: 14,
+                                            borderRadius: 7,
+                                            scales: {
+                                                y: {
+                                                    ticks: {
+                                                        font: {
+                                                            size: 14,
+                                                            family: "'Epilogue', sans-serif",
+                                                            weight: 500,
+                                                        }
+                                                    },
+                                                    grid: {
+                                                        display: false
+                                                    },
+                                                },
+                                                x: {
+                                                    beginAtZero: true,
+                                                    border: {
+                                                        display: false
+                                                    },
+                                                }
+                                            },
+                                            plugins: {
+                                                legend: {
+                                                    display: false
+                                                }
+                                            }
+                                        }
+                                    });
+                                </script>
+                            {% else %}
+                                <p class="small-light mb-0">No clinical classification data available.</p>
+                            {% endif %}
+                        </div>
+                    </div>
             </div>
 
             <div class="row mb-3">

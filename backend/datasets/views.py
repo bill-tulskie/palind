@@ -24,6 +24,7 @@ from django.views.decorators.csrf import csrf_exempt
 
 from accounts.models import Organization
 from prevalence.models import Disease
+from prevalence.models import ClinicalDX
 
 from .models import Dataset, DatasetPatient, Submission, are_similar, dice
 
@@ -75,6 +76,11 @@ class DatasetCreateView(LoginRequiredMixin, CreateView):
             form.instance.palind_prefix = form.instance.name
         return super().form_valid(form)
 
+    def get_success_url(self):
+        if self.request.POST.get("save_and_load_cmd"):
+            return reverse_lazy("preprocess_data_cmdir")
+        return super().get_success_url()
+
 
 class DatasetUpdateView(AccessibleDatasetsMixin, UpdateView):
     model = Dataset
@@ -107,7 +113,7 @@ class DatasetUploadCSV(AccessibleDatasetsMixin, DetailView):
 
     def get_context_data(self, **kwargs: Any) -> Dict[str, Any]:
         data = super().get_context_data(**kwargs)
-        data["fields"] = [
+        fields = [
             {
                 "field": f.name.replace("_token", ""),
                 "name": f.verbose_name,
@@ -119,6 +125,25 @@ class DatasetUploadCSV(AccessibleDatasetsMixin, DetailView):
             and "soundex" not in f.name
             and "full" not in f.name
         ]
+
+        # The upload UI should expose `disease_id` (the disease identifier)
+        # rather than `gene`. Historically `gene` replaced `disease_id` by
+        # mistake; treat it as an implementation detail and do not expose it
+        # in the CSV field list. Insert `disease_id` into the fields list.
+        fields = [f for f in fields if f["field"] != "gene"]
+        if not any(f["field"] == "disease_id" for f in fields):
+            # Make disease_id a required field in the upload UI
+            fields.insert(
+                0,
+                {
+                    "field": "disease_id",
+                    "name": "Disease ID",
+                    "description": "DO ID or disease name",
+                    "required": "required",
+                },
+            )
+
+        data["fields"] = fields
         data["do_ids"] = Disease.objects.exclude(do_id="").values_list(
             "do_id", flat=True
         )
@@ -183,35 +208,26 @@ class SubmitView(View):
         # Get disease either from do_id or from dataset
         disease = None
         warnings = []
-        
-        if "disease_id" in data and data["disease_id"]:
-            disease_id = data["disease_id"].strip()
 
-            # First try do_id (common expected field)
-            disease = Disease.objects.filter(do_id=disease_id).first()
+        # Require `disease_id` in upload data
+        disease_id = (data.get("disease_id") or "").strip()
+        if not disease_id:
+            return HttpResponse(status=400, content="Missing disease_id")
 
-            # If that doesn't exist, allow using the value as a name (or create it)
-            if disease is None:
-                disease = Disease.objects.filter(name__iexact=disease_id).first()
+        # First try do_id (common expected field)
+        disease = Disease.objects.filter(do_id=disease_id).first()
 
-            if disease is None:
-                description = f"Added from data uploaded in dataset '{dataset.name}' on {datetime.now().strftime('%Y-%m-%d')}"
-                disease = Disease.objects.create(name=disease_id, do_id=disease_id, description=description)
-                warnings.append(
-                    f"Disease ID '{disease_id}' was not found in the database and has been added as a new disease. "
-                    f"Please verify this is the correct disease."
-                )
-
-        elif dataset.disease:
-            disease = dataset.disease
-        else:
-            if dataset.created_by.is_prevalence_counting_user:
-                return HttpResponse(status=400, content="Missing disease_id")
-            else:
-                return HttpResponse(status=400, content="No disease specified")
+        # If that doesn't exist, allow using the value as a name (or create it)
+        if disease is None:
+            disease = Disease.objects.filter(name__iexact=disease_id).first()
 
         if disease is None:
-            return HttpResponse(status=400, content="Disease not found")
+            description = f"Added from data uploaded in dataset '{dataset.name}' on {datetime.now().strftime('%Y-%m-%d')}"
+            disease = Disease.objects.create(name=disease_id, do_id=disease_id, description=description)
+            warnings.append(
+                f"Disease ID '{disease_id}' was not found in the database and has been added as a new disease. "
+                f"Please verify this is the correct disease."
+            )
 
         submission = Submission(
             protocol_version="1.0.0",
@@ -226,6 +242,8 @@ class SubmitView(View):
             sex_at_birth_token=data.get("sex_at_birth_token", ""),
             date_of_birth_token=data.get("date_of_birth_token", ""),
             city_at_birth_token=data.get("city_at_birth_token", ""),
+            clinical_classification_token=data.get("clinical_classification_token", ""),
+            clinical_classification=data.get("clinical_classification", ""),
         )
 
         # Search if there is any similar patient and create one if not
@@ -268,6 +286,36 @@ class LinkerDemo(SuperUserRequiredMixin, TemplateView):
             raise Http404()
 
         return super().dispatch(request, *args, **kwargs)
+
+
+class PreprocessDataDemo(LoginRequiredMixin, TemplateView):
+    template_name = "demos/preprocess_data_cmdir.html"
+
+    def get_context_data(self, **kwargs: Any) -> Dict[str, Any]:
+        data = super().get_context_data(**kwargs)
+        data["clinical_dx_values"] = list(
+            ClinicalDX.objects.exclude(label="").values_list(
+                "label", "clinical_classification"
+            )
+        )
+
+        selected_dataset = None
+        if self.request.user.is_prevalence_counting_user:
+            selected_dataset = self.request.user.default_dataset
+        elif self.request.user.organization is not None:
+            selected_dataset = (
+                Dataset.objects.filter(organization=self.request.user.organization)
+                .order_by("-created_at")
+                .first()
+            )
+
+        data["submit_api_token"] = (
+            str(selected_dataset.api_token) if selected_dataset is not None else ""
+        )
+        data["submit_dataset_name"] = (
+            selected_dataset.name if selected_dataset is not None else ""
+        )
+        return data
 
 
 def merge_view(request):
