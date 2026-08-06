@@ -238,8 +238,8 @@
             </div>
 
             <div class="row mb-4" style="align-items: stretch">
-                <div class="col-12 col-md-3 d-flex" style="flex-direction: column">
-                    <div class="card" style="flex-grow: 1">
+                <div class="col-12 col-md-4 d-flex">
+                    <div class="card w-100">
                         <div class="card-body d-flex" style="align-items: center">
                             <div class="d-flex align-items-center">
                                 <img src="{% static 'disease.png' %}" width="32" height="30" class="rounded-circle me-2">
@@ -252,7 +252,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card" style="flex-grow: 1">
+                </div>
+                <div class="col-12 col-md-4 d-flex">
+                    <div class="card w-100">
                         <div class="card-body d-flex" style="align-items: center">
                             <div class="d-flex align-items-center">
                                 <img src="{% static 'users.png' %}" width="24" height="24" class="rounded-circle me-2">
@@ -265,7 +267,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card" style="flex-grow: 1">
+                </div>
+                <div class="col-12 col-md-4 d-flex">
+                    <div class="card w-100">
                         <div class="card-body d-flex" style="align-items: center">
                             <div class="d-flex align-items-center">
                                 <img src="{% static 'users.png' %}" width="24" height="24" class="rounded-circle me-2">
@@ -279,13 +283,18 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 d-flex" style="flex-direction: column">
+            </div>
+
+            <div class="row mb-4" style="align-items: stretch">
+                <div class="col-12 d-flex" style="flex-direction: column">
                     <div class="card" style="flex-grow: 1">
                         <div class="card-body">
                             <h3 class="subtitle">
                                 Patients by Disease
                             </h3>
-                            <canvas id="barPlot" style="padding-right: 1rem; height: 100%"></canvas>
+                            <div class="clinical-classifications-chart-wrap">
+                                <canvas id="barPlot" style="padding-right: 1rem;"></canvas>
+                            </div>
                             <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
                             <script>
                                 var ctx = document.getElementById('barPlot').getContext('2d');
@@ -305,6 +314,7 @@
                                     },
                                     options: {
                                         responsive: true,
+                                        maintainAspectRatio: false,
                                         indexAxis: 'y',
                                         barThickness: 14,
                                         borderRadius: 7,
@@ -343,79 +353,18 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-3 d-flex" style="flex-direction: column">
-                    <div class="card" style="flex-grow: 1">
-                        <div class="card-body">
-                            <h3 class="subtitle">
-                                Patients by Source
-                            </h3>
-                            <canvas id="myChart" class="p-2"></canvas>
-                            <script>
-                                var ctx = document.getElementById('myChart').getContext('2d');
-                                var myChart = new Chart(ctx, {
-                                    type: 'pie',
-                                    data: {
-                                        labels: [{% for source in patients_by_source %}'{{ source.name }}',{% endfor %}],
-                                        datasets: [{
-                                            label: 'Patients',
-                                            data: [{% for source in patients_by_source %}{{ source.n_patients }},{% endfor %}],
-                                            backgroundColor: [
-                                                '#cd4610',
-                                                '#eba082',
-                                                '#d5d9de',
-                                            ],
-                                            borderColor: [
-                                                '#cd4610',
-                                                '#eba082',
-                                                '#d5d9de',
-                                            ],
-                                            borderWidth: 1,
-                                            radius: '80%',
-                                        }]
-                                    },
-                                    options: {
-                                        responsive: true,
-                                        plugins: {
-                                            legend: {
-                                                display: false,
-                                                position: 'bottom',
-                                                labels: {
-                                                    boxWidth: 12,
-                                                    color: '#464E5F',
-                                                    padding: 20,
-                                                    font: {
-                                                        size: 12,
-                                                        family: "'Epilogue', sans-serif",
-                                                        weight: 500,
-                                                    },
-                                                },
-                                            },
-                                            title: {
-                                                display: false,
-                                                text: 'Data Source Distribution'
-                                            }
-                                        }
-                                    }
-                                });
-                            </script>
-                            {% for source in patients_by_source %}
-                                <span class="legend">
-                                    <i class="fa-solid fa-square fa-lg" style="color: {{ source.source.color }}"></i>
-                                    {{ source.source.name }}
-                                </span>
-                            {% endfor %}
-                        </div>
-                    </div>
-                </div>
+                <div class="col-12">
                     <div class="card" style="flex-grow: 1; margin-top: 1rem">
                         <div class="card-body">
                             <h3 class="subtitle">Top Clinical Classifications</h3>
+                            {{ clinical_classification_labels|json_script:"clinical-classification-labels" }}
                             {% if clinical_classifications %}
                                 <div class="clinical-classifications-chart-wrap">
                                     <canvas id="clinicalClassificationsChart" style="padding-right: 1rem;"></canvas>
                                 </div>
                                 <script>
                                     var clinicalCtx = document.getElementById('clinicalClassificationsChart').getContext('2d');
+                                    var clinicalClassificationLabels = JSON.parse(document.getElementById('clinical-classification-labels').textContent);
                                     var clinicalGradient = clinicalCtx.createLinearGradient(500, 0, 1500, 0);
                                     clinicalGradient.addColorStop(0, '#EBA082');
                                     clinicalGradient.addColorStop(1, '#CD4610');
@@ -459,6 +408,17 @@
                                             plugins: {
                                                 legend: {
                                                     display: false
+                                                },
+                                                tooltip: {
+                                                    callbacks: {
+                                                        title: function(context) {
+                                                            return context[0].label;
+                                                        },
+                                                        label: function(context) {
+                                                            var label = clinicalClassificationLabels[context.label] || "Label not found";
+                                                            return [label, "Patients: " + context.raw];
+                                                        }
+                                                    }
                                                 }
                                             }
                                         }
@@ -469,6 +429,102 @@
                             {% endif %}
                         </div>
                     </div>
+                </div>
+            </div>
+
+            <div class="row mb-4" style="align-items: stretch">
+                <div class="col-12 col-md-6 d-flex" style="flex-direction: column">
+                    <div class="card" style="flex-grow: 1">
+                        <div class="card-body">
+                            <h3 class="subtitle">Patients by Source</h3>
+                            <canvas id="myChart" class="p-2"></canvas>
+                            <script>
+                                var sourceCtx = document.getElementById('myChart').getContext('2d');
+                                new Chart(sourceCtx, {
+                                    type: 'pie',
+                                    data: {
+                                        labels: [{% for source in patients_by_source %}'{{ source.label|escapejs }}',{% endfor %}],
+                                        datasets: [{
+                                            label: 'Patients',
+                                            data: [{% for source in patients_by_source %}{{ source.n_patients }},{% endfor %}],
+                                            backgroundColor: [{% for source in patients_by_source %}'{{ source.color }}',{% endfor %}],
+                                            borderColor: [{% for source in patients_by_source %}'{{ source.color }}',{% endfor %}],
+                                            borderWidth: 1,
+                                            radius: '80%',
+                                        }]
+                                    },
+                                    options: {
+                                        responsive: true,
+                                        plugins: {
+                                            legend: { display: false },
+                                            tooltip: {
+                                                callbacks: {
+                                                    label: function(context) {
+                                                        var total = context.dataset.data.reduce(function(sum, value) { return sum + value; }, 0);
+                                                        var percentage = total ? ((context.raw / total) * 100).toFixed(1) : 0;
+                                                        return context.label + ': ' + context.raw + ' (' + percentage + '%)';
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                });
+                            </script>
+                            {% for source in patients_by_source %}
+                                <span class="legend">
+                                    <i class="fa-solid fa-square fa-lg" style="color: {{ source.color }}"></i>
+                                    {{ source.label }}
+                                </span>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 d-flex" style="flex-direction: column">
+                    <div class="card" style="flex-grow: 1">
+                        <div class="card-body">
+                            <h3 class="subtitle">Patients by Organization</h3>
+                            <canvas id="organizationChart" class="p-2"></canvas>
+                            <script>
+                                var organizationCtx = document.getElementById('organizationChart').getContext('2d');
+                                new Chart(organizationCtx, {
+                                    type: 'pie',
+                                    data: {
+                                        labels: [{% for organization in patients_by_organization %}'{{ organization.label|escapejs }}',{% endfor %}],
+                                        datasets: [{
+                                            label: 'Patients',
+                                            data: [{% for organization in patients_by_organization %}{{ organization.n_patients }},{% endfor %}],
+                                            backgroundColor: [{% for organization in patients_by_organization %}'{{ organization.color }}',{% endfor %}],
+                                            borderColor: [{% for organization in patients_by_organization %}'{{ organization.color }}',{% endfor %}],
+                                            borderWidth: 1,
+                                            radius: '80%',
+                                        }]
+                                    },
+                                    options: {
+                                        responsive: true,
+                                        plugins: {
+                                            legend: { display: false },
+                                            tooltip: {
+                                                callbacks: {
+                                                    label: function(context) {
+                                                        var total = context.dataset.data.reduce(function(sum, value) { return sum + value; }, 0);
+                                                        var percentage = total ? ((context.raw / total) * 100).toFixed(1) : 0;
+                                                        return context.label + ': ' + context.raw + ' (' + percentage + '%)';
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                });
+                            </script>
+                            {% for organization in patients_by_organization %}
+                                <span class="legend">
+                                    <i class="fa-solid fa-square fa-lg" style="color: {{ organization.color }}"></i>
+                                    {{ organization.label }}
+                                </span>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="row mb-3">

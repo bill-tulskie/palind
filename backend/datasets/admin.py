@@ -17,6 +17,7 @@ class DatasetAdmin(admin.ModelAdmin):
         "name",
         "description",
         "palind_prefix",
+        "source",
         "organization",
         "created_by",
         "api_token",

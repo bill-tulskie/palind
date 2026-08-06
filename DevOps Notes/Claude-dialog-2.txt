@@ -34,3 +34,60 @@ On the admin interface sidebar under the DEMO heading, there is a link to Tokeni
 The two links and the DEMO heading only appear for users with Superuser status.  Please show the heading and the links in the  sidebar for all users including users with staff status and users without Staff status or Superuser status.
 
 Next, we need allow users to optionally upload data in the format accepted by the preprocess_data.py command. We will do this in a few incremental steps.  First, we need a version of the preprocess_data.py command that is functionally equivalent but written in javascript and that produces its output in an in-memory array which is displayed in a table in a browser window. Can you complete this first step?
+
+Please remove (Browser Demo) from the preprocess-data page.  Since this page expects a CSV file in the format produced by the CMD International Registry's (called the CMDIR) export function, the page title should be Preprocess CMDIR Data.  Also the instructions on the page should include an explanation of the expected upload data.
+
+To reduce vertical space in the div, put the required and optional lists into two side-by-side cells in an html table. Put the labels ito the top row and the lists into the second row.
+
+Change the table borders to black and make the table background color white.
+
+I noticed that the file name for the page is preprocess_data_cmdir.html but the url is preprocess_data.  Please first update the url
+
+When I inspect the divs with the alert class, I do not see the global rule from the custom.css file applied and then overriden. Rather is is not being applied at all. That rule from custom.css does not appear in the entire set rules that are applied to the div. It appears that only the minified light.css file is processed when the page is rendered by the browser even though the custom.css file is loaded.  You mentioned that bootstrap is used as the theme for this application. Is it possible that a javascipt or something related to bootstrap is processing only the light.css file and not processing the custom.css file when the page is rendered in the browser?
+
+I am trying to switch databases from SQLite to Postgres.  I have exported the SQLite database using the command: 'python manage.py dumpdata --natural-foreign --natural-primary -e contenttypes -e auth.Permission --indent 4 > datadump-2026-07-24.json'. Then I created the new database in postgres, changed the database connection tot the new postgres database in the settings.py file and ran the migrations using the command: 'python manage.py migrate' which ran successfully.  I then tried to import the data dump into the new database with the command: 'python manage.py loaddata -v 3 datadump-2026-07-24.json'.  That fails after loading 3013 objects with the following traceback: 'File "/Users/bill/Projects/GitHub/palind/.venv/lib/python3.9/site-packages/django/db/models/fields/related_descriptors.py", line 218, in __get__
+    rel_obj = self.field.get_cached_value(instance)
+  File "/Users/bill/Projects/GitHub/palind/.venv/lib/python3.9/site-packages/django/db/models/fields/mixins.py", line 15, in get_cached_value
+    return instance._state.fields_cache[cache_name]
+KeyError: 'default_dataset'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/bill/Projects/GitHub/palind/backend/manage.py", line 22, in <module>
+    main()
+  File "/Users/bill/Projects/GitHub/palind/backend/manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/Users/bill/Projects/GitHub/palind/.venv/lib/python3.9/site-packages/django/core/management/__init__.py", line 442, in execute_from_command_line
+    utility.execute()
+  File "/Users/bill/Projects/GitHub/palind/.venv/lib/python3.9/site-packages/django/core/management/__init__.py", line 436, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "/Users/bill/Projects/GitHub/palind/.venv/lib/python3.9/site-packages/django/core/management/base.py", line 412, in run_from_argv
+    self.execute(*args, **cmd_options)
+  File "/Users/bill/Projects/GitHub/palind/.venv/lib/python3.9/site-packages/django/core/management/base.py", line 458, in execute
+    output = self.handle(*args, **options)
+  File "/Users/bill/Projects/GitHub/palind/.venv/lib/python3.9/site-packages/django/core/management/commands/loaddata.py", line 102, in handle
+    self.loaddata(fixture_labels)
+  File "/Users/bill/Projects/GitHub/palind/.venv/lib/python3.9/site-packages/django/core/management/commands/loaddata.py", line 163, in loaddata
+    self.load_label(fixture_label)
+  File "/Users/bill/Projects/GitHub/palind/.venv/lib/python3.9/site-packages/django/core/management/commands/loaddata.py", line 253, in load_label
+    if self.save_obj(obj):
+  File "/Users/bill/Projects/GitHub/palind/.venv/lib/python3.9/site-packages/django/core/management/commands/loaddata.py", line 209, in save_obj
+    obj.save(using=self.using)
+  File "/Users/bill/Projects/GitHub/palind/.venv/lib/python3.9/site-packages/django/core/serializers/base.py", line 288, in save
+    models.Model.save_base(self.object, using=using, raw=True, **kwargs)
+  File "/Users/bill/Projects/GitHub/palind/.venv/lib/python3.9/site-packages/django/db/models/base.py", line 892, in save_base
+    post_save.send(
+  File "/Users/bill/Projects/GitHub/palind/.venv/lib/python3.9/site-packages/django/dispatch/dispatcher.py", line 176, in send
+    return [
+  File "/Users/bill/Projects/GitHub/palind/.venv/lib/python3.9/site-packages/django/dispatch/dispatcher.py", line 177, in <listcomp>
+    (receiver, receiver(signal=self, sender=sender, **named))
+  File "/Users/bill/Projects/GitHub/palind/backend/accounts/models.py", line 53, in create_default_dataset
+    if instance.default_dataset is None:
+  File "/Users/bill/Projects/GitHub/palind/.venv/lib/python3.9/site-packages/django/db/models/fields/related_descriptors.py", line 236, in __get__
+    rel_obj = self.get_object(instance)
+  File "/Users/bill/Projects/GitHub/palind/.venv/lib/python3.9/site-packages/django/db/models/fields/related_descriptors.py", line 199, in get_object
+    return qs.get(self.field.get_reverse_related_filter(instance))
+  File "/Users/bill/Projects/GitHub/palind/.venv/lib/python3.9/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+datasets.models.DoesNotExist: Problem installing fixture '/Users/bill/Projects/GitHub/palind/backend/datadump-2026-07-24.json': Dataset matching query does not exist.'

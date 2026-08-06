@@ -101,3 +101,84 @@ export DJANGO_DB_USER_PASSWORD='{"username": "postgres", "password": "XXX"}'  # 
 11. Run `./manage.py import_diseases HumanDO.json` to fill the database with the diseases.
 12. Remove Inbound rule from the VPC > Security Group.
 13. Make RDS database not publicly accessible.
+
+## SQLite to PostgreSQL data migration
+
+Use this workflow to migrate existing data from SQLite into a new PostgreSQL database.
+
+1. Export data from SQLite:
+
+    python manage.py dumpdata --natural-foreign --natural-primary -e contenttypes -e auth.Permission --indent 4 > datadump-YYYY-MM-DD.json
+
+2. Update Django database settings to point to PostgreSQL.
+3. Create the PostgreSQL database (if needed), then run migrations:
+
+    python manage.py migrate
+
+4. Import the fixture into PostgreSQL:
+
+    python manage.py loaddata -v 2 datadump-YYYY-MM-DD.json
+
+### Verification script (copy/paste)
+
+Run this from the `backend` directory after updating database settings:
+
+```bash
+set -euo pipefail
+
+FIXTURE_FILE="datadump-YYYY-MM-DD.json"
+
+echo "Checking Django configuration and DB connectivity..."
+python manage.py check --database default
+
+echo "Applying migrations..."
+python manage.py migrate --noinput
+
+echo "Loading fixture: ${FIXTURE_FILE}"
+python manage.py loaddata -v 2 "${FIXTURE_FILE}"
+
+echo "Sanity check: users and datasets"
+python manage.py shell -c "from django.contrib.auth import get_user_model; from datasets.models import Dataset; print(f'Users: {get_user_model().objects.count()} | Datasets: {Dataset.objects.count()}')"
+
+echo "Migration verification completed successfully."
+```
+
+### Important fixture-loading caveat
+
+If a `post_save` signal dereferences related objects during fixture loading, `loaddata` can fail because objects may be saved in an order where relations are not yet resolvable. In this project, the `CustomUser` default dataset signal must:
+
+- Return immediately when `raw=True`.
+- Check `instance.default_dataset_id is None` rather than `instance.default_dataset is None`.
+
+This prevents `Dataset.DoesNotExist` errors during fixture import.
+
+### Troubleshooting
+
+1. `connection to server ... failed: Operation not permitted`
+
+- Cause: network path to PostgreSQL is blocked.
+- Check: DB host/port are correct in Django settings or env vars.
+- Check: for RDS, inbound rule allows your current IP on port `5432`.
+- Check: local firewall/VPN is not blocking outbound access.
+
+2. `password authentication failed for user ...`
+
+- Cause: wrong username/password.
+- Check: `DJANGO_DB_USER_PASSWORD` secret JSON has the expected username and password.
+- Re-test with the same credentials using `psql`.
+
+3. `database "..." does not exist`
+
+- Cause: target DB not created yet.
+- Fix: create the database, then run `python manage.py migrate` before `loaddata`.
+
+4. `Dataset.DoesNotExist` (or similar relation errors) during `loaddata`
+
+- Cause: signal logic dereferences relations while fixtures are loading.
+- Fix: guard `post_save` handlers with `if kwargs.get("raw", False): return`.
+- Fix: prefer checking `*_id` fields (for example `default_dataset_id`) over relation objects during signal checks.
+
+5. Fixtures partially imported on a failed run
+
+- Cause: interrupted or failing import attempt.
+- Fix: reset target database state (drop/recreate DB, or truncate tables), rerun `migrate`, then rerun `loaddata` once.

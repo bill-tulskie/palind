@@ -1,4 +1,6 @@
 from django.contrib.admin.views.decorators import staff_member_required
+from collections import defaultdict
+
 from django.db.models import Max
 from django.http import JsonResponse
 from django.utils.decorators import method_decorator
@@ -6,9 +8,16 @@ from django.views.generic import TemplateView
 from django.views import View
 from django.views.generic import TemplateView
 
+from datasets.models import DatasetPatient, are_similar
 from datasets.views import SuperUserRequiredMixin
 
-from .models import DiseaseStats, GlobalStats, count_diseases_prevalence, ClinicalClassificationStats
+from .models import (
+    ClinicalClassificationStats,
+    ClinicalDX,
+    DiseaseStats,
+    GlobalStats,
+    count_diseases_prevalence,
+)
 
 
 class PrevalenceView(TemplateView):
@@ -25,17 +34,75 @@ class PrevalenceView(TemplateView):
             .values("max_id")
         ).order_by("-n_patients")
         context["diseases"] = disease_stats[:16]
-        context["patients_by_disease"] = disease_stats[:5]
+        context["patients_by_disease"] = disease_stats[:10]
 
         context["global_stats"] = global_stats
-        context[
-            "patients_by_source"
-        ] = global_stats.patientsbysource_set.all().order_by("-n_patients")
+        source_counts, organization_counts = self.get_patient_group_counts()
+        context["patients_by_source"] = self.chart_groups(
+            source_counts, "Source not entered"
+        )
+        context["patients_by_organization"] = self.chart_groups(
+            organization_counts, "Organization not entered"
+        )
 
         # Top clinical classifications across diseases
         context["clinical_classifications"] = global_stats.clinicalclassificationstats_set.all().order_by("-n_patients")[:10]
+        context["clinical_classification_labels"] = dict(
+            ClinicalDX.objects.exclude(label="")
+            .exclude(clinical_classification="")
+            .values_list("clinical_classification", "label")
+        )
 
         return context
+
+    @staticmethod
+    def get_patient_group_counts():
+        source_counts = defaultdict(int)
+        organization_counts = defaultdict(int)
+        seen_patients = defaultdict(list)
+
+        patients = DatasetPatient.objects.select_related(
+            "dataset__source", "dataset__organization"
+        ).prefetch_related("submission_set")
+        for patient in patients:
+            submission = patient.submission_set.order_by("-id").first()
+            if not submission or not submission.disease:
+                continue
+
+            disease_patients = seen_patients[submission.disease_id]
+            if any(are_similar(submission, previous) for previous in disease_patients):
+                continue
+            disease_patients.append(submission)
+
+            source_name = patient.dataset.source.name if patient.dataset.source else None
+            organization_name = (
+                patient.dataset.organization.name
+                if patient.dataset.organization
+                else None
+            )
+            source_counts[source_name] += 1
+            organization_counts[organization_name] += 1
+
+        return source_counts, organization_counts
+
+    @staticmethod
+    def chart_groups(counts, missing_label):
+        colors = ["#cd4610", "#eba082", "#0f4c81", "#42bd53", "#d5d9de"]
+        groups = []
+        for index, (label, count) in enumerate(
+            sorted(
+                counts.items(),
+                key=lambda item: (item[0] is None, -item[1]),
+            )
+        ):
+            groups.append(
+                {
+                    "label": label or missing_label,
+                    "n_patients": count,
+                    "color": colors[index % len(colors)],
+                }
+            )
+        return groups
 
 
 class PrevalenceDataView(View):

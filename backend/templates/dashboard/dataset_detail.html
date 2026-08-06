@@ -78,6 +78,10 @@
             <span class="fas fa-plus me-2"></span>
             Load new data
           </a>
+          <a href="{% url 'preprocess_data_cmdir' %}?dataset={{ dataset.pk }}" class="btn btn-outline-primary ms-2">
+            <span class="fas fa-table me-2"></span>
+            Load new CMDIR data
+          </a>
         </div>
       </div>
     </div>

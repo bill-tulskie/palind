@@ -50,10 +50,14 @@ class CustomUser(AbstractUser):
 
 @receiver(post_save, sender=CustomUser)
 def create_default_dataset(sender, instance, created, **kwargs):
-    if instance.default_dataset is None:
+    # During loaddata, Django saves with raw=True and relations may not resolve yet.
+    if kwargs.get("raw", False):
+        return
+
+    if instance.default_dataset_id is None:
         instance.default_dataset = Dataset.objects.create(
             name="Default dataset",
             description="Dataset for prevalence counting.",
             created_by=instance,
         )
-        instance.save()
+        instance.save(update_fields=["default_dataset"])

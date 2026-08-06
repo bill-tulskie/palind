@@ -303,11 +303,16 @@ class PreprocessDataDemo(LoginRequiredMixin, TemplateView):
         if self.request.user.is_prevalence_counting_user:
             selected_dataset = self.request.user.default_dataset
         elif self.request.user.organization is not None:
-            selected_dataset = (
-                Dataset.objects.filter(organization=self.request.user.organization)
-                .order_by("-created_at")
-                .first()
+            accessible_datasets = Dataset.objects.filter(
+                organization=self.request.user.organization
             )
+            requested_dataset = self.request.GET.get("dataset")
+            if requested_dataset:
+                selected_dataset = accessible_datasets.filter(
+                    pk=requested_dataset
+                ).first()
+            if selected_dataset is None:
+                selected_dataset = accessible_datasets.order_by("-created_at").first()
 
         data["submit_api_token"] = (
             str(selected_dataset.api_token) if selected_dataset is not None else ""

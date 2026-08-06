@@ -106,9 +106,18 @@ elif os.getenv("DJANGO_DB_USER_PASSWORD"):
     }
 else:
     DATABASES = {
+ #       "default": {
+ #           "ENGINE": "django.db.backends.sqlite3",
+ #           "NAME": BASE_DIR / "data" / "db.sqlite3",
+ #       }
+
         "default": {
-            "ENGINE": "django.db.backends.sqlite3",
-            "NAME": BASE_DIR / "data" / "db.sqlite3",
+            "ENGINE": "django.db.backends.postgresql",
+            "NAME": "palind",
+            "USER": "palind",
+            "PASSWORD": "DGh@8VG2nz.r",
+            "HOST": "10.243.207.9",
+            "PORT": "5432",
         }
     }
 
