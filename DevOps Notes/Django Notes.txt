@@ -4,12 +4,12 @@ To restart django
 
 The backend folder contains a prevalence folder and a datasets folder.  Each has a migrations folder.
 
-from (venv) # prompt while in (cd'd to) backend directory 
+From (venv) # prompt while in (cd'd to) backend directory:
 
-To run migrations on a specific app e.g. prevalence or datasets:
+-- to run migrations on a specific app e.g. prevalence or datasets:
 (venv) # python manage.py migrate prevalence (or ...datasets)
 
-To run all migrations:
+-- to run all migrations:
 (venv) # python manage.py migrate
 
 Example of truncating corrupted tables:
@@ -18,10 +18,10 @@ First start the Django shell
 
 # cd backend
 # source venv/bin/activate (bash)
- or 
+ or
 # . venv/bin/activate (posix)
 
-(venv) # python manage.py shell 
+(venv) # python manage.py shell
 
 In the Django shell:
 
@@ -31,7 +31,5 @@ In the Django shell:
         # Delete all rows from the problematic table
         cursor.execute("DELETE FROM prevalence_patientsbysource")
         cursor.execute("DELETE FROM prevalence_globalstats")
-				
 
-
-				
+TODO: add new import and conversion commands

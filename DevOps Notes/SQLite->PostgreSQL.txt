@@ -1,20 +1,21 @@
 Steps to convert Django app from SQLite to PostgreSQL
 
+
 1. Back Up Existing Data
-Before changing anything, export your current SQLite data into a JSON fixture file. 
-Exclude contenttypes and auth.Permission data. Django automatically regenerates these records during the migration phase, and trying to re-import them manually causes severe database conflict errors. 
+Before changing anything, export your current SQLite data into a JSON fixture file.
+Exclude contenttypes and auth.Permission data. Django automatically regenerates these records during the migration phase, and trying to re-import them manually causes severe database conflict errors.
 
 python manage.py dumpdata --natural-foreign --natural-primary -e contenttypes -e auth.Permission --indent 4 > datadump.json
 
 2. Install Database Adapter
 Django requires a database adapter package to communicate with PostgreSQL. Install the binary version of psycopg (formerly known as psycopg2)
 
-pip install psycopg2-binary 
+pip install psycopg2-binary
 
 (TODO: This is already in requirements.txt. Has this been updated?)
 
 3. Update Django Settings
-Open your settings.py file (in /palind/backend/palind/settings.py) and swap your DATABASES setting from the SQLite configuration to your PostgreSQL parameters. 
+Open your settings.py file (in /palind/backend/palind/settings.py) and swap your DATABASES setting from the SQLite configuration to your PostgreSQL parameters.
 
 Old Configuration (SQLite):
 
@@ -27,7 +28,7 @@ DATABASES = {
 }
 
 New Configuration (PostgreSQL):
-Instead of hardcoding your database password directly in the file, pull the connection values safely from environment variables: 
+Instead of hardcoding your database password directly in the file, pull the connection values safely from environment variables:
 
 TODO: The connection values are not being set currently for the environment.  Needs research/update.
 
@@ -49,12 +50,11 @@ DATABASES = {
 Before you can fill your PostgreSQL database with data, you must instruct Django to execute its existing migrations to build out the correct table schema:
 
 bash
-cd [project root] (e.g. /Users/bill/Projects/GitHub/palind)
+cd [project root] (e.g. /Users/bill/Projects/GitHub/palind/backend)
 (.venv) python manage.py migrate
 
 5. Load the Exported Data
-With the target database schema initialized, push your JSON file records into PostgreSQL: 
+With the target database schema initialized, push your JSON file records into PostgreSQL:
 
 bash
-python manage.py loaddata datadump.json
-
+python manage.py loaddata data-dumps/datadump-2026-07-24.json
