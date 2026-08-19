@@ -118,7 +118,17 @@ else:
             "PASSWORD": "DGh@8VG2nz.r",
             "HOST": "10.243.207.9",
             "PORT": "5432",
-        }
+        }    
+#        },
+
+#        "defaultcs": {
+#            "ENGINE": "django.db.backends.postgresql",
+#            "NAME": "palindcs",
+#            "USER": "palindcs",
+#            "PASSWORD": "BqxZo_3rteRD",
+#            "HOST": "127.0.0.1",
+#            "PORT": "5432",
+#        }       
     }
 
 
